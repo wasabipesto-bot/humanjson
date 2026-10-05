@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The human.json vouch graph</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --series-1: #2a78d6; --series-2: #eb6834; --bare: #c3c2b7; --edge: rgba(11,11,11,0.07);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19;
+    --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5; --series-2: #d95926; --bare: #52514e; --edge: rgba(255,255,255,0.07);
+  }
+}
+:root[data-theme="dark"] .viz-root {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19;
+  --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --series-1: #3987e5; --series-2: #d95926; --bare: #52514e; --edge: rgba(255,255,255,0.07);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.viz-root { background: var(--page); color: var(--text-primary); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; min-height: 100vh; }
+main { max-width: 1180px; margin: 0 auto; padding: 32px 20px 64px; }
+h1 { font-size: 26px; margin: 0 0 4px; }
+h2 { font-size: 18px; margin: 40px 0 4px; }
+p.sub, .note { color: var(--text-secondary); margin: 0 0 12px; }
+.note { font-size: 13px; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 20px; }
+.tile .v { font-size: 30px; font-weight: 600; }
+.tile .l { color: var(--text-secondary); font-size: 13px; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+input[type=search] { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); min-width: 260px; }
+button { font: inherit; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); cursor: pointer; }
+.legend { display: flex; gap: 16px; color: var(--text-secondary); font-size: 13px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.legend i.line { width: 14px; height: 2px; border-radius: 1px; vertical-align: 3px; }
+#net { width: 100%; height: 640px; display: block; border-radius: 8px; cursor: grab; touch-action: none; }
+#tip { position: fixed; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 13px; box-shadow: 0 4px 16px rgba(0,0,0,.12); display: none; z-index: 10; max-width: 320px; }
+#tip b { display: block; font-size: 14px; }
+#tip span { color: var(--text-secondary); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--grid); }
+th { color: var(--text-secondary); font-weight: 500; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: inherit; }
+svg text { fill: var(--text-muted); font-size: 11px; }
+svg .val { fill: var(--text-secondary); }
+.scroll { max-height: 360px; overflow: auto; }
+#sel { min-height: 1.5em; color: var(--text-secondary); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="viz-root">
+<main>
+  <h1>The human.json vouch graph</h1>
+  <p class="sub" id="lede"></p>
+  <div class="tiles" id="tiles"></div>
+
+  <h2>The network</h2>
+  <p class="note">Each dot is a site. Blue sites publish a human.json file; gray sites are vouched for by two or more files but publish none (single-vouch dead ends are omitted here). Dot size follows how many sites vouch for it. Hover for details, click to pin a site and see its vouches. Scroll to zoom, drag to pan.</p>
+  <div class="row">
+    <input type="search" id="q" placeholder="Find a site…" list="sites">
+    <datalist id="sites"></datalist>
+    <button id="reset">Reset view</button>
+    <div class="legend">
+      <span><i style="background:var(--series-1)"></i>Has a human.json file</span>
+      <span><i style="background:var(--bare)"></i>Vouched for, no file</span>
+      <span><i class="line" style="background:var(--series-1)"></i>Vouches given</span>
+      <span><i class="line" style="background:var(--series-2)"></i>Vouches received</span>
+    </div>
+  </div>
+  <div id="sel"></div>
+  <div class="card" style="padding:0"><canvas id="net"></canvas></div>
+
+  <h2>When people joined</h2>
+  <p class="note">New human.json files per week, dated by each file's earliest <code>vouched_at</code> (a lower bound on adoption; files with no dated vouches are not counted). The spec launched 8 March 2026.</p>
+  <div class="card"><svg id="weekly" width="100%" height="240"></svg></div>
+
+  <div class="grid2">
+    <div>
+      <h2>Are files being updated?</h2>
+      <p class="note">Age of each file's newest dated vouch, as of the crawl date.</p>
+      <div class="card"><svg id="fresh" width="100%" height="180"></svg></div>
+    </div>
+    <div>
+      <h2>Is the network navigable?</h2>
+      <p class="note">Trust structure among sites that publish a file.</p>
+      <div class="card" id="trust"></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div><h2>Most vouches given</h2><div class="card scroll"><table id="t-out"></table></div></div>
+    <div><h2>Most vouched for</h2><div class="card scroll"><table id="t-in"></table></div></div>
+  </div>
+  <div class="grid2">
+    <div><h2>Most vouched for, but no file</h2><div class="card scroll"><table id="t-nofile"></table></div></div>
+    <div><h2>The longest chain of trust</h2><p class="note">The longest shortest path between two sites: the farthest a verifier would have to walk to connect them.</p><div class="card" id="chain"></div></div>
+  </div>
+  <h2>Vouches withdrawn</h2>
+  <p class="note">Vouches that were in an archived (Wayback Machine) or earlier copy of a file and are missing from a later one.</p>
+  <div class="card scroll"><table id="t-removed"></table></div>
+  <p class="note" style="margin-top:32px" id="foot"></p>
+</main>
+<div id="tip"></div>
+</div>
+<script>
+const D = /*DATA*/null;
+const S = D.stats;
+const $ = (s) => document.querySelector(s);
+const css = (v) => getComputedStyle($(".viz-root")).getPropertyValue(v).trim();
+const fmt = (n) => n.toLocaleString("en-US");
+const pct = (x) => (x * 100).toFixed(x < 0.01 ? 2 : 1) + "%";
+function el(tag, attrs = {}, text) {
+  const e = document.createElementNS(tag === "svg" || ["rect","text","line","g","path"].includes(tag) ? "http://www.w3.org/2000/svg" : "http://www.w3.org/1999/xhtml", tag);
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+// ---- lede + tiles ----
+const C = S.counts, T = S.trust;
+const samp = Object.values(S.sample).reduce((a, s) => ({r: a.r + s.reachable, h: a.h + s.with_human_json}), {r: 0, h: 0});
+$("#lede").textContent = `A crawl of every human.json file reachable from ${fmt(C.sites_with_file)} known deployments, research seeds and ${fmt(samp.r)} blogs from IndieWeb directories, run on 5 October 2026.`;
+const tiles = [
+  [fmt(C.sites_with_file), "sites publish a human.json file"],
+  [fmt(C.edges), "vouches between sites"],
+  [fmt(C.bare_targets), "vouched-for sites with no file"],
+  [pct(T.reciprocity), "of vouches between file-holders are returned"],
+  [fmt(T.largest_scc), "sites in the largest circle of trust (all reach each other)"],
+  [pct(samp.h / samp.r), `of ${fmt(samp.r)} directory-listed blogs have a file`],
+];
+for (const [v, l] of tiles) {
+  const t = el("div", {class: "card tile"});
+  t.append(el("div", {class: "v"}, v), el("div", {class: "l"}, l));
+  $("#tiles").append(t);
+}
+
+// ---- network ----
+const cv = $("#net"), ctx = cv.getContext("2d");
+const N = D.nodes, E = D.edges;
+const outAdj = N.map(() => []), inAdj = N.map(() => []);
+E.forEach(([s, t]) => { outAdj[s].push(t); inAdj[t].push(s); });
+const r = (n) => 2 + Math.sqrt(n.i) * 1.3;
+let view = {k: 1, x: 0, y: 0}, W = 0, H = 0, hover = -1, pinned = -1;
+for (const n of N) $("#sites").append(el("option", {value: n.id}));
+function size() {
+  const dpr = devicePixelRatio || 1;
+  W = cv.clientWidth; H = cv.clientHeight;
+  cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+function fit() {
+  const pad = 30, xs = N.map(n => n.x), ys = N.map(n => n.y);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  view.k = Math.min((W - 2 * pad) / (x1 - x0), (H - 2 * pad) / (y1 - y0));
+  view.x = pad - x0 * view.k + ((W - 2 * pad) - (x1 - x0) * view.k) / 2;
+  view.y = pad - y0 * view.k + ((H - 2 * pad) - (y1 - y0) * view.k) / 2;
+}
+const px = (n) => n.x * view.k + view.x, py = (n) => n.y * view.k + view.y;
+function draw() {
+  ctx.fillStyle = css("--surface-1"); ctx.fillRect(0, 0, W, H);
+  const focus = pinned >= 0 ? pinned : hover;
+  ctx.lineWidth = 1; ctx.strokeStyle = css("--edge"); ctx.beginPath();
+  for (const [s, t] of E) { ctx.moveTo(px(N[s]), py(N[s])); ctx.lineTo(px(N[t]), py(N[t])); }
+  ctx.stroke();
+  const hl = new Set();
+  if (focus >= 0) {
+    ctx.lineWidth = 1.5;
+    for (const [list, color] of [[inAdj[focus], css("--series-2")], [outAdj[focus], css("--series-1")]]) {
+      ctx.strokeStyle = color; ctx.beginPath();
+      for (const o of list) { hl.add(o); ctx.moveTo(px(N[focus]), py(N[focus])); ctx.lineTo(px(N[o]), py(N[o])); }
+      ctx.stroke();
+    }
+    hl.add(focus);
+  }
+  const surf = css("--surface-1"), s1 = css("--series-1"), bare = css("--bare");
+  const order = N.map((_, i) => i).sort((a, b) => N[a].i - N[b].i);
+  for (const i of order) {
+    const n = N[i], rr = r(n) * Math.max(1, Math.sqrt(view.k / 600));
+    ctx.globalAlpha = focus >= 0 && !hl.has(i) ? 0.25 : 1;
+    ctx.beginPath(); ctx.arc(px(n), py(n), rr + 1, 0, 7); ctx.fillStyle = surf; ctx.fill();
+    ctx.beginPath(); ctx.arc(px(n), py(n), rr, 0, 7); ctx.fillStyle = n.f ? s1 : bare; ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  // label the biggest hubs + focus neighbourhood
+  ctx.font = "12px system-ui, sans-serif"; ctx.fillStyle = css("--text-secondary");
+  const labels = focus >= 0 ? [...hl] : order.slice(-12);
+  for (const i of labels) { const n = N[i]; ctx.fillText(n.id, px(n) + r(n) + 4, py(n) + 4); }
+}
+function nearest(mx, my) {
+  let best = -1, bd = 24 * 24;
+  N.forEach((n, i) => { const d = (px(n) - mx) ** 2 + (py(n) - my) ** 2; if (d < bd) { bd = d; best = i; } });
+  return best;
+}
+function describe(i) {
+  const n = N[i];
+  return [n.id, `${n.f ? "publishes a file" : "no file"} · vouches for ${n.o} · vouched for by ${n.i}`];
+}
+function pin(i) {
+  pinned = i;
+  const s = $("#sel"); s.textContent = "";
+  if (i >= 0) {
+    const [a, b] = describe(i);
+    s.append(el("b", {}, a), document.createTextNode(" — " + b));
+  }
+  draw();
+}
+let drag = null;
+cv.addEventListener("pointerdown", (e) => { drag = {x: e.clientX, y: e.clientY, vx: view.x, vy: view.y, moved: false}; cv.setPointerCapture(e.pointerId); });
+cv.addEventListener("pointermove", (e) => {
+  const b = cv.getBoundingClientRect();
+  if (drag) {
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
+    view.x = drag.vx + dx; view.y = drag.vy + dy; draw(); return;
+  }
+  const i = nearest(e.clientX - b.left, e.clientY - b.top);
+  const tip = $("#tip");
+  if (i !== hover) { hover = i; draw(); }
+  if (i >= 0) {
+    const [a, bb] = describe(i); tip.textContent = "";
+    tip.append(el("b", {}, a), el("span", {}, bb));
+    tip.style.display = "block"; tip.style.left = e.clientX + 14 + "px"; tip.style.top = e.clientY + 14 + "px";
+  } else tip.style.display = "none";
+});
+cv.addEventListener("pointerup", (e) => {
+  if (drag && !drag.moved) { const b = cv.getBoundingClientRect(); const i = nearest(e.clientX - b.left, e.clientY - b.top); pin(i === pinned ? -1 : i); }
+  drag = null;
+});
+cv.addEventListener("pointerleave", () => { hover = -1; $("#tip").style.display = "none"; draw(); });
+cv.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  const b = cv.getBoundingClientRect(), mx = e.clientX - b.left, my = e.clientY - b.top;
+  const f = Math.exp(-e.deltaY * 0.0015);
+  view.x = mx - (mx - view.x) * f; view.y = my - (my - view.y) * f; view.k *= f; draw();
+}, {passive: false});
+$("#q").addEventListener("change", (e) => {
+  const i = N.findIndex(n => n.id === e.target.value.trim());
+  if (i >= 0) { view.x += W / 2 - px(N[i]); view.y += H / 2 - py(N[i]); pin(i); }
+});
+$("#reset").onclick = () => { fit(); pin(-1); };
+addEventListener("resize", () => { size(); fit(); draw(); });
+size(); fit(); draw();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
+
+// ---- small chart helpers (single-series: no legend, title names it) ----
+function columns(svg, data, {fmtX}) {
+  const w = svg.clientWidth, h = svg.clientHeight, m = {l: 32, r: 8, t: 16, b: 28};
+  const max = Math.max(...data.map(d => d[1]), 1);
+  const step = Math.pow(10, Math.floor(Math.log10(max))), top = Math.ceil(max / step) * step;
+  const bw = (w - m.l - m.r) / data.length, y = (v) => h - m.b - (v / top) * (h - m.t - m.b);
+  for (let t = 0; t <= top; t += top / 4) {
+    svg.append(el("line", {x1: m.l, x2: w - m.r, y1: y(t), y2: y(t), stroke: css("--grid")}));
+    svg.append(el("text", {x: m.l - 6, y: y(t) + 4, "text-anchor": "end"}, fmt(Math.round(t))));
+  }
+  data.forEach(([k, v], i) => {
+    const x = m.l + i * bw + Math.max(1, (bw - 24) / 2), bwid = Math.min(24, bw - 2), hh = h - m.b - y(v);
+    if (v > 0) {
+      const rr = Math.min(4, hh, bwid / 2);
+      const p = `M${x},${h - m.b} V${y(v) + rr} q0,-${rr} ${rr},-${rr} H${x + bwid - rr} q${rr},0 ${rr},${rr} V${h - m.b} Z`;
+      const bar = el("path", {d: p, fill: css("--series-1"), tabindex: 0});
+      const tt = el("title", {}, `${fmtX(k)}: ${v}`); bar.append(tt); svg.append(bar);
+    }
+    if (i % 4 === 0) svg.append(el("text", {x: x + bwid / 2, y: h - 8, "text-anchor": "middle"}, fmtX(k)));
+  });
+  const peak = data.reduce((a, b) => b[1] > a[1] ? b : a);
+  const pi = data.indexOf(peak);
+  svg.append(el("text", {class: "val", x: m.l + pi * bw + bw / 2 + 14, y: y(peak[1]) + 10}, `${peak[1]} new files, week of ${fmtX(peak[0])}`));
+}
+function hbars(svg, data) {
+  const w = svg.clientWidth, m = {l: 70, r: 60}, bh = 22, gap = 14;
+  const max = Math.max(...data.map(d => d[1]), 1);
+  data.forEach(([k, v], i) => {
+    const y = 10 + i * (bh + gap), bw = (w - m.l - m.r) * v / max;
+    svg.append(el("text", {x: m.l - 8, y: y + bh / 2 + 4, "text-anchor": "end"}, k));
+    if (v > 0) svg.append(el("path", {d: `M${m.l},${y} H${m.l + bw - 4} q4,0 4,4 V${y + bh - 4} q0,4 -4,4 H${m.l} Z`, fill: css("--series-1")}));
+    svg.append(el("text", {class: "val", x: m.l + bw + 6, y: y + bh / 2 + 4}, fmt(v)));
+  });
+}
+const mon = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+columns($("#weekly"), D.weeks, {fmtX: (k) => `${+k.slice(8)} ${mon[+k.slice(5, 7) - 1]}`});
+hbars($("#fresh"), Object.entries(S.freshness.newest_vouch_age));
+
+// ---- trust card ----
+const tc = $("#trust");
+const lines = [
+  [`${fmt(T.largest_wcc)} of ${fmt(C.sites_with_file)}`, "file-holding sites are connected to the main cluster in some direction"],
+  [`${fmt(T.largest_scc)}`, "sites form the largest circle of trust: each can reach every other by following vouches"],
+  [`${T.core_avg_shortest_path} hops`, `average distance inside that circle (longest: ${T.core_diameter})`],
+  [`${fmt(T.mutual_pairs)}`, `mutual pairs; the largest group where everyone vouches for everyone has ${T.largest_mutual_clique} sites`],
+  [`${fmt(S.unvouched_sites)}`, "sites with a file that nobody else's file vouches for"],
+  [`${fmt(T.median_reach_within_5_hops)}`, "sites the median file can reach within the reference verifier's 5-hop default"],
+];
+for (const [v, l] of lines) {
+  const p = el("p", {style: "margin:0 0 10px"}); p.append(el("b", {}, v + " "), document.createTextNode(l)); tc.append(p);
+}
+
+// ---- tables ----
+function table(id, cols, rows) {
+  const t = $(id), tr = el("tr");
+  cols.forEach(([h, num]) => tr.append(el("th", num ? {class: "n"} : {}, h)));
+  t.append(tr);
+  for (const r of rows) {
+    const row = el("tr");
+    r.forEach((v, i) => row.append(el("td", cols[i][1] ? {class: "n"} : {}, typeof v === "number" ? fmt(v) : v)));
+    t.append(row);
+  }
+}
+table("#t-out", [["Site"], ["Vouches", 1]], S.top_out.map(x => [x.site, x.vouches]));
+table("#t-in", [["Site"], ["Vouched by", 1], ["File?"]], S.top_in.map(x => [x.site, x.vouched_by, x.has_file ? "yes" : "no"]));
+table("#t-nofile", [["Site"], ["Vouched by", 1]], S.top_in_without_file.map(x => [x.site, x.vouched_by]));
+const ch = $("#chain");
+ch.append(el("p", {style: "margin:0 0 8px"}, `${T.longest_shortest_chain} hops:`));
+const ol = el("ol", {style: "margin:0; padding-left: 22px"});
+T.longest_chain.forEach(s => ol.append(el("li", {}, s)));
+ch.append(ol);
+const rem = S.history.removals;
+if (rem.length) table("#t-removed", [["Site"], ["No longer vouches for"], ["Between"]],
+  rem.map(x => [x.site, x.removed, x.between.map(b => b === "current" ? "today" : `${b.slice(0,4)}-${b.slice(4,6)}-${b.slice(6,8)}`).join(" → ")]));
+else $("#t-removed").append(el("tr", {}, "None found."));
+$("#foot").textContent = "Crawler respects robots.txt and fetches one request at a time per host. Data, code and method: see REPORT.md in the project repo.";
+</script>
+</body>
+</html>
