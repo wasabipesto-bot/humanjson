@@ -1,0 +1,588 @@
+{
+"100r.co": [],
+"11ty.dev": [],
+"13willow.com": [],
+"11tybundle.dev": [],
+"11d.im": [],
+"56k.es": [],
+"1902.studio": [],
+"82mhz.net": [],
+"abhinavsarkar.net": [],
+"aboutabook.uk": [],
+"abandon.ie": [],
+"absolument-tout.net": [],
+"acdw.net": [
+[
+"https://www.acdw.net/.well-known/human.json",
+"20260330194333"
+]
+],
+"a.wholelottanothing.org": [],
+"adam.omg.lol": [],
+"adamj.eu": [],
+"adamsdesk.com": [],
+"adactio.com": [],
+"aetheranne.ca": [],
+"aeva.online": [],
+"affordance.framasoft.org": [],
+"adrianroselli.com": [],
+"afilina.com": [],
+"agwa.name": [],
+"ajroach42.com": [],
+"accioecologista-agro.org": [],
+"aftermath.site": [],
+"akrabat.com": [],
+"alabut.com": [],
+"aleksandrhovhannisyan.com": [],
+"alecsargent.codeberg.page": [],
+"alexandergraefe.de": [],
+"alexandragallant.com": [],
+"alexschroeder.ch": [],
+"alexsirac.com": [],
+"alexwlchan.net": [],
+"alexwolfe.ca": [],
+"alien.hospital": [],
+"alistairshepherd.uk": [],
+"amerpie.lol": [],
+"amethystraccoon.co.uk": [],
+"albdoblog.com": [],
+"amicsdelcarme.com": [],
+"amyhupe.co.uk": [],
+"anaideia.mataroa.blog": [],
+"analognowhere.com": [],
+"anaolivia.micro.blog": [],
+"andre.torrez.org": [],
+"andreas.scherbaum.la": [],
+"andrewknighton.com": [],
+"andy-bell.co.uk": [],
+"andy.ggu.cz": [],
+"andycarolan.com": [],
+"analogoffice.net": [],
+"andydavies.me": [],
+"andypiper.co.uk": [],
+"andypiper.org": [],
+"andypiper.omg.lol": [],
+"angelesbroullon.gitlab.io": [],
+"aneclecticmind.com": [],
+"anhvn.com": [],
+"anildash.com": [],
+"annaecook.com": [],
+"anniemueller.com": [],
+"annsophi-digsmed.com": [],
+"alexanderbjoy.com": null,
+"antipope.org": [],
+"apis.qweb.co.uk": [],
+"apothecaryshed.com": [],
+"appak.neocities.org": [],
+"arch.dog": [],
+"antocuni.eu": [],
+"argentauria.com": [],
+"ariadne.space": [],
+"arialdomartini.github.io": [],
+"arongriffis.com": [],
+"aroceu.com": [],
+"ashk.au": [],
+"ashleymcquaid.com": [],
+"aubreysambor.com": [],
+"autiomaa.galleria.fi": [],
+"ausiastsel.substack.com": [],
+"automatetheboringstuff.com": [],
+"axel.mx": [],
+"b-list.org": [],
+"avascik.neocities.org": [],
+"backyardtinker.bearblog.dev": [],
+"baccyflap.com": [],
+"balileart.neocities.org": [],
+"bajram.com": [],
+"balsadetinta.com": [],
+"banksmusicpublications.co.uk": [],
+"batchimageresize.com": [],
+"basic.bearblog.dev": [],
+"batsov.com": [],
+"annemccoll.com": null,
+"beccaselah.substack.com": [],
+"beco35.neocities.org": [],
+"baty.net": [],
+"bell.bz": [],
+"benhoyt.com": [],
+"benjamim.neocities.org": [],
+"beesbuzz.biz": [
+[
+"https://beesbuzz.biz/_login/blog/chatter/15975-The-human.json-protocol",
+"20260616004753"
+],
+[
+"https://beesbuzz.biz/_login/blog/chatter/15975-The-human.json-protocol?fill=@user@domain",
+"20260616065412"
+],
+[
+"https://beesbuzz.biz/_login/blog/chatter/15975-The-human.json-protocol?fill=https%3A//domain.example.com",
+"20260616065413"
+],
+[
+"https://beesbuzz.biz/_login/blog/chatter/15975-The-human.json-protocol?fill=https%3A//instance/",
+"20260616065413"
+],
+[
+"https://beesbuzz.biz/_login/blog/chatter/15975-The-human.json-protocol?fill=mailto%3Aemail%40example.com",
+"20260616065413"
+],
+[
+"https://beesbuzz.biz/blog/chatter/15975-The-human.json-protocol",
+"20260308060153"
+]
+],
+"benji.dog": [],
+"benjaminhollon.com": [],
+"benovermyer.com": [],
+"bethanyh.net": [],
+"better-simple.com": [],
+"bewcloud.com": [],
+"berthub.eu": [],
+"beyondinteractive.co.uk": [],
+"bilej.monster": [],
+"bfloeser.de": [],
+"billmorris.io": [],
+"binarydigit.net": [],
+"billhunt.dev": [],
+"biologists.social": [],
+"bipbop.es": [],
+"bearly-creative.de": [],
+"bionicteaching.com": [],
+"birdwrongs.sh": [],
+"bitbra.in": [],
+"birchtree.me": [],
+"bitbrain.itch.io": [],
+"bjoern.stierand.org": [],
+"blackunicorn.co.uk": [],
+"blahg.online": [],
+"bjoern.brembs.net": [],
+"bkardell.com": [],
+"blakewatson.com": [],
+"blarg.ca": [],
+"blog.achintyarao.in": [],
+"blog.allpurposem.at": [],
+"blog.afandian.com": [],
+"blog.ayom.media": [],
+"blog.avas.space": [],
+"blog.cron.world": [],
+"blog.ctms.me": [],
+"blog.cytrogen.icu": [],
+"blog.danskingdom.com": [],
+"blog.elenarossini.com": [],
+"blog.erreur503.xyz": [],
+"blog.europlus.zone": [],
+"blog.front-matter.de": [],
+"blog.glyph.im": [],
+"blog.helenchong.omg.lol": [],
+"blog.ian.stapletoncordas.co": [],
+"blog.idee.es": [],
+"blog.ihatereality.space": [],
+"blog.dawgeth.xyz": [],
+"blog.infected.systems": [],
+"blog.jagedn.dev": [],
+"blog.johl.io": [],
+"blog.juliaferraioli.com": [],
+"blog.khinsen.net": [],
+"blog.legoktm.com": [],
+"blog.liw.fi": [],
+"blog.lovirent.eu": [],
+"blog.lukaszwojcik.net": [],
+"blog.m-ou.se": [],
+"blog.marcelsel.com": [],
+"blog.mattgauger.com": [],
+"blog.mayank.co": [],
+"blog.n8fq.org": [],
+"blog.nataliethenerd.com": [],
+"blep.org": null,
+"blog.nocturnalmonkey.com": [],
+"blog.pirated.tech": [],
+"blog.ppb1701.com": [],
+"blog.saisarida.com": [],
+"blog.seboss666.info": [],
+"blog.segiddins.me": [],
+"blog.sens-public.org": [],
+"blog.sgawolf.com": [],
+"blog.smears.org": [],
+"blog.southfox.me": [],
+"blog.spu.io": [],
+"blog.sulimans.space": [],
+"blog.thea.codes": [],
+"blog.thechases.com": [],
+"blog.thirstybear.co.uk": [],
+"blog.tisaac.be": [],
+"blog.turbo.fish": [],
+"blog.ussjoin.com": [],
+"blog.peter-b.co.uk": [],
+"blog.webb.page": [],
+"blog.yoshuawuyts.com": [],
+"blog.vbuckenham.com": [],
+"blog.zolutal.io": [],
+"blog.yossarian.net": [],
+"blurbs.benjaminhollon.com": [],
+"bobmonsour.com": [],
+"blogz.zaclys.com": [],
+"blog.jim-nielsen.com": null,
+"boffosocko.com": [],
+"bouvier.cc": [],
+"box.matto.nl": [],
+"brainbaking.com": [],
+"bram.us": [],
+"brandonrohrer.com": [],
+"brettcodes.com": [],
+"brettsheffield.com": [],
+"brincadeiramusic.com": [],
+"britthub.co.uk": [],
+"brooke.vibber.net": [],
+"brown-delair.net": [],
+"brown-gordon.com": [],
+"bojidar-bg.dev": [],
+"brucelawson.co.uk": [],
+"btxx.org": [],
+"bouchechocolate.co.uk": [],
+"btp.dev": [],
+"bubbles.town": [],
+"bumbershootsoft.wordpress.com": [],
+"busterbenson.com": [],
+"cabel.com": [],
+"cablespaghetti.dev": [],
+"calliecameron.com": [],
+"caiustheory.com": [],
+"calumryan.com": [],
+"bubblegum.girlonthemoon.xyz": [],
+"canneddragons.net": [
+[
+"https://www.canneddragons.net/assets/human.json",
+"20260503011642"
+]
+],
+"calnewport.com": [],
+"carfax.org.uk": [],
+"carina.org.uk": [],
+"carsoncoder.com": [],
+"cassey.dev": [],
+"cashmerecrypt.art": [],
+"castleseftonpress.co.uk": [],
+"catecheticconverter.com": [],
+"cedmax.net": [],
+"cedon.dev": [],
+"cassie.ink": [],
+"chagratt.site": [],
+"chamik.eu": [],
+"changelog.complete.org": [],
+"chlo.is": [],
+"chris.eidhof.nl": [],
+"chrisadams.me.uk": [],
+"chriscoyier.net": [],
+"chrisglass.com": [],
+"chriskiehl.com": [],
+"chrislowis.co.uk": [],
+"chrismcleod.dev": [],
+"chrisroos.co.uk": [],
+"christandpopculture.com": [],
+"christopherhimes.com": [],
+"chriswiegman.com": [],
+"chronicles.mad-scientist.club": [],
+"chronocide.neocities.org": [],
+"chronosaur.us": [],
+"ciccarello.me": [],
+"civio.es": [],
+"clagnut.com": [],
+"clairikine.blogspot.com": [],
+"climateuncensored.com": [],
+"cliophate.wtf": [],
+"clockwooork.github.io": [],
+"clouderst.xyz": [],
+"chaos.social": [],
+"code.mendhak.com": [],
+"cobc.me": [],
+"codeka.io": [],
+"colour-tool.qweb.co.uk": [],
+"cameronneylon.net": null,
+"codeberg.org": [
+[
+"https://codeberg.org/g-rppl/movetrack/src/commit/01f7455a13c0c7682ac33305b80564fe08ce74b1/pkgdown/assets/human.json",
+"20260402153121"
+],
+[
+"https://codeberg.org/robida/human.json",
+"20260308203907"
+],
+[
+"https://codeberg.org/robida/human.json.rss",
+"20260313085211"
+],
+[
+"https://codeberg.org/robida/human.json/-/summary-card",
+"20260308171412"
+],
+[
+"https://codeberg.org/robida/human.json/activity",
+"20260313204902"
+],
+[
+"https://codeberg.org/robida/human.json/archive/main.bundle",
+"20260314043609"
+],
+[
+"https://codeberg.org/robida/human.json/branches",
+"20260313085004"
+],
+[
+"https://codeberg.org/robida/human.json/commit/10128ad20ea7f58ea787d0e5128cc070be10a5bf",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/1043bfe82da5efe252af695c32de265193e5b81f",
+"20260313201012"
+],
+[
+"https://codeberg.org/robida/human.json/commit/352c08fbb43d96ba8bba778560bd90b2f3d56f47",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/3e35309614522c0681339a61e84163fe96cf8d85",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/58be0c609baab31076efc55bb8b623d13ad4a187",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/7efafd7669f1c619fbd2de59ae4f40d6cd2b530b",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/840210ff5b5bca4b951390f34b791dff0c57520c",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/8ebc6b6ebae1e2ed7d58fb32e65d0355b20b7b8d",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/9c7093c6267fa4e72b7ae7b9f114aa9a04fbfe2f",
+"20260313070031"
+],
+[
+"https://codeberg.org/robida/human.json/commit/b627a2298ecfeef80fc0f8f99d412b95cd62c794",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/deeb9eb6d3e0c99a0f3e9a1138c2b21773d3c7d3",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/e4a97744fccba7dea09addd12ac119363dae292d",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/commit/ea2f21aac667a16ef4d752129c8e6956574ec538",
+"20260313155506"
+],
+[
+"https://codeberg.org/robida/human.json/commit/ef254d5208d8cbb346ba4a90a3417e21d182ba47",
+"20260314062448"
+],
+[
+"https://codeberg.org/robida/human.json/commits/branch/main",
+"20260314001042"
+],
+[
+"https://codeberg.org/robida/human.json/compare/787d98a4d141655fbc71fe65329a7b8485801011...ef5adcdea90fe935d5ac3cf983006585fbae4134",
+"20260328045912"
+],
+[
+"https://codeberg.org/robida/human.json/compare/8db11cf3a6595d9a915a212f0bb1ad15ee470f90...787d98a4d141655fbc71fe65329a7b8485801011",
+"20260328045912"
+],
+[
+"https://codeberg.org/robida/human.json/compare/e9aaf4b95f98968cacbc6fc613144afad1038681...5311e39659fdd495f3d31f353b788ff26210e5d7",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/compare/eb01f3c68ac28563ff6495faec94988eddb5f489...8db11cf3a6595d9a915a212f0bb1ad15ee470f90",
+"20260328045912"
+],
+[
+"https://codeberg.org/robida/human.json/compare/main...main",
+"20260314065851"
+],
+[
+"https://codeberg.org/robida/human.json/find/branch/main",
+"20260314065201"
+],
+[
+"https://codeberg.org/robida/human.json/forks",
+"20260314033547"
+],
+[
+"https://codeberg.org/robida/human.json/issues",
+"20260314020246"
+],
+[
+"https://codeberg.org/robida/human.json/issues/10",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/issues/10/summary-card",
+"20260313085213"
+],
+[
+"https://codeberg.org/robida/human.json/issues/11",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/issues/11/summary-card",
+"20260313085213"
+],
+[
+"https://codeberg.org/robida/human.json/issues/12",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/issues/12/summary-card",
+"20260313085213"
+],
+[
+"https://codeberg.org/robida/human.json/issues/13",
+"20260313085212"
+],
+[
+"https://codeberg.org/robida/human.json/issues/13/summary-card",
+"20260313085213"
+],
+[
+"https://codeberg.org/robida/human.json/issues/15",
+"20260328083909"
+],
+[
+"https://codeberg.org/robida/human.json/issues/15/summary-card",
+"20260328083911"
+],
+[
+"https://codeberg.org/robida/human.json/issues/18",
+"20260328045859"
+],
+[
+"https://codeberg.org/robida/human.json/issues/18/content-history/overview",
+"20260328045901"
+],
+[
+"https://codeberg.org/robida/human.json/issues/18/summary-card",
+"20260413122753"
+],
+[
+"https://codeberg.org/robida/human.json/issues/21",
+"20260321171720"
+],
+[
+"https://codeberg.org/robida/human.json/issues/21/content-history/overview",
+"20260328083816"
+],
+[
+"https://codeberg.org/robida/human.json/issues/21/summary-card",
+"20260328083910"
+],
+[
+"https://codeberg.org/robida/human.json/issues/33",
+"20260321014256"
+],
+[
+"https://codeberg.org/robida/human.json/issues/33/content-history/overview",
+"20260328083858"
+],
+[
+"https://codeberg.org/robida/human.json/issues/45",
+"20260328083746"
+],
+[
+"https://codeberg.org/robida/human.json/issues/45/content-history/overview",
+"20260328083749"
+]
+],
+"congdegeo.wordpress.com": [],
+"contino.com": [],
+"cory.dev": [],
+"cosmolinguist.dreamwidth.org": [],
+"cptkrb.net": [],
+"craft-patterns.trueelena.org": [],
+"craphound.com": [],
+"crowdagger.fr": [],
+"crowdersoup.com": [],
+"crummy.com": [],
+"crysiecornie.blogspot.com": [],
+"css-irl.info": [],
+"comp-sys-bio.org": null,
+"cubane8.straw.page": [],
+"csswizardry.com": [],
+"cuyler36.github.io": [],
+"cv.autiomaa.org": [],
+"cv.achintyarao.in": [],
+"d12s.ventures": [],
+"compcellbio.org": null,
+"da-focus.com": [],
+"d.moonfire.us": [],
+"damolamorenikeji.com": [],
+"daniele63.com": [],
+"danielle.bearblog.dev": [],
+"daniel.haxx.se": [],
+"danielledonnelly.github.io": [],
+"danielpietzsch.com": [],
+"danielpower.ca": [],
+"danj.ca": [],
+"dalliard.ch": [],
+"danielmrose.com": [],
+"danmatthews.me": [],
+"dantleech.com": [],
+"dansinker.com": [],
+"darcynorman.net": [],
+"danq.me": [],
+"darn.es": [],
+"darylsun.page": [],
+"daught.me": [],
+"daverupert.com": [],
+"davesnider.com": [],
+"david.shanske.com": [],
+"davidcamus.substack.com": [],
+"davidism.com": [],
+"davidpeach.me": [],
+"davidrevoy.com": [],
+"darekkay.com": null,
+"dbushell.com": [],
+"dead.garden": [],
+"daringfireball.net": null,
+"deadscorpionranch.bearblog.dev": [],
+"decaro.la": [],
+"decentfilms.com": [],
+"decoded.legal": [],
+"denissalem.ovh": [],
+"densford.net": [],
+"derickrethans.nl": [],
+"dertagundich.de": [],
+"destroyallsoftware.com": [],
+"developerjack.com": [],
+"dearstrangethings.substack.com": [],
+"devonshiredementiacare.com": [],
+"developmentseed.org": [],
+"ddlyh.smol.pub": [],
+"diefrauschauthin.de": [],
+"dhippo.net": [],
+"digitalflapjack.com": [],
+"diegologs.com": [],
+"discardpile.pika.page": [],
+"docs.trueelena.org": [],
+"digitalseams.com": [],
+"donaberger.xyz": [],
+"donyweb.net": [],
+"doserver.top": [],
+"dino.opij.ac": [],
+"doslovaja.cz": [],
+"dotart.blog": [],
+"dougbelshaw.com": [],
+"dougiamas.com": [],
+"downiefamily.wixsite.com": [],
+"dozenialdragons.me.uk": [],
+"dpocoms.co.uk": [],
+"dransfieldroofing.co.uk": []
+}

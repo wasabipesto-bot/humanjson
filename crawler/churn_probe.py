@@ -10,6 +10,7 @@ Writes data/churn_probe.json (not sqlite, so it can run beside the history job).
 
 import asyncio
 import json
+import sqlite3
 import sys
 from pathlib import Path
 
@@ -26,7 +27,7 @@ async def check(client, sem, host, out):
             try:
                 r = await client.get("https://web.archive.org/cdx/search/cdx", params={
                     "url": host, "matchType": "host", "output": "json", "collapse": "urlkey",
-                    "filter": ["original:.*human\\.json.*", "statuscode:200"], "fl": "original,timestamp",
+                    "filter": ["original:.*/humans?\\.json$", "statuscode:200"], "fl": "original,timestamp",
                     "limit": "50"})
                 r.raise_for_status()
                 rows = r.json() if r.text.strip() else []
@@ -39,7 +40,14 @@ async def check(client, sem, host, out):
 
 async def main():
     g = json.loads((ROOT / "data/graph.json").read_text())
-    hosts = sorted({n["id"].split("/")[0] for n in g["nodes"] if not n["has_file"]})
+    # Most informative first: hosts robots.txt kept us out of, then the most vouched-for
+    status = dict(sqlite3.connect(ROOT / "data/crawl.sqlite").execute("select site, status from probes"))
+    indeg = {}
+    for e in g["edges"]:
+        indeg[e["target"]] = indeg.get(e["target"], 0) + 1
+    bare = [n["id"] for n in g["nodes"] if not n["has_file"]]
+    bare.sort(key=lambda k: (status.get(k) != "robots", -indeg.get(k, 0), k))
+    hosts = list(dict.fromkeys(k.split("/")[0] for k in bare))
     path = ROOT / "data/churn_probe.json"
     out = json.loads(path.read_text()) if path.exists() else {}
     todo = [h for h in hosts if out.get(h) is None]

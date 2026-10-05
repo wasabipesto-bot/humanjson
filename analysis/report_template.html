@@ -111,8 +111,8 @@ svg .val { fill: var(--text-secondary); }
     <div><h2>Most vouched for, but no file</h2><div class="card scroll"><table id="t-nofile"></table></div></div>
     <div><h2>The longest chain of trust</h2><p class="note">The longest shortest path between two sites: the farthest a verifier would have to walk to connect them.</p><div class="card" id="chain"></div></div>
   </div>
-  <h2>Vouches withdrawn</h2>
-  <p class="note">Vouches that were in an archived (Wayback Machine) or earlier copy of a file and are missing from a later one.</p>
+  <h2>Has trust been withdrawn?</h2>
+  <p class="note">Vouches present in one version of a file and missing from the next, across Wayback Machine captures (then today's crawl) and the git history of files kept on GitHub. The protocol has no revocation, so deleting the vouch is the only way to withdraw it.</p>
   <div class="card scroll"><table id="t-removed"></table></div>
   <p class="note" style="margin-top:32px" id="foot"></p>
 </main>
@@ -126,7 +126,7 @@ const css = (v) => getComputedStyle($(".viz-root")).getPropertyValue(v).trim();
 const fmt = (n) => n.toLocaleString("en-US");
 const pct = (x) => (x * 100).toFixed(x < 0.01 ? 2 : 1) + "%";
 function el(tag, attrs = {}, text) {
-  const e = document.createElementNS(tag === "svg" || ["rect","text","line","g","path"].includes(tag) ? "http://www.w3.org/2000/svg" : "http://www.w3.org/1999/xhtml", tag);
+  const e = document.createElementNS(tag === "svg" || ["rect","text","line","g","path","title"].includes(tag) ? "http://www.w3.org/2000/svg" : "http://www.w3.org/1999/xhtml", tag);
   for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
   if (text != null) e.textContent = text;
   return e;
@@ -134,8 +134,8 @@ function el(tag, attrs = {}, text) {
 
 // ---- lede + tiles ----
 const C = S.counts, T = S.trust;
-const samp = Object.values(S.sample).reduce((a, s) => ({r: a.r + s.reachable, h: a.h + s.with_human_json}), {r: 0, h: 0});
-$("#lede").textContent = `A crawl of every human.json file reachable from ${fmt(C.sites_with_file)} known deployments, research seeds and ${fmt(samp.r)} blogs from IndieWeb directories, run on 5 October 2026.`;
+const samp = {r: S.sample_combined.reachable_hosts, h: S.sample_combined.with_human_json};
+$("#lede").textContent = `Every human.json file reachable from a known-deployments list, research seeds, GitHub code search and ${fmt(samp.r)} blogs from IndieWeb directories, following vouches until nothing new turned up. Crawled 5 October 2026.`;
 const tiles = [
   [fmt(C.sites_with_file), "sites publish a human.json file"],
   [fmt(C.edges), "vouches between sites"],
@@ -198,8 +198,17 @@ function draw() {
   ctx.globalAlpha = 1;
   // label the biggest hubs + focus neighbourhood
   ctx.font = "12px system-ui, sans-serif"; ctx.fillStyle = css("--text-secondary");
-  const labels = focus >= 0 ? [...hl] : order.slice(-12);
-  for (const i of labels) { const n = N[i]; ctx.fillText(n.id, px(n) + r(n) + 4, py(n) + 4); }
+  // biggest first; skip any label that would overlap one already drawn
+  const labels = (focus >= 0 ? [focus, ...[...hl].filter(i => i !== focus)] : order.slice(-16).reverse());
+  const boxes = [];
+  for (const i of labels) {
+    const n = N[i], x = px(n) + r(n) + 4, y = py(n) + 4, w = ctx.measureText(n.id).width;
+    const b = [x - 2, y - 12, x + w + 2, y + 4];
+    if (boxes.some(o => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1])) continue;
+    boxes.push(b);
+    ctx.lineWidth = 3; ctx.strokeStyle = css("--surface-1"); ctx.lineJoin = "round"; ctx.strokeText(n.id, x, y);
+    ctx.fillText(n.id, x, y);
+  }
 }
 function nearest(mx, my) {
   let best = -1, bd = 24 * 24;
@@ -261,9 +270,10 @@ matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
 function columns(svg, data, {fmtX}) {
   const w = svg.clientWidth, h = svg.clientHeight, m = {l: 32, r: 8, t: 16, b: 28};
   const max = Math.max(...data.map(d => d[1]), 1);
-  const step = Math.pow(10, Math.floor(Math.log10(max))), top = Math.ceil(max / step) * step;
+  const raw = max / 4, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw), top = step * 4;
   const bw = (w - m.l - m.r) / data.length, y = (v) => h - m.b - (v / top) * (h - m.t - m.b);
-  for (let t = 0; t <= top; t += top / 4) {
+  for (let t = 0; t <= top; t += step) {
     svg.append(el("line", {x1: m.l, x2: w - m.r, y1: y(t), y2: y(t), stroke: css("--grid")}));
     svg.append(el("text", {x: m.l - 6, y: y(t) + 4, "text-anchor": "end"}, fmt(Math.round(t))));
   }
@@ -328,10 +338,13 @@ ch.append(el("p", {style: "margin:0 0 8px"}, `${T.longest_shortest_chain} hops:`
 const ol = el("ol", {style: "margin:0; padding-left: 22px"});
 T.longest_chain.forEach(s => ol.append(el("li", {}, s)));
 ch.append(ol);
-const rem = S.history.removals;
-if (rem.length) table("#t-removed", [["Site"], ["No longer vouches for"], ["Between"]],
-  rem.map(x => [x.site, x.removed, x.between.map(b => b === "current" ? "today" : `${b.slice(0,4)}-${b.slice(4,6)}-${b.slice(6,8)}`).join(" → ")]));
-else $("#t-removed").append(el("tr", {}, "None found."));
+// Who withdrew from whom stays out of the page (it's in data/stats.json); show what kind of removal it was
+const kindLabel = {"withdrawn": "Withdrawn (target still online)", "target offline": "Target site offline",
+  "url changed": "Moved to a new URL", "own site": "Removed a vouch for own site", "same-day edit": "Same-day edit"};
+const hist = S.history.by_source;
+table("#t-removed", [["Kind of removal"], ["Wayback", 1], ["Git history", 1]],
+  Object.keys(kindLabel).map(k => [kindLabel[k], (hist.wayback.removed[k] || 0), (hist.git.removed[k] || 0)])
+    .concat([["(for scale) vouches added in later versions", hist.wayback.added, hist.git.added]]));
 $("#foot").textContent = "Crawler respects robots.txt and fetches one request at a time per host. Data, code and method: see REPORT.md in the project repo.";
 </script>
 </body>

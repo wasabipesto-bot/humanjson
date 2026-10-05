@@ -4,10 +4,12 @@ seeds := "seed/seeds-2026-10-05-csv.txt seed/research-seeds.txt seed/sample-webr
 crawl:
     uv run crawler/crawl.py {{seeds}} --db data/crawl.sqlite
 
-# Pull Wayback Machine history for every discovered file
+# Version history: Wayback captures, GitHub commits, and Wayback lookups for sites without a file
 history:
     cd crawler && uv run history.py --db ../data/crawl.sqlite
     cd crawler && uv run git_history.py --db ../data/crawl.sqlite
+    uv run analysis/build_graph.py
+    cd crawler && uv run churn_probe.py
 
 # Resolve graph, compute stats, build report/index.html
 analyze:

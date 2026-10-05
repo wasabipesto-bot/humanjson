@@ -281,6 +281,7 @@
  ],
  "unvouched_sites": 81,
  "trust": {
+  "n_pairs_at_longest_distance": 7,
   "largest_scc": 121,
   "scc_sizes_top5": [
    121,
@@ -303,18 +304,18 @@
   "core_avg_shortest_path": 4.4,
   "longest_shortest_chain": 11,
   "longest_chain": [
-   "leah.is",
-   "foosel.net",
-   "sethmlarson.dev",
-   "rknight.me",
-   "nicksimson.com",
-   "coryd.dev",
-   "hamatti.org",
-   "joelchrono.xyz",
-   "ohheybrian.com",
-   "cogdogblog.com",
-   "downes.ca",
-   "paulwalk.net"
+   "blog.edwardloveall.com",
+   "darthmall.net",
+   "benmyers.dev",
+   "shkspr.mobi/blog",
+   "neilzone.co.uk",
+   "shellsharks.com",
+   "evanhahn.com",
+   "robida.net",
+   "evilgeniuschronicles.org",
+   "jpreardon.com",
+   "denisdefreyne.com",
+   "janogonzalez.com"
   ],
   "mutual_pairs": 185,
   "reciprocity": 0.574,
@@ -335,7 +336,7 @@
   ],
   "median_reach_within_5_hops": 67,
   "max_reach_within_5_hops": [
-   "firesphere.dev",
+   "burgeonlab.com",
    131
   ],
   "share_reaching_half_within_5": 0.0
@@ -352,10 +353,10 @@
    "starforge.co.uk"
   ],
   [
-   "astrabun.com",
-   "deckardholiday.com",
-   "erikmcclure.com",
-   "tuskito.neocities.org"
+   "areweaiyet.taffer.ca",
+   "arewequantumyet.taffer.ca",
+   "skelly.taffer.ca",
+   "taffer.ca"
   ],
   [
    "enough.computer",
@@ -364,16 +365,10 @@
    "xn--b1aif.camera"
   ],
   [
-   "areweaiyet.taffer.ca",
-   "arewequantumyet.taffer.ca",
-   "skelly.taffer.ca",
-   "taffer.ca"
-  ],
-  [
-   "paddyroddy.github.io",
-   "paddyroddy.github.io/blog",
-   "paddyroddy.github.io/posters",
-   "paddyroddy.github.io/talks"
+   "astrabun.com",
+   "deckardholiday.com",
+   "erikmcclure.com",
+   "tuskito.neocities.org"
   ],
   [
    "kamloopstaichi.org",
@@ -382,14 +377,20 @@
    "thriftmac.com"
   ],
   [
-   "blackblog.cz",
-   "rdck.dev",
-   "slama.dev"
+   "paddyroddy.github.io",
+   "paddyroddy.github.io/blog",
+   "paddyroddy.github.io/posters",
+   "paddyroddy.github.io/talks"
   ],
   [
    "dominikschwind.com",
    "lostfocus.de",
    "marcgoertz.de"
+  ],
+  [
+   "blackblog.cz",
+   "rdck.dev",
+   "slama.dev"
   ],
   [
    "ffoodd.fr",
@@ -441,6 +442,16 @@
  "same_day_rings": [
   {
    "sites": [
+    "kamloopstaichi.org",
+    "newsonaut.com",
+    "theanimalreporter.com",
+    "thriftmac.com"
+   ],
+   "date": "2026-03-30",
+   "outside_vouchers": []
+  },
+  {
+   "sites": [
     "onepict.com",
     "sam.pikesley.org",
     "tante.cc"
@@ -469,18 +480,57 @@
     "skye.fyi",
     "tzovar.as"
    ]
-  },
-  {
-   "sites": [
-    "kamloopstaichi.org",
-    "newsonaut.com",
-    "theanimalreporter.com",
-    "thriftmac.com"
-   ],
-   "date": "2026-03-30",
-   "outside_vouchers": []
   }
  ],
+ "reciprocation_lag_days": {
+  "pairs_dated": 185,
+  "same_day": 80,
+  "within_week": 135,
+  "median": 1,
+  "p90": 119
+ },
+ "cctld_homophily": {
+  "uk": {
+   "out": 40,
+   "same": 8,
+   "share_of_targets_with_cc": 0.051
+  },
+  "eu": {
+   "out": 16,
+   "same": 0,
+   "share_of_targets_with_cc": 0.017
+  },
+  "ca": {
+   "out": 15,
+   "same": 12,
+   "share_of_targets_with_cc": 0.021
+  },
+  "de": {
+   "out": 10,
+   "same": 2,
+   "share_of_targets_with_cc": 0.038
+  },
+  "pl": {
+   "out": 9,
+   "same": 2,
+   "share_of_targets_with_cc": 0.007
+  },
+  "nl": {
+   "out": 9,
+   "same": 2,
+   "share_of_targets_with_cc": 0.01
+  },
+  "fr": {
+   "out": 9,
+   "same": 3,
+   "share_of_targets_with_cc": 0.024
+  },
+  "as": {
+   "out": 7,
+   "same": 0,
+   "share_of_targets_with_cc": 0.003
+  }
+ },
  "pagerank_top": [
   {
    "site": "shkspr.mobi/blog",
@@ -589,16 +639,16 @@
   "2025-03": 1,
   "2025-11": 1,
   "2026-01": 2,
-  "2026-03": 153,
-  "2026-04": 33,
-  "2026-05": 24,
+  "2026-03": 154,
+  "2026-04": 34,
+  "2026-05": 26,
   "2026-06": 5,
-  "2026-07": 14,
+  "2026-07": 15,
   "2026-08": 13,
   "2026-09": 25,
-  "2026-10": 3
+  "2026-10": 2
  },
- "adoption_undated": 18,
+ "adoption_undated": 14,
  "vouches_by_month": {
   "2025-03": 1,
   "2025-11": 5,
@@ -636,7 +686,7 @@
   "files_with_vouches_on_multiple_dates": 104
  },
  "history": {
-  "files_with_archive": 27,
+  "files_with_archive": 86,
   "files_with_git_history": 80,
   "git_files_changed_after_first_commit": 37,
   "git_commits_median": 2,
@@ -646,12 +696,32 @@
    "91\u2013180d": 16,
    ">180d": 40
   },
-  "vouches_removed": 19,
+  "vouches_removed": 22,
   "removed_by_kind": {
-   "withdrawn": 8,
-   "url changed": 3,
+   "withdrawn": 9,
+   "target offline": 1,
+   "url changed": 4,
    "own site": 2,
    "same-day edit": 6
+  },
+  "by_source": {
+   "wayback": {
+    "added": 204,
+    "removed": {
+     "withdrawn": 8,
+     "target offline": 1,
+     "url changed": 2
+    }
+   },
+   "git": {
+    "added": 215,
+    "removed": {
+     "withdrawn": 1,
+     "url changed": 2,
+     "own site": 2,
+     "same-day edit": 6
+    }
+   }
   },
   "withdrawn": [
    {
@@ -660,6 +730,16 @@
     "between": [
      "2026-06-10",
      "2026-08-14"
+    ],
+    "source": "wayback",
+    "kind": "withdrawn"
+   },
+   {
+    "site": "edwardloveall.com",
+    "removed": "ericwbailey.website",
+    "between": [
+     "2026-04-06",
+     "2026-06-26"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -745,6 +825,36 @@
     ],
     "source": "wayback",
     "kind": "withdrawn"
+   },
+   {
+    "site": "edwardloveall.com",
+    "removed": "ericwbailey.design",
+    "between": [
+     "2026-04-06",
+     "2026-06-26"
+    ],
+    "source": "wayback",
+    "kind": "target offline"
+   },
+   {
+    "site": "edwardloveall.com",
+    "removed": "ericwbailey.website",
+    "between": [
+     "2026-04-06",
+     "2026-06-26"
+    ],
+    "source": "wayback",
+    "kind": "withdrawn"
+   },
+   {
+    "site": "luiscarlospando.com",
+    "removed": "text.eapl.mx/main-es",
+    "between": [
+     "2026-03-17",
+     "2026-10-05"
+    ],
+    "source": "wayback",
+    "kind": "url changed"
    },
    {
     "site": "coryd.dev",
@@ -927,7 +1037,7 @@
     "kind": "same-day edit"
    }
   ],
-  "vouches_added_in_later_versions": 275,
+  "vouches_added_in_later_versions": 419,
   "archived_files_now_missing": []
  },
  "bare_target_status": {
@@ -953,18 +1063,18 @@
    "1": 4,
    "0.1.2": 2,
    "0.1": 2,
-   "0.0.1": 1,
+   "0.1.0": 1,
+   "1.0.0": 1,
    "0.1.6": 1,
    "1.1.0": 1,
-   "0.1.4": 1,
-   "1.0.0": 1,
-   "0.1.0": 1
+   "0.0.1": 1,
+   "0.1.4": 1
   },
   "lenient_parse": [
-   "cygnoir.net",
    "tuskito.neocities.org",
    "albert.rierol.net",
    "lazybea.rs",
+   "cygnoir.net",
    "bobbyhiltz.com"
   ],
   "cors_star": 115,
@@ -981,14 +1091,14 @@
   "self_vouch": 20,
   "extra_top_level_keys": {
    "$schema": 6,
-   "_comment": 1,
    "updated_at": 1,
    "$id": 1,
    "title": 1,
    "description": 1,
    "type": 1,
    "required": 1,
-   "properties": 1
+   "properties": 1,
+   "_comment": 1
   },
   "vouch_extra_keys": {},
   "undated_vouches": 33
@@ -999,28 +1109,28 @@
   "org": 27,
   "dev": 19,
   "uk": 15,
-  "io": 11,
-  "de": 11,
   "me": 11,
+  "de": 11,
+  "io": 11,
   "fr": 7,
   "ca": 6,
   "eu": 5,
   "space": 4,
-  "nl": 3,
-  "blog": 3,
   "xyz": 3,
   "info": 3,
   "page": 3,
-  "site": 2,
-  "se": 2,
-  "cc": 2
+  "nl": 3,
+  "blog": 3,
+  "tech": 2,
+  "camera": 2,
+  "site": 2
  },
  "platforms": {
   "own domain": 276,
   "github.io": 9,
   "neocities.org": 5,
-  "pages.dev": 1,
-  "codeberg.page": 1
+  "codeberg.page": 1,
+  "pages.dev": 1
  },
  "sample": {
   "sample-webring": {
@@ -1241,6 +1351,29 @@
   "thega.me.uk",
   "yadin.com"
  ],
+ "churn": {
+  "hosts_checked": 341,
+  "robots_hosts_checked": 17,
+  "had_file": {
+   "acdw.net": {
+    "now": "blocks crawlers (robots.txt)",
+    "first_seen": "20260330"
+   },
+   "canneddragons.net": {
+    "now": "still links a file that is broken",
+    "first_seen": "20260503"
+   },
+   "codeberg.org": {
+    "now": "file gone",
+    "first_seen": "20260308"
+   }
+  },
+  "by_outcome": {
+   "blocks crawlers (robots.txt)": 1,
+   "still links a file that is broken": 1,
+   "file gone": 1
+  }
+ },
  "provenance": {
   "vouch": 134,
   "seeds-2026-10-05-csv.txt": 98,

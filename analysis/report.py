@@ -27,8 +27,21 @@ def layout(g):
     pos = {}
     comps = sorted(nx.connected_components(H), key=len, reverse=True)
     main = H.subgraph(comps[0])
-    p = nx.forceatlas2_layout(main, max_iter=1000, scaling_ratio=12.0, gravity=0.5, linlog=False, distributed_action=True, seed=7) \
+    p = nx.forceatlas2_layout(main, max_iter=1000, scaling_ratio=4.0, gravity=1.0, distributed_action=True, seed=7) \
         if hasattr(nx, "forceatlas2_layout") else nx.spring_layout(main, k=1.6 / math.sqrt(len(main)), iterations=300, seed=7)
+    assert all(math.isfinite(c) for v in p.values() for c in v), "layout produced non-finite positions"
+    # Pull long tendrils in: beyond the 95th-percentile radius, distance grows logarithmically,
+    # so one far-off cluster doesn't shrink the core to a corner of the canvas.
+    cx = sorted(float(v[0]) for v in p.values())[len(p) // 2]
+    cy = sorted(float(v[1]) for v in p.values())[len(p) // 2]
+    radii = sorted(math.hypot(float(v[0]) - cx, float(v[1]) - cy) for v in p.values())
+    r95 = radii[int(len(radii) * 0.95)] or 1.0
+    for k, (x, y) in list(p.items()):
+        dx, dy = float(x) - cx, float(y) - cy
+        r = math.hypot(dx, dy)
+        if r > r95:
+            f = (r95 + r95 * 0.25 * math.log1p((r - r95) / r95)) / r
+            p[k] = (cx + dx * f, cy + dy * f)
     xs = [v[0] for v in p.values()]
     ys = [v[1] for v in p.values()]
     span = float(max(max(xs) - min(xs), max(ys) - min(ys))) or 1.0

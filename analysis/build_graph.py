@@ -59,7 +59,7 @@ def main(db_path=ROOT / "data/crawl.sqlite", out=ROOT / "data/graph.json"):
     for k, hjs in by_key.items():
         best = max(hjs, key=lambda h: (files[h]["n_vouches"] or 0, -len(h)))
         canonical[k] = best
-    # Same content at different declared keys? (e.g. jneidel.com/.de both declaring themselves)
+    # Same content under different declared keys (one person mirroring a file across two domains)
     by_sha = defaultdict(list)
     for k, hj in canonical.items():
         by_sha[files[hj]["sha256"]].append(k)

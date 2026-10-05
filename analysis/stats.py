@@ -85,14 +85,16 @@ def main():
     # Longest shortest path (the longest chain of trust you'd actually have to follow)
     longest = (0, None, None)
     reach5 = {}
-    for s in sites:
+    for s in sorted(sites):  # sorted: several chains tie, keep the reported one stable
         lengths = nx.single_source_shortest_path_length(F, s)
-        far = max(lengths.items(), key=lambda kv: kv[1])
+        far = max(sorted(lengths.items()), key=lambda kv: kv[1])
         if far[1] > longest[0]:
             longest = (far[1], s, far[0])
         reach5[s] = sum(1 for d in lengths.values() if 0 < d <= 5)
     chain = nx.shortest_path(F, longest[1], longest[2]) if longest[1] else []
+    n_longest = sum(1 for s in sites for d in nx.single_source_shortest_path_length(F, s).values() if d == longest[0])
     S["trust"] = {
+        "n_pairs_at_longest_distance": n_longest,
         "largest_scc": len(sccs[0]),
         "scc_sizes_top5": [len(c) for c in sccs[:5]],
         "n_singleton_scc": sum(1 for c in sccs if len(c) == 1),
@@ -128,6 +130,31 @@ def main():
             if len(dates) == 1:
                 S["same_day_rings"].append({"sites": sorted(c), "date": dates.pop(),
                                             "outside_vouchers": sorted(inbound)})
+    # How long until a vouch is returned? (both directions dated)
+    lags = []
+    for u, v in mutual.edges:
+        a, b = parse_date(F.edges[u, v]["vouched_at"]), parse_date(F.edges[v, u]["vouched_at"])
+        if a and b:
+            lags.append(abs((a - b).days))
+    lags.sort()
+    S["reciprocation_lag_days"] = {
+        "pairs_dated": len(lags),
+        "same_day": sum(1 for x in lags if x == 0),
+        "within_week": sum(1 for x in lags if x <= 7),
+        "median": lags[len(lags) // 2] if lags else None,
+        "p90": lags[int(len(lags) * 0.9)] if lags else None,
+    }
+    # Do people vouch within their own country? (ccTLD -> same ccTLD, among file-holders)
+    def cc(k):
+        t = k.split("/")[0].rsplit(".", 1)[-1]
+        return t if len(t) == 2 and t not in ("io", "me", "co", "tv", "fm", "ai", "is", "cc", "gg", "sh", "so", "to", "ws", "xyz") else None
+    cc_edges = [(cc(u), cc(v)) for u, v in F.edges if cc(u)]
+    by_cc = Counter(a for a, _ in cc_edges)
+    S["cctld_homophily"] = {
+        a: {"out": n, "same": sum(1 for x, y in cc_edges if x == a and y == a),
+            "share_of_targets_with_cc": round(sum(1 for k in sites if cc(k) == a) / len(sites), 3)}
+        for a, n in by_cc.most_common(8)
+    }
     pr = nx.pagerank(F)
     S["pagerank_top"] = [{"site": k, "pr": round(v, 4)} for k, v in sorted(pr.items(), key=lambda kv: -kv[1])[:15]]
     bc = nx.betweenness_centrality(F)
@@ -215,9 +242,13 @@ def main():
             owner = norm(declared) or f"github.com/{repo}"
             seqs.setdefault(("git", f"{repo}/{path}"), []).append((when[:10], owner, set(json.loads(targets))))
 
+    live_status = dict(db.execute("select site, status from probes"))
+
     def classify(owner, gone, t0, t1, added):
         if regdom(gone) == regdom(owner):
             return "own site"
+        if (live_status.get(gone) or "").startswith("err"):
+            return "target offline"
         name = regdom(gone).split(".")[0]
         if any(regdom(a) == regdom(gone) or regdom(a).split(".")[0] == name for a in added):
             return "url changed"
@@ -243,6 +274,10 @@ def main():
         "git_last_commit_age": {b: sum(1 for t in last_commit if bucket(date.fromisoformat(t)) == b) for b in order},
         "vouches_removed": len(removed),
         "removed_by_kind": dict(Counter(r["kind"] for r in removed)),
+        "by_source": {src: {"added": sum(len(b - a) for v in [vv for (s2, _), vv in seqs.items() if s2 == src]
+                                         for (_, _, a), (_, _, b) in zip(v, v[1:])),
+                            "removed": dict(Counter(r["kind"] for r in removed if r["source"] == src))}
+                      for src in ("wayback", "git")},
         "withdrawn": [r for r in removed if r["kind"] == "withdrawn"],
         "removals": removed,
         "vouches_added_in_later_versions": added_later,
@@ -318,6 +353,32 @@ def main():
     # Found by blind probing, and no file in the graph vouches for them
     S["sample_only_sites"] = sorted(k for k in sites if (nodes[k].get("source") or "").startswith("sample")
                                     and G.in_degree(k) == 0)
+
+    # ---- 9b. Churn: vouched-for sites with no live file that the Wayback Machine saw with one
+    churn_path = ROOT / "data/churn_probe.json"
+    if churn_path.exists():
+        cp = json.loads(churn_path.read_text())
+        file_re = re.compile(r"/humans?\.json$")
+        checked = {h for h, v in cp.items() if v is not None}
+        had = {h: [r for r in v if file_re.search(r[0].split("?")[0])] for h, v in cp.items() if v}
+        forges = {"codeberg.org", "github.com", "gitlab.com", "raw.githubusercontent.com", "git.sr.ht"}
+        had = {h: v for h, v in had.items() if v and h not in forges}
+        def now(h):
+            sts = [st for k, st in status.items() if k.split("/")[0] == h and st]
+            if any(st == "robots" for st in sts):
+                return "blocks crawlers (robots.txt)"
+            if any(st.startswith("declared-but") for st in sts):
+                return "still links a file that is broken"
+            if sts and all(st.startswith("err") for st in sts):
+                return "site offline"
+            return "file gone"
+        robots_hosts = {k.split("/")[0] for k in bare if status.get(k) == "robots"}
+        S["churn"] = {
+            "hosts_checked": len(checked),
+            "robots_hosts_checked": len(checked & robots_hosts),
+            "had_file": {h: {"now": now(h), "first_seen": min(r[1] for r in v)[:8]} for h, v in sorted(had.items())},
+            "by_outcome": dict(Counter(now(h) for h in had)),
+        }
 
     # ---- 10. Who found what (discovery provenance) --------------------------------
     S["provenance"] = dict(Counter(nodes[k].get("source") or "alias-only" for k in sites).most_common())
