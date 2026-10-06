@@ -283,7 +283,8 @@ def main():
         "vouches_added_in_later_versions": added_later,
     }
     # Files that the archive saw but are now gone
-    gone_files = [hj for hj, *_ in wb_rows if hj not in hj_to_site]
+    live_files = {r[0] for r in db.execute("select hj_url from files")}
+    gone_files = [hj for hj, *_ in wb_rows if hj not in live_files]
     S["history"]["archived_files_now_missing"] = gone_files
 
     # ---- 6. Dead / broken links in the graph ----------------------------------------
@@ -363,7 +364,20 @@ def main():
         had = {h: [r for r in v if file_re.search(r[0].split("?")[0])] for h, v in cp.items() if v}
         forges = {"codeberg.org", "github.com", "gitlab.com", "raw.githubusercontent.com", "git.sr.ht"}
         had = {h: v for h, v in had.items() if v and h not in forges}
+        rc_path = ROOT / "data/churn_recheck.json"
+        recheck = json.loads(rc_path.read_text()) if rc_path.exists() else {}
+
         def now(h):
+            urls = [r[0] for r in had[h]]
+            sts = [st for k, st in status.items() if k.split("/")[0] == h and st]
+            if any(st == "ok" for st in sts):
+                return "has a file under a sub-path (not churn)"
+            if any(st == "robots" for st in sts):  # checked first: we don't use fetches robots.txt forbids
+                return "blocks crawlers (robots.txt)"
+            if any(recheck.get(u, {}).get("parses") for u in urls):
+                return "file still served (not discoverable from the homepage)"
+            if any(recheck.get(u, {}).get("status") in (401, 403) for u in urls):
+                return "blocked to us (403), unknown"
             sts = [st for k, st in status.items() if k.split("/")[0] == h and st]
             if any(st == "robots" for st in sts):
                 return "blocks crawlers (robots.txt)"

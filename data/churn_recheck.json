@@ -1,0 +1,74 @@
+{
+ "https://www.acdw.net/.well-known/human.json": {
+  "status": null,
+  "robots": true
+ },
+ "https://www.canneddragons.net/assets/human.json": {
+  "status": 404,
+  "parses": false
+ },
+ "https://codeberg.org/g-rppl/movetrack/src/commit/01f7455a13c0c7682ac33305b80564fe08ce74b1/pkgdown/assets/human.json": {
+  "status": 200,
+  "parses": false
+ },
+ "https://codeberg.org/robida/human.json": {
+  "status": 200,
+  "parses": false
+ },
+ "https://larlet.fr/human.json": {
+  "status": null,
+  "robots": true
+ },
+ "https://www.geedea.pro/human.json": {
+  "status": null,
+  "robots": true
+ },
+ "https://post-tenebras-lire.net/human.json": {
+  "status": null,
+  "robots": true
+ },
+ "https://schafe-sind-bessere-rasenmaeher.de/human.json": {
+  "status": null,
+  "robots": true
+ },
+ "https://russellphillips.uk/nonwp/human.json": {
+  "status": 404,
+  "parses": false
+ },
+ "https://vhbelvadi.com/human.json": {
+  "status": 522,
+  "parses": false
+ },
+ "https://not-a-number.io/human.json": {
+  "status": 404,
+  "parses": false
+ },
+ "https://possiblyaxolotl.com/human.json": {
+  "status": 200,
+  "parses": true
+ },
+ "http://www.gepasi.org/human.json": {
+  "status": 200,
+  "parses": true
+ },
+ "https://hisvirusness.com/assets/human.json": {
+  "status": null,
+  "error": "ConnectError"
+ },
+ "https://jmtd.net/about/human.json": {
+  "status": 200,
+  "parses": true
+ },
+ "https://phillipsuk.org/robin/human/human.json": {
+  "status": 200,
+  "parses": true
+ },
+ "https://raniz.blog/human.json": {
+  "status": 404,
+  "parses": false
+ },
+ "https://xlthlx.com/human.json": {
+  "status": 200,
+  "parses": true
+ }
+}

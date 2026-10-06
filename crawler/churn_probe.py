@@ -10,13 +10,16 @@ Writes data/churn_probe.json (not sqlite, so it can run beside the history job).
 
 import asyncio
 import json
+import re
 import sqlite3
 import sys
+import urllib.parse
+import urllib.robotparser
 from pathlib import Path
 
 import httpx
 
-from crawl import UA
+from crawl import UA, lenient_json
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -61,6 +64,36 @@ async def main():
                 path.write_text(json.dumps(out, indent=0))
                 print(f"  {i}/{len(todo)}, hits so far {sum(1 for v in out.values() if v)}", file=sys.stderr)
     path.write_text(json.dumps(out, indent=0))
+
+    # Re-fetch every archived file URL as it is today. A 200 + parseable JSON means the
+    # file is still there and only our homepage-based discovery missed it.
+    file_re = re.compile(r"/humans?\.json$")
+    recheck, robots = {}, {}
+    async with httpx.AsyncClient(timeout=30, follow_redirects=True, headers={"User-Agent": UA}) as client:
+        for host, rows in out.items():
+            for orig, _ in rows or []:
+                if not file_re.search(orig.split("?")[0]) or orig in recheck:
+                    continue
+                try:
+                    origin = "{0.scheme}://{0.netloc}".format(urllib.parse.urlsplit(orig))
+                    if origin not in robots:
+                        rp = urllib.robotparser.RobotFileParser()
+                        rr = await client.get(origin + "/robots.txt")
+                        if rr.status_code == 200:
+                            rp.parse(rr.text.splitlines())
+                        else:
+                            rp.allow_all = rr.status_code >= 400 and rr.status_code not in (401, 403)
+                            rp.disallow_all = not rp.allow_all
+                        robots[origin] = rp
+                    if not robots[origin].can_fetch(UA, orig):
+                        recheck[orig] = {"status": None, "robots": True}
+                        continue
+                    r = await client.get(orig)
+                    data, mode = lenient_json(r.content) if r.status_code == 200 else (None, None)
+                    recheck[orig] = {"status": r.status_code, "parses": isinstance(data, dict)}
+                except Exception as e:
+                    recheck[orig] = {"status": None, "error": type(e).__name__}
+    (ROOT / "data/churn_recheck.json").write_text(json.dumps(recheck, indent=1))
 
 
 if __name__ == "__main__":
