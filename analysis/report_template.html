@@ -67,6 +67,7 @@ svg .val { fill: var(--text-secondary); }
 <div class="viz-root">
 <main>
   <h1>The human.json vouch graph</h1>
+  <p class="sub"><a href="https://codeberg.org/robida/human.json">human.json</a> is a small protocol, launched in March 2026, that lets a personal website state that it's written by a human and vouch for other sites it believes are human-made too. A site adds a <code>&lt;link rel="human-json"&gt;</code> tag pointing to a JSON file that lists the URLs it vouches for, each with a date. Verifiers, such as the browser extensions, follow those vouches outward from sites you already trust, building a web of trust one hop at a time. This page maps that web: every file we can find, who vouches for whom, and how the network changes week to week.</p>
   <p class="sub" id="lede"></p>
   <div class="tiles" id="tiles"></div>
 
