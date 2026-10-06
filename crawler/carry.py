@@ -64,7 +64,8 @@ def main():
             data, _ = lenient_json(body)
             vouches = (data or {}).get("vouches") or []
             store_vouches(db, hj, vouches if isinstance(vouches, list) else [])
-        db.execute("update probes set status='ok-carried', hj_url=? where site=?", (hj, site))
+        # keep the error that triggered the carry, so persistent failures are visible
+        db.execute("update probes set status='ok-carried', hj_url=?, via=? where site=?", (hj, "carried:" + status, site))
         carried += 1
     db.commit()
     print(f"carried {carried} files forward from {snap.name}")
