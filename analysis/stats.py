@@ -68,6 +68,8 @@ def main():
         "edges": G.number_of_edges(),
         "edges_between_files": F.number_of_edges(),
         "files_with_zero_vouches": sum(1 for k in sites if G.out_degree(k) == 0),
+        # files re-used from the previous crawl because this crawl hit a transient error
+        "carried_forward": db.execute("select count(*) from probes where status='ok-carried'").fetchone()[0],
         "median_out_degree": sorted(d for d, _ in outdeg)[len(outdeg) // 2],
         "mean_out_degree": round(sum(d for d, _ in outdeg) / len(outdeg), 1),
     }
@@ -342,8 +344,8 @@ def main():
         for k in keys:
             by_host[k.split("/")[0]].append(status.get(k) or "")
         reachable = [h for h, sts in by_host.items()
-                     if any(x in ("ok", "no-human-json") or x.startswith("declared") for x in sts)]
-        hits = [h for h, sts in by_host.items() if "ok" in sts]
+                     if any(x.startswith("ok") or x == "no-human-json" or x.startswith("declared") for x in sts)]
+        hits = [h for h, sts in by_host.items() if any(x.startswith("ok") for x in sts)]
         S["sample"][name] = {"listed_hosts": len(by_host), "reachable": len(reachable),
                              "with_human_json": len(hits),
                              "rate": round(len(hits) / len(reachable), 4) if reachable else None,
@@ -372,7 +374,7 @@ def main():
         def now(h):
             urls = [r[0] for r in had[h]]
             sts = [st for k, st in status.items() if k.split("/")[0] == h and st]
-            if any(st == "ok" for st in sts):
+            if any(st.startswith("ok") for st in sts):
                 return "has a file under a sub-path (not churn)"
             if any(st == "robots" for st in sts):  # checked first: we don't use fetches robots.txt forbids
                 return "blocks crawlers (robots.txt)"

@@ -171,14 +171,20 @@ These are two different questions with very different answers.
 **Still exist (file still served in October 2027): very likely yes, ~90%.**
 - Observed loss so far is small. Of the 1,282 vouched-for sites without a file today, the
   Wayback Machine saw a human.json on 15. Re-checking those:
-  - **4 files are gone** (404, link tag removed)
+  - **3 files are gone** (404, link tag removed)
   - 1 site still links a file that now 404s
-  - 1 site is offline
+  - 2 sites were only temporarily down (see correction below)
   - 4 still serve the file but don't link it from the homepage
   - 5 are robots-blocked
-  Add 5 sites in the live crawl that declare a broken file, and about **10 of roughly 310
-  known deployments (~3%) have broken or disappeared in seven months.** Annualised, that's
-  around 5%.
+  Add the other 4 sites in the live crawl that declare a broken file, and about **8 of
+  roughly 310 known deployments (~2.5%) have broken or disappeared in seven months.**
+  Annualised, that's around 4–5%.
+
+  *Correction (6 October):* the first version of this report counted vhbelvadi.com as
+  "file gone" and hisvirusness.com as "offline". Both were serving their files again in the
+  next day's crawl, so they were outages during the first crawl, not removals. The weekly
+  pipeline now carries a file forward through transient errors, for up to four weeks, so
+  outages like these no longer register as churn.
 - Blog mortality looks similar. Of the 1,310 sites people vouched for in the last seven
   months, 33 (2.5%) are already unreachable.
 - Failing would take more than half of these files being deleted within a year. Nothing in

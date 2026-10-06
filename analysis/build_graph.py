@@ -34,7 +34,7 @@ def main(db_path=ROOT / "data/crawl.sqlite", out=ROOT / "data/graph.json"):
 
     # Owner key per file: declared url if it normalises, otherwise the probed site
     probed_to_file = defaultdict(set)
-    for r in db.execute("select site, hj_url from probes where status='ok'"):
+    for r in db.execute("select site, hj_url from probes where status in ('ok', 'ok-carried')"):
         probed_to_file[r["hj_url"]].add(r["site"])
 
     owner = {}

@@ -101,7 +101,7 @@ def save():
     # Known sites only grow: anything that ever had a file or got a vouch is re-probed every run
     known_path = STATE / "known-sites.txt"
     known = set(known_path.read_text().split()) if known_path.exists() else set()
-    known |= {r[0] for r in db.execute("select site from probes where status = 'ok'")}
+    known |= {r[0] for r in db.execute("select site from probes where status like 'ok%'")}
     known |= {r[0] for r in db.execute("select distinct target from vouches where target is not null")}
     known_path.write_text("\n".join(sorted(known)) + "\n")
     print(f"state saved: {len(wb)} wayback rows, {len(known)} known sites")

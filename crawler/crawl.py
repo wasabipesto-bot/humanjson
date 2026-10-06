@@ -254,19 +254,28 @@ class Crawler:
         lock = self.robots_locks.setdefault(origin, asyncio.Lock())
         async with lock:
             if origin not in self.robots:
+                # RFC 9309: 2xx -> parse; 4xx ("unavailable", incl. 401/403) -> no restrictions;
+                # 5xx or no response ("unreachable") -> assume complete disallow.
                 rp = urllib.robotparser.RobotFileParser()
+                rp.unreachable = None
                 try:
                     r, body = await self.get(client, origin + "/robots.txt")
-                    if r.status_code in (401, 403):
-                        rp.disallow_all = True
+                    if r.status_code >= 500:
+                        rp.disallow_all, rp.unreachable = True, f"robots-http{r.status_code}"
                     elif r.status_code >= 400:
                         rp.allow_all = True
                     else:
                         rp.parse(body.decode("utf-8", "replace").splitlines())
-                except Exception:
-                    rp.allow_all = True
+                except Exception as e:
+                    rp.disallow_all, rp.unreachable = True, "robots-" + type(e).__name__
                 self.robots[origin] = rp
         return self.robots[origin].can_fetch(UA, url)
+
+    def blocked_status(self, url: str) -> str:
+        """Why allowed() said no: a real robots.txt disallow, or robots.txt was unreachable."""
+        p = urllib.parse.urlsplit(url)
+        why = getattr(self.robots.get(f"{p.scheme}://{p.netloc}"), "unreachable", None)
+        return f"err:{why}" if why else "robots"
 
     async def fetch_file(self, client, hj_url: str):
         if not await self.allowed(client, hj_url):
@@ -290,15 +299,23 @@ class Crawler:
         url = site_url(key)
         try:
             if not await self.allowed(client, url):
-                res["status"] = "robots"
-                return res, None
+                res["status"] = self.blocked_status(url)
+                if not res["status"].startswith("err:robots-") or not url.startswith("https://"):
+                    return res, None
+                # robots.txt unreachable over https: fall through to the plain-http retry below
+                url = "http://" + url[len("https://"):]
+                if not await self.allowed(client, url):
+                    res["status"] = self.blocked_status(url)
+                    return res, None
             try:
                 r, body = await self.get(client, url)
             except httpx.ConnectError:
                 # Plenty of personal sites have broken TLS but still serve plain HTTP
+                if not url.startswith("https://"):
+                    raise
                 url = "http://" + url[len("https://"):]
                 if not await self.allowed(client, url):
-                    res["status"] = "robots"
+                    res["status"] = self.blocked_status(url)
                     return res, None
                 r, body = await self.get(client, url)
             res["final_url"] = str(r.url)

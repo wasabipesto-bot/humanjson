@@ -1,7 +1,7 @@
 seeds := "seed/seeds-2026-10-05-csv.txt seed/research-seeds.txt seed/codeberg-seeds.txt seed/github-seeds.txt seed/removed-targets.txt seed/sample-webring.txt seed/sample-blogroll.txt seed/sample-indieblog.txt data/state/known-sites.txt"
 
 # Full weekly pipeline (what CI runs): fresh crawl on top of committed state, then site + snapshot
-weekly: load seeds crawl history analyze snapshot save
+weekly: load seeds crawl carry history analyze snapshot save
 
 # Rebuild the site from committed state + newest snapshot, no crawling (for code/design changes)
 rebuild:
@@ -19,6 +19,10 @@ seeds:
 # Crawl every seed and follow vouches until nothing new turns up
 crawl:
     uv run crawler/crawl.py {{seeds}} --db data/crawl.sqlite
+
+# Re-use last week's file for sites that only failed transiently this time
+carry:
+    cd crawler && uv run carry.py
 
 # Version history, budgeted: Wayback captures, GitHub commits, Wayback lookups for sites without a file
 history:
