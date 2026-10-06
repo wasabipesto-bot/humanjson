@@ -4,6 +4,7 @@
 11tybundle.dev
 13willow.com
 1902.studio
+4cm3.dev
 56k.es
 727bikepacking.fr
 82mhz.net
@@ -39,8 +40,10 @@ ajroach42.com
 akrabat.com
 akselmo.dev
 alabut.com
+alastairjohnston.com
 albdoblog.com
 albert.rierol.net
+albertopiccioni.org
 aldur.blog
 alecsargent.codeberg.page
 aleksandrhovhannisyan.com
@@ -54,7 +57,9 @@ alexsirac.com
 alexwlchan.net
 alexwolfe.ca
 alien.hospital
+alis.me
 alistairshepherd.uk
+alisx.dreamwidth.org
 amerpie.lol
 amethystraccoon.co.uk
 amf.didiermary.fr
@@ -108,17 +113,20 @@ astrabun.com
 astriiid.fr
 aubreysambor.com
 ausiastsel.substack.com
+austinkleon.com
 authorhelp.uk
 autiomaa.galleria.fi
 autiomaa.org
 automatetheboringstuff.com
 avascik.neocities.org
+avq.neocities.org
 axel.mx
 axxuy.com
 axxuy.com/blog
 b-list.org
 baccyflap.com
 backyardtinker.bearblog.dev
+badfic.net
 baerlkr.github.io
 baillehachepascal.dev
 bajram.com
@@ -264,6 +272,7 @@ brennan.day
 brettcodes.com
 brettsheffield.com
 brincadeiramusic.com
+brindly.art
 britthub.co.uk
 brooke.vibber.net
 brown-delair.net
@@ -271,6 +280,7 @@ brown-gordon.com
 brucelawson.co.uk
 brunobernardino.com
 brunty.me
+brycewray.com
 btp.dev
 btxx.org
 bubblegum.girlonthemoon.xyz
@@ -310,6 +320,7 @@ chrisadams.me.uk
 chrisburnell.com
 chriscoyier.net
 chrisglass.com
+chrisjones.io
 chriskiehl.com
 chrislowis.co.uk
 chrismcleod.dev
@@ -351,6 +362,7 @@ comp-sys-bio.org
 compcellbio.org
 congdegeo.wordpress.com
 contino.com
+controkarma.blogspot.com
 copasi.github.io
 copasi.org
 coreysnipes.com
@@ -368,8 +380,11 @@ crazyroostereye.de
 crowdagger.fr
 crowdersoup.com
 crummy.com
+cryptid.house/@alis
 crysiecornie.blogspot.com
+crystaldrift.net
 crystalwobsite.gay
+csfg.org.au
 css-irl.info
 csswizardry.com
 cthoyt.com
@@ -435,12 +450,16 @@ developmentseed.org
 devonshiredementiacare.com
 dhippo.net
 didiermary.fr
+diecisei.com
 diefrauschauthin.de
 diegologs.com
+diffydude.neocities.org
+diggon.lol
 digitalflapjack.com
 digitalseams.com
 dino.opij.ac
 discardpile.pika.page
+dldr.xyz
 docs.trueelena.org
 dominikschwind.com
 donaberger.xyz
@@ -473,6 +492,7 @@ dvsn.io
 dwunabridged.blogspot.com
 eamoncaddigan.net
 eamoncaddigan.net/posts
+earlgreyediting.com.au
 earth.li/~noodles/blog
 eash.dev
 eclecticpassions.net
@@ -507,6 +527,7 @@ emontheinternet.me
 empara.fr
 en.kedara.nl/blog
 en.wikipedia.org
+enchantedsleeper.space
 enikofox.com
 enocc.com
 enough.computer
@@ -542,12 +563,14 @@ eviefp.github.io
 evilgeniuschronicles.org
 ewen.corre.bio
 exple.tive.org
+extinctinks.net
 eyu.at
 fab1an.me
 fabiensanglard.net
 factor10.com
 fairieswearboots.org
 familyhistorysite.co.uk
+fandom.ink/@alis
 fbievan.live
 fedi.directory
 fediscience.org/@Guillawme
@@ -603,10 +626,12 @@ futilitycloset.com
 fyr.io
 gabebw.com
 gaelan.me
+garden.mattstein.com/notes
 garrit.xyz
 garymcgraw.com
 gaspartorriero.it
 gaullier.org
+gaullier.org/en/about
 gavart.ist
 gbilder.com
 geedea.pro
@@ -702,6 +727,7 @@ hiyd.uk
 hkamran.com
 hmnpls.neocities.org
 hollie.eilloh.net
+holzer.online
 honzuvkod.dev
 horodecki.net
 horseonvhs.com
@@ -774,6 +800,7 @@ janogonzalez.com
 jar.geedea.pro
 jaredwhite.com
 jarizleifr.xyz
+jased.xyz
 jasonbot.github.io
 jasongullickson.com
 jasonscheirer.com
@@ -798,6 +825,7 @@ jim-nielsen.com
 jimmynilsson.com
 jlgoodwin.com/words-pictures
 jluther.net
+jmjordan.com
 jmtd.net
 jneidel.com
 jneidel.de
@@ -823,6 +851,7 @@ joshmock.com
 joshtumath.uk
 joshwcomeau.com
 journal.bsd.cafe
+journal.james-zhan.com
 journal.kvibber.com
 journeysinfilm.org
 jpreardon.com
@@ -834,6 +863,7 @@ judy.co.uk
 jugmac00.github.io
 julia.densford.net
 julienhirtauteur.com
+justatheory.com
 justcarrie.blog
 justine.smithies.me.uk
 justinmayer.com
@@ -868,6 +898,7 @@ kersti.de
 kevinboone.me
 kevingimbel.de
 kevinpowell.co
+kevinspencer.org/posts
 kevquirk.com
 kfitz.info
 khinsen.net
@@ -875,6 +906,7 @@ khleedril.org/blog
 khrys.eu.org
 kianryan.co.uk
 kiko.io
+kimberlyhirsh.com
 kimcapcreations.fr
 kirgroup.net
 kition.dev
@@ -884,6 +916,7 @@ kniebes.com
 knolleary.net
 konstantintutsch.com
 koolinus.net
+koolinus.net/blog
 korben.info
 krisbug.xyz
 krisztianna.com
@@ -897,6 +930,7 @@ l3on.site
 lambdaland.org
 lamecarlate.net
 lamonaca.dev
+laozhainan.de
 larlet.fr
 lars-christian.com
 larsthebear.me
@@ -922,6 +956,7 @@ lesleylai.info
 letorey.co.uk
 lffc.us
 librarian.net
+libre.fm
 librecast.net
 liedra.net
 lifeofaudrey.com
@@ -938,6 +973,7 @@ look-a.camera
 lookingup.francois-rincon.org
 looktothestars.org
 loreleice.net
+lorenzogerli.net
 lostfocus.de
 lovejoolz.com
 lovergine.com
@@ -956,10 +992,12 @@ lwgrs.bearblog.dev
 lxak.net
 lynnandtonic.com
 lynnandtonicblog.com
+lynx.luxferre.top
 lyonhe.art
 lyra.horse
 lyz-code.github.io/blue-book
 m0yng.uk
+m9z.org
 maartjevandevelden.nl
 macchaffee.com
 macintelligence.org
@@ -1006,6 +1044,7 @@ mastodon.social/@hynek
 mastodon.social/@mrcgrtz
 mat.tl
 mat.uush.cz
+math.columbia.edu/~woit/wordpress
 mathstodon.xyz/@albertcardona
 matizeta.com
 matling.fit
@@ -1022,8 +1061,10 @@ me.zys.im
 medium.com/@QueenRubyJones
 meistermeier.com
 melabit.com
+melanie-richards.com
 melaniekat.com
 mellodillo.neocities.org
+melonking.net
 metamodular.com
 metinseven.nl
 meyerweb.com/eric/thoughts
@@ -1051,6 +1092,7 @@ miqueladavis.com
 miraz.me
 miriamsuzanne.com
 mirw3b.neocities.org
+misterchrisjones.ca
 mitchellhynes.com
 miyaku.media
 mj.ucw.cz
@@ -1066,6 +1108,7 @@ mollymcleod.com
 mollywhite.net
 monotasking.hcommons.org
 montreuillois.com
+montyfew.com
 moonbase.lgbt
 moose.ca
 morrick.me
@@ -1139,9 +1182,11 @@ notfellchen.org
 nothe.purplellamas.net
 notiz.blog
 noumenal.es
+nounbea.st
 now.achintyarao.in
 nuchronic.uk
 nutritionfacts.org
+occamstypewriter.org/scurry
 ocramius.github.io
 octoprint.org
 odonnellweb.com
@@ -1168,6 +1213,7 @@ opus.ing
 oranki.net
 orbitalmartian.polymaths.page
 orbitalmartian.polymaths.page/
+orphaned.monster
 osteophage.neocities.org
 ottorask.com
 owen.blacker.me.uk
@@ -1216,6 +1262,7 @@ piccioni.london
 pictureuk.co.uk
 pierreraufast.com
 pikesley.org
+pimoore.ca
 piper.thunstrom.dev
 pixel-dirt.com
 ploum.net
@@ -1255,6 +1302,7 @@ qweb.co.uk
 rachelbythebay.com
 rachelskirts.com
 rachsmith.com
+rae.wtf
 ragman.net
 ragt.ag
 rahim.li
@@ -1271,6 +1319,7 @@ rasterweb.net/raster
 ratfactor.com
 rauh.net
 raymondcamden.com
+rb.ax
 rdck.dev
 readsteven.com
 realmenweardress.es
@@ -1298,6 +1347,7 @@ ritual.sh
 riverpatrimonio.com/blog
 rknight.md
 rknight.me
+rkoziel.com
 rldane.space
 rmendes.net
 ro3or.com
@@ -1342,6 +1392,7 @@ saphingus.xyz
 sarajoy.dev
 sarasoueidan.com
 satellite.eilloh.net
+satsuma.dreamwidth.org
 sava.rocks
 savannah.dev
 sawyer.nz
@@ -1377,6 +1428,7 @@ shellsharks.com/scrolls
 shinar.starforge.co.uk
 shinmera.com
 shirakumo.org
+shirasade.net
 shkspr.mobi
 shkspr.mobi/blog
 shojiwax.com
@@ -1406,6 +1458,7 @@ slama.dev
 sleeplessdomain.com
 sloppydiscs.com
 slott56.github.io
+smallcypress.neocities.org
 smallsheds.garden
 smathermather.com
 snacktraces.com
@@ -1438,6 +1491,7 @@ statmodeling.stat.columbia.edu
 stealthiswebsite.art
 stefanbohacek.com
 stefanjudis.com
+stefanocaffarri.it
 stephaniewalter.design
 stephvee.ca
 stevehammond.org
@@ -1448,11 +1502,13 @@ stfn.pl
 strflr.neocities.org
 stritzke.me
 strudel.org.uk
+sttl.boo
 sturm.to
 suburbanalities.blogspot.com
 sudo.is
 sugui.siesta.cat
 sumsar.net
+suricrasia.online/sortition
 susanearlam.com
 susanjeanrobertson.com
 susansenator.com
@@ -1480,6 +1536,7 @@ teamonstergames.com
 tech.skylar.tel
 technomancy.us
 techtrenches.dev
+telescoper.blog
 tenderiq.co.uk
 tero.dev
 tetronimedia.net
@@ -1512,6 +1569,8 @@ thesaigoneer.bearblog.dev
 thetangent.space
 thewhitepages.net
 thinkdobecreate.com
+thisdaysportion.com/posts
+thomashodson.com
 thomasrigby.com
 thriftmac.com
 thual.eu
@@ -1524,7 +1583,9 @@ tink.uk
 tinkerbetter.tube
 tinysubversions.com
 tk-web.top
+tl-dr.net
 tldr.nettime.org/@tante
+toadley.space
 tobekko.fi
 tom.eastman.nz
 tombickle.blogspot.com
@@ -1540,6 +1601,7 @@ toruzz.com
 totallytanked.net
 townsquare.cauenapier.com/blog
 tracydurnell.com
+tre.praze.net
 trekkingasia.co.uk
 triapul.cz
 trovster.com
@@ -1592,6 +1654,7 @@ vivax.dev
 vkane.cz
 vkc.sh
 vlad.website
+void-star.net
 voidnull.es
 volcanloupgames.neocities.org
 volochii.dev
@@ -1612,6 +1675,7 @@ webshed.org
 webworm.co
 welchwrite.com/blog
 werd.io
+westenberg.beehiiv.com
 whatever.scalzi.com
 wheresyoured.at
 whitep4nth3r.com
@@ -1643,6 +1707,7 @@ writingslowly.com
 wrywriter.ca
 ww0cj.radio
 www-gem.codeberg.page
+xan.lol
 xandra.cc
 xaselgio.net
 xenodium.com
@@ -1663,6 +1728,7 @@ youtube.com/@VeronicaExplains
 youtube.com/@imautisticnowwhat
 yummyurinal.bearblog.dev
 zacharykai.net
+zacharys.dev
 zachleat.com
 zadzmo.org
 zakr.es
@@ -1670,5 +1736,6 @@ zeldman.com
 zeyus.com
 zeyus.github.io
 zhangjet.com
+zinzy.website
 zola.passthejoe.net
 zvava.org
