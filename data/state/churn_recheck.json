@@ -60,8 +60,8 @@
   "robots": true
  },
  "https://vhbelvadi.com/human.json": {
-  "status": 200,
-  "parses": true
+  "status": null,
+  "error": "ReadTimeout"
  },
  "https://www.acdw.net/.well-known/human.json": {
   "status": null,

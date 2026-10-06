@@ -177,7 +177,7 @@
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://mobile.bluestarcreations.net/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://mterry.name/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://myles.garden/human.json", "kind": "status", "n_captures": 1}
-{"checked_at": 1791256097.829863, "error": "ConnectError", "hj_url": "https://neatnik.net/.well-known/human.json", "kind": "status", "n_captures": null}
+{"checked_at": 1791258651.8663037, "error": "HTTPStatusError", "hj_url": "https://neatnik.net/.well-known/human.json", "kind": "status", "n_captures": null}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://nedbatchelder.com/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://neilzone.co.uk/human/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://newsonaut.com/human.json", "kind": "status", "n_captures": 1}
@@ -256,7 +256,7 @@
 {"checked_at": 1791256001.915424, "error": null, "hj_url": "https://vhbelvadi.com/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://villepreux.net/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791256005.5737274, "error": null, "hj_url": "https://vivax.dev/human.json", "kind": "status", "n_captures": 0}
-{"checked_at": 1791255941.4808226, "error": "HTTPStatusError", "hj_url": "https://vlad.website/human.json", "kind": "status", "n_captures": null}
+{"checked_at": 1791258653.8441749, "error": "HTTPStatusError", "hj_url": "https://vlad.website/human.json", "kind": "status", "n_captures": null}
 {"checked_at": 1791255888.6124685, "error": null, "hj_url": "https://void-star.net/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://volcanloupgames.neocities.org/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://voxelmanip.se/human.json", "kind": "status", "n_captures": 2}
@@ -287,7 +287,7 @@
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.kytta.dev/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.lemonsieurdelaphoto.com/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.leouieda.com/human.json", "kind": "status", "n_captures": 1}
-{"checked_at": 1791255962.041278, "error": "HTTPStatusError", "hj_url": "https://www.neatnik.net/.well-known/human.json", "kind": "status", "n_captures": null}
+{"checked_at": 1791258651.0430849, "error": "HTTPStatusError", "hj_url": "https://www.neatnik.net/.well-known/human.json", "kind": "status", "n_captures": null}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.nicksimson.com/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.onepict.com/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.ottorask.com/human.json", "kind": "status", "n_captures": 0}
