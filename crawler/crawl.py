@@ -29,7 +29,7 @@ import dns.exception
 import dns.resolver
 import httpx
 
-UA = "humanjson-survey/0.2 (personal research crawler of the human.json vouch graph; honours robots.txt)"
+UA = "humanjson-survey/0.3 (+https://github.com/wasabipesto-bot/humanjson; maps the human.json vouch graph; honours robots.txt)"
 MAX_BODY = 1_000_000
 FALLBACK_PATHS = ["/human.json", "/.well-known/human.json", "/humans.json"]
 

@@ -71,7 +71,7 @@ svg .val { fill: var(--text-secondary); }
   <div class="tiles" id="tiles"></div>
 
   <h2>The network</h2>
-  <p class="note">Each dot is a site. Blue sites publish a human.json file; gray sites are vouched for by two or more files but publish none (single-vouch dead ends are omitted here). Dot size follows how many sites vouch for it. Hover for details, click to pin a site and see its vouches. Scroll to zoom, drag to pan.</p>
+  <p class="note">Each dot is a site. Blue sites publish a human.json file; gray sites are vouched for but publish none. Dot size follows how many sites vouch for it. The ring around the edge holds sites that share no vouch with the main network: a file whose targets nobody else vouches for, or a file with no vouches at all. Hover for details, click to pin a site and see its vouches. Scroll to zoom, drag to pan.</p>
   <div class="row">
     <input type="search" id="q" placeholder="Find a site…" list="sites">
     <datalist id="sites"></datalist>
@@ -135,7 +135,7 @@ function el(tag, attrs = {}, text) {
 // ---- lede + tiles ----
 const C = S.counts, T = S.trust;
 const samp = {r: S.sample_combined.reachable_hosts, h: S.sample_combined.with_human_json};
-$("#lede").textContent = `Every human.json file reachable from a known-deployments list, research seeds, GitHub code search and ${fmt(samp.r)} blogs from IndieWeb directories, following vouches until nothing new turned up. Crawled 5 October 2026.`;
+$("#lede").textContent = `Every human.json file reachable from a known-deployments list, research seeds, GitHub code search and ${fmt(samp.r)} blogs from IndieWeb directories, following vouches until nothing new turned up. Last crawled ${new Date(S.crawl_date + "T00:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "long", year: "numeric", timeZone: "UTC"})}; re-crawled weekly.`;
 const tiles = [
   [fmt(C.sites_with_file), "sites publish a human.json file"],
   [fmt(C.edges), "vouches between sites"],
@@ -155,7 +155,8 @@ const cv = $("#net"), ctx = cv.getContext("2d");
 const N = D.nodes, E = D.edges;
 const outAdj = N.map(() => []), inAdj = N.map(() => []);
 E.forEach(([s, t]) => { outAdj[s].push(t); inAdj[t].push(s); });
-const r = (n) => 2 + Math.sqrt(n.i) * 1.3;
+// Leaves (one vouch, no file) are drawn small so the hubs carry the picture
+const r = (n) => (!n.f && n.i <= 1) ? 1.5 : 2 + Math.sqrt(n.i) * 1.3;
 let view = {k: 1, x: 0, y: 0}, W = 0, H = 0, hover = -1, pinned = -1;
 for (const n of N) $("#sites").append(el("option", {value: n.id}));
 function size() {
@@ -267,8 +268,20 @@ size(); fit(); draw();
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", draw);
 
 // ---- small chart helpers (single-series: no legend, title names it) ----
-function columns(svg, data, {fmtX}) {
-  const w = svg.clientWidth, h = svg.clientHeight, m = {l: 32, r: 8, t: 16, b: 28};
+// Charts redraw whenever their box changes size (window resize, reflow after load),
+// so marks and labels always fit the width actually on screen.
+function responsive(svg, render) {
+  const run = () => { svg.replaceChildren(); const b = svg.getBoundingClientRect(); if (b.width) render(b.width, b.height); };
+  new ResizeObserver(run).observe(svg);
+  run();
+}
+function textWidth(svg, s) {
+  const t = el("text", {class: "val"}, s); svg.append(t);
+  const w = t.getComputedTextLength(); t.remove(); return w;
+}
+function columns(svg, data, {fmtX}) { responsive(svg, (w, h) => columnsAt(svg, data, fmtX, w, h)); }
+function columnsAt(svg, data, fmtX, w, h) {
+  const m = {l: 32, r: 8, t: 16, b: 28};
   const max = Math.max(...data.map(d => d[1]), 1);
   const raw = max / 4, mag = Math.pow(10, Math.floor(Math.log10(raw)));
   const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw), top = step * 4;
@@ -285,15 +298,20 @@ function columns(svg, data, {fmtX}) {
       const bar = el("path", {d: p, fill: css("--series-1"), tabindex: 0});
       const tt = el("title", {}, `${fmtX(k)}: ${v}`); bar.append(tt); svg.append(bar);
     }
-    if (i % 4 === 0) svg.append(el("text", {x: x + bwid / 2, y: h - 8, "text-anchor": "middle"}, fmtX(k)));
+    const every = Math.max(1, Math.ceil(56 / bw));  // ~56px per date label
+    if (i % every === 0) svg.append(el("text", {x: x + bwid / 2, y: h - 8, "text-anchor": "middle"}, fmtX(k)));
   });
   const peak = data.reduce((a, b) => b[1] > a[1] ? b : a);
   const pi = data.indexOf(peak);
-  svg.append(el("text", {class: "val", x: m.l + pi * bw + bw / 2 + 14, y: y(peak[1]) + 10}, `${peak[1]} new files, week of ${fmtX(peak[0])}`));
+  const label = `${peak[1]} new files, week of ${fmtX(peak[0])}`, lx = m.l + pi * bw + bw / 2 + 14;
+  const fits = lx + textWidth(svg, label) < w - m.r;
+  svg.append(el("text", {class: "val", x: fits ? lx : lx - 28, y: y(peak[1]) + 10, "text-anchor": fits ? "start" : "end"}, label));
 }
-function hbars(svg, data) {
-  const w = svg.clientWidth, m = {l: 70, r: 60}, bh = 22, gap = 14;
-  const max = Math.max(...data.map(d => d[1]), 1);
+function hbars(svg, data) { responsive(svg, (w) => hbarsAt(svg, data, w)); }
+function hbarsAt(svg, data, w) {
+  const bh = 22, gap = 14, max = Math.max(...data.map(d => d[1]), 1);
+  // Right margin = widest value label, so the longest bar's count always fits
+  const m = {l: 70, r: 10 + Math.max(...data.map(([, v]) => textWidth(svg, fmt(v))))};
   data.forEach(([k, v], i) => {
     const y = 10 + i * (bh + gap), bw = (w - m.l - m.r) * v / max;
     svg.append(el("text", {x: m.l - 8, y: y + bh / 2 + 4, "text-anchor": "end"}, k));
@@ -345,7 +363,12 @@ const hist = S.history.by_source;
 table("#t-removed", [["Kind of removal"], ["Wayback", 1], ["Git history", 1]],
   Object.keys(kindLabel).map(k => [kindLabel[k], (hist.wayback.removed[k] || 0), (hist.git.removed[k] || 0)])
     .concat([["(for scale) vouches added in later versions", hist.wayback.added, hist.git.added]]));
-$("#foot").textContent = "Crawler respects robots.txt and fetches one request at a time per host. Data, code and method: see REPORT.md in the project repo.";
+{
+  const f = $("#foot");
+  f.append(document.createTextNode("The crawler follows the spec's verifier guidance: it honours robots.txt, identifies itself, and fetches one request at a time per host. Code, data and weekly snapshots: "));
+  const a = el("a", {href: "https://github.com/wasabipesto-bot/humanjson"}, "github.com/wasabipesto-bot/humanjson");
+  f.append(a, document.createTextNode("."));
+}
 </script>
 </body>
 </html>

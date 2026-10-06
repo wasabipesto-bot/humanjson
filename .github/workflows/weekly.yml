@@ -1,0 +1,51 @@
+# Weekly: refresh seeds, crawl the whole vouch graph, extend version history, rebuild the
+# site, commit the new state + snapshot back to main, and publish to GitHub Pages.
+name: Weekly crawl
+
+on:
+  schedule:
+    - cron: "41 5 * * 1" # Mondays 05:41 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+      - uses: extractions/setup-just@v4
+      - name: Crawl and analyse
+        env:
+          GH_TOKEN: ${{ github.token }} # git_history: code search + commit history
+        run: just weekly
+      - name: Commit state and snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/state data/snapshots data/stats.json data/graph.json seed
+          git diff --cached --quiet || git commit -m "Weekly crawl $(date -u +%F)"
+          git push
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: report
+
+  deploy:
+    needs: crawl
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

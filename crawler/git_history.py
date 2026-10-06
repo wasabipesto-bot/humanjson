@@ -7,7 +7,9 @@ complete edit history, so it shows exactly when vouches were added and removed.
 Also writes seed/github-seeds.txt (each file's declared url) so the live crawl
 can cover sites that nothing else led to.
 
-Usage: uv run crawler/git_history.py --db data/crawl.sqlite   (needs `gh` logged in)
+Incremental: versions already stored are skipped.
+
+Usage: uv run crawler/git_history.py --db data/crawl.sqlite   (needs `gh` authenticated; GH_TOKEN in CI)
 """
 
 import argparse
@@ -60,7 +62,17 @@ def main():
     a = ap.parse_args()
     db = sqlite3.connect(a.db, timeout=120)
     db.executescript(SCHEMA)
-    files = find_files()
+    # Remember every repo/path ever found: code search is flaky (and may be unavailable to
+    # the CI token), and a file that drops out of the index still has history worth keeping.
+    known_path = ROOT / "data/state/git_files.json"
+    known = {tuple(x) for x in json.loads(known_path.read_text())} if known_path.exists() else set()
+    try:
+        known |= set(find_files())
+    except Exception as e:
+        print(f"code search failed ({e}); using {len(known)} remembered files", file=sys.stderr)
+    files = sorted(known)
+    known_path.parent.mkdir(parents=True, exist_ok=True)
+    known_path.write_text(json.dumps([list(f) for f in files], indent=0) + "\n")
     print(f"{len(files)} files in {len({r for r, _ in files})} repos", file=sys.stderr)
     seeds = set()
     for repo, path in files:
@@ -69,8 +81,11 @@ def main():
         except Exception as e:
             print(f"  {repo}/{path}: {e}", file=sys.stderr)
             continue
+        have = {r[0] for r in db.execute("select sha from gh_versions where repo=? and path=?", (repo, path))}
         for c in commits:
             sha = c["sha"]
+            if sha in have:
+                continue
             when = c["commit"]["committer"]["date"]
             try:
                 raw = gh("api", f"repos/{repo}/contents/{urllib.parse.quote(path)}?ref={sha}",
@@ -91,6 +106,8 @@ def main():
                        (repo, path, sha, when, mode, str(declared), json.dumps(targets), json.dumps(dates)))
         db.commit()
         print(f"  {repo}/{path}: {len(commits)} commits", file=sys.stderr)
+    db.commit()
+    seeds |= {d for (d,) in db.execute("select distinct declared_url from gh_versions") if d and norm(d)}
     (ROOT / "seed/github-seeds.txt").write_text("\n".join(sorted(seeds)) + "\n")
 
 

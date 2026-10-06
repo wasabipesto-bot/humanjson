@@ -1,6 +1,6 @@
 """Build report/index.html: a self-contained explorer for the vouch graph + stats.
 
-Layout is computed here (networkx spring layout) so the page needs no libraries.
+Layout is computed here (networkx ForceAtlas2) so the page needs no libraries.
 """
 
 import json
@@ -13,53 +13,66 @@ import networkx as nx
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def layout(g):
-    G = nx.DiGraph()
-    for n in g["nodes"]:
-        G.add_node(n["id"])
-    for e in g["edges"]:
-        G.add_edge(e["source"], e["target"])
-    indeg = dict(G.in_degree())
-    # Keep every site with a file, plus bare targets vouched for by 2+ sites;
-    # single-vouch bare targets are leaves that only add hairballs.
-    keep = {n["id"] for n in g["nodes"] if n["has_file"] or indeg[n["id"]] >= 2}
-    H = G.subgraph(keep).to_undirected()
-    pos = {}
-    comps = sorted(nx.connected_components(H), key=len, reverse=True)
-    main = H.subgraph(comps[0])
-    p = nx.forceatlas2_layout(main, max_iter=1000, scaling_ratio=4.0, gravity=1.0, distributed_action=True, seed=7) \
-        if hasattr(nx, "forceatlas2_layout") else nx.spring_layout(main, k=1.6 / math.sqrt(len(main)), iterations=300, seed=7)
-    assert all(math.isfinite(c) for v in p.values() for c in v), "layout produced non-finite positions"
-    # Pull long tendrils in: beyond the 95th-percentile radius, distance grows logarithmically,
-    # so one far-off cluster doesn't shrink the core to a corner of the canvas.
-    cx = sorted(float(v[0]) for v in p.values())[len(p) // 2]
-    cy = sorted(float(v[1]) for v in p.values())[len(p) // 2]
-    radii = sorted(math.hypot(float(v[0]) - cx, float(v[1]) - cy) for v in p.values())
+def compress(p):
+    """Beyond the 95th-percentile radius, distance grows logarithmically, so one far-off
+    cluster doesn't shrink the core to a corner of the canvas."""
+    cx = sorted(x for x, _ in p.values())[len(p) // 2]
+    cy = sorted(y for _, y in p.values())[len(p) // 2]
+    radii = sorted(math.hypot(x - cx, y - cy) for x, y in p.values())
     r95 = radii[int(len(radii) * 0.95)] or 1.0
-    for k, (x, y) in list(p.items()):
-        dx, dy = float(x) - cx, float(y) - cy
-        r = math.hypot(dx, dy)
-        if r > r95:
-            f = (r95 + r95 * 0.25 * math.log1p((r - r95) / r95)) / r
-            p[k] = (cx + dx * f, cy + dy * f)
-    xs = [v[0] for v in p.values()]
-    ys = [v[1] for v in p.values()]
-    span = float(max(max(xs) - min(xs), max(ys) - min(ys))) or 1.0
+    out = {}
     for k, (x, y) in p.items():
-        pos[k] = (float(x - min(xs)) / span, float(y - min(ys)) / span)
-    # Small components & isolates: a tidy grid under the main component
-    col, maxy = 0, max(v[1] for v in pos.values())
+        dx, dy = x - cx, y - cy
+        r = math.hypot(dx, dy)
+        f = (r95 + r95 * 0.25 * math.log1p((r - r95) / r95)) / r if r > r95 else 1.0
+        out[k] = (dx * f, dy * f)  # centred on the median
+    return out
+
+
+def layout(g):
+    """ForceAtlas2 for the main component; everything else packed on rings around it.
+
+    Every node is included, leaves too, so each file's vouches are visible. Components
+    that share no vouch with the main network (a site plus targets nobody else vouches
+    for, or a file with no vouches at all) get their own compact layout and sit on rings
+    hugging the core, rather than drifting off or being parked in a separate row.
+    """
+    H = nx.Graph()
+    H.add_nodes_from(n["id"] for n in g["nodes"])
+    H.add_edges_from((e["source"], e["target"]) for e in g["edges"])
+    comps = sorted(nx.connected_components(H), key=lambda c: (-len(c), min(c)))
+    main = H.subgraph(comps[0])
+    p = nx.forceatlas2_layout(main, max_iter=1000, scaling_ratio=4.0, gravity=1.0,
+                              distributed_action=True, seed=7)
+    assert all(math.isfinite(c) for v in p.values() for c in v), "layout produced non-finite positions"
+    pos = compress({k: (float(x), float(y)) for k, (x, y) in p.items()})
+    R = max(math.hypot(x, y) for x, y in pos.values())
+    unit = R / 40  # radius of a one-node component
+    ring_r, angle = R * 1.12, 0.0
     for c in comps[1:]:
-        for i, k in enumerate(sorted(c)):
-            pos[k] = (0.02 + (col % 40) * 0.024 + i * 0.006, maxy + 0.06 + (col // 40) * 0.03)
-        col += 1
-    return pos, keep
+        sub = H.subgraph(c)
+        radius = unit * math.sqrt(len(c))
+        local = nx.spring_layout(sub, seed=7, scale=radius * 0.8) if len(c) > 1 else {next(iter(c)): (0.0, 0.0)}
+        step = 2 * (radius + unit) / ring_r  # arc taken by this component
+        if angle + step > 2 * math.pi:  # ring full: start another, further out
+            ring_r += 2 * (radius + unit) + unit * 4
+            angle = 0.0
+        a = angle + step / 2
+        cx, cy = ring_r * math.cos(a), ring_r * math.sin(a)
+        for k, (x, y) in local.items():
+            pos[k] = (cx + float(x), cy + float(y))
+        angle += step
+    xs = [x for x, _ in pos.values()]
+    ys = [y for _, y in pos.values()]
+    span = max(max(xs) - min(xs), max(ys) - min(ys)) or 1.0
+    return {k: ((x - min(xs)) / span, (y - min(ys)) / span) for k, (x, y) in pos.items()}
 
 
 def main():
     g = json.loads((ROOT / "data/graph.json").read_text())
     S = json.loads((ROOT / "data/stats.json").read_text())
-    pos, keep = layout(g)
+    pos = layout(g)
+    crawl_date = date.fromisoformat(S["crawl_date"])
     indeg, outdeg = {}, {}
     for e in g["edges"]:
         outdeg[e["source"]] = outdeg.get(e["source"], 0) + 1
@@ -67,7 +80,7 @@ def main():
     nodes = [
         {"id": n["id"], "f": int(n["has_file"]), "x": round(pos[n["id"]][0], 4), "y": round(pos[n["id"]][1], 4),
          "i": indeg.get(n["id"], 0), "o": outdeg.get(n["id"], 0)}
-        for n in g["nodes"] if n["id"] in keep
+        for n in g["nodes"]
     ]
     idx = {n["id"]: i for i, n in enumerate(nodes)}
     edges = [[idx[e["source"]], idx[e["target"]]] for e in g["edges"] if e["source"] in idx and e["target"] in idx]
@@ -82,7 +95,7 @@ def main():
                 dd = date.fromisoformat(d[:10])
             except ValueError:
                 continue
-            if date(2026, 1, 1) <= dd <= date(2026, 10, 5):
+            if date(2026, 1, 1) <= dd <= crawl_date:
                 first[e["source"]] = min(first.get(e["source"], dd), dd)
     for d in first.values():
         wk = d - timedelta(days=d.weekday())
@@ -90,7 +103,7 @@ def main():
     start = date(2026, 3, 2)
     weeks = []
     w = start
-    while w <= date(2026, 10, 5):
+    while w <= crawl_date:
         weeks.append([w.isoformat(), weekly.get(w.isoformat(), 0)])
         w += timedelta(days=7)
     early = sum(v for k, v in weekly.items() if k < start.isoformat())

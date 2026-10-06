@@ -3,3 +3,4 @@ __pycache__/
 data/*.sqlite
 data/*.log
 data/*.sqlite-*
+report/

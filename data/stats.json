@@ -1,4 +1,5 @@
 {
+ "crawl_date": "2026-10-06",
  "counts": {
   "sites_with_file": 293,
   "bare_targets": 1310,
@@ -353,10 +354,10 @@
    "starforge.co.uk"
   ],
   [
-   "enough.computer",
-   "look-a.camera",
-   "undef.me",
-   "xn--b1aif.camera"
+   "areweaiyet.taffer.ca",
+   "arewequantumyet.taffer.ca",
+   "skelly.taffer.ca",
+   "taffer.ca"
   ],
   [
    "astrabun.com",
@@ -365,16 +366,10 @@
    "tuskito.neocities.org"
   ],
   [
-   "areweaiyet.taffer.ca",
-   "arewequantumyet.taffer.ca",
-   "skelly.taffer.ca",
-   "taffer.ca"
-  ],
-  [
-   "paddyroddy.github.io",
-   "paddyroddy.github.io/blog",
-   "paddyroddy.github.io/posters",
-   "paddyroddy.github.io/talks"
+   "enough.computer",
+   "look-a.camera",
+   "undef.me",
+   "xn--b1aif.camera"
   ],
   [
    "kamloopstaichi.org",
@@ -383,14 +378,10 @@
    "thriftmac.com"
   ],
   [
-   "dominikschwind.com",
-   "lostfocus.de",
-   "marcgoertz.de"
-  ],
-  [
-   "ffoodd.fr",
-   "fourbi.eu",
-   "lamecarlate.net"
+   "paddyroddy.github.io",
+   "paddyroddy.github.io/blog",
+   "paddyroddy.github.io/posters",
+   "paddyroddy.github.io/talks"
   ],
   [
    "blackblog.cz",
@@ -401,6 +392,16 @@
    "crazyroostereye.de",
    "fireye.coffee",
    "frutigeraeroarchive.org"
+  ],
+  [
+   "dominikschwind.com",
+   "lostfocus.de",
+   "marcgoertz.de"
+  ],
+  [
+   "ffoodd.fr",
+   "fourbi.eu",
+   "lamecarlate.net"
   ]
  ],
  "same_owner": {
@@ -442,16 +443,6 @@
  "same_day_rings": [
   {
    "sites": [
-    "kamloopstaichi.org",
-    "newsonaut.com",
-    "theanimalreporter.com",
-    "thriftmac.com"
-   ],
-   "date": "2026-03-30",
-   "outside_vouchers": []
-  },
-  {
-   "sites": [
     "onepict.com",
     "sam.pikesley.org",
     "tante.cc"
@@ -480,6 +471,16 @@
     "skye.fyi",
     "tzovar.as"
    ]
+  },
+  {
+   "sites": [
+    "kamloopstaichi.org",
+    "newsonaut.com",
+    "theanimalreporter.com",
+    "thriftmac.com"
+   ],
+   "date": "2026-03-30",
+   "outside_vouchers": []
   }
  ],
  "reciprocation_lag_days": {
@@ -510,20 +511,20 @@
    "same": 2,
    "share_of_targets_with_cc": 0.038
   },
-  "fr": {
+  "nl": {
    "out": 9,
-   "same": 3,
-   "share_of_targets_with_cc": 0.024
+   "same": 2,
+   "share_of_targets_with_cc": 0.01
   },
   "pl": {
    "out": 9,
    "same": 2,
    "share_of_targets_with_cc": 0.007
   },
-  "nl": {
+  "fr": {
    "out": 9,
-   "same": 2,
-   "share_of_targets_with_cc": 0.01
+   "same": 3,
+   "share_of_targets_with_cc": 0.024
   },
   "as": {
    "out": 7,
@@ -670,14 +671,14 @@
   "newest_vouch_age": {
    "\u226430d": 38,
    "31\u201390d": 40,
-   "91\u2013180d": 63,
-   ">180d": 128
+   "91\u2013180d": 62,
+   ">180d": 129
   },
   "newest_vouch_undated": 24,
   "last_modified_age": {
    "\u226430d": 94,
-   "31\u201390d": 40,
-   "91\u2013180d": 38,
+   "31\u201390d": 39,
+   "91\u2013180d": 39,
    ">180d": 57
   },
   "last_modified_missing": 64,
@@ -769,7 +770,7 @@
     "removed": "chrisburnell.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -779,7 +780,7 @@
     "removed": "chrismcleod.dev",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -789,7 +790,7 @@
     "removed": "pxlnv.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -799,7 +800,7 @@
     "removed": "raymondcamden.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -809,7 +810,7 @@
     "removed": "robinrendle.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -861,7 +862,7 @@
     "removed": "solariz.de/",
     "between": [
      "2026-04-13",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "url changed"
@@ -911,7 +912,7 @@
     "removed": "text.eapl.mx/main-es",
     "between": [
      "2026-03-17",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "url changed"
@@ -921,7 +922,7 @@
     "removed": "binarydigit.dev",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "target offline"
@@ -931,7 +932,7 @@
     "removed": "chrisburnell.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -941,7 +942,7 @@
     "removed": "chrismcleod.dev",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -951,7 +952,7 @@
     "removed": "crashthearcade.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "target offline"
@@ -961,7 +962,7 @@
     "removed": "pxlnv.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -971,7 +972,7 @@
     "removed": "raymondcamden.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -981,7 +982,7 @@
     "removed": "robinrendle.com",
     "between": [
      "2026-03-28",
-     "2026-10-05"
+     "2026-10-06"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -1111,11 +1112,11 @@
   "declared-but-http404": 1
  },
  "declared_but_broken": [
-  "srvanderplas.github.io",
-  "koolinus.net/blog",
-  "harrycresswell.com",
   "canneddragons.net",
-  "dpogue.ca"
+  "dpogue.ca",
+  "harrycresswell.com",
+  "koolinus.net/blog",
+  "srvanderplas.github.io"
  ],
  "compliance": {
   "versions": {
@@ -1123,26 +1124,26 @@
    "1": 4,
    "0.1": 2,
    "0.1.2": 2,
-   "0.1.6": 1,
-   "1.1.0": 1,
    "0.0.1": 1,
+   "0.1.6": 1,
    "1.0.0": 1,
+   "1.1.0": 1,
    "0.1.0": 1,
    "0.1.4": 1
   },
   "lenient_parse": [
-   "cygnoir.net",
-   "lazybea.rs",
    "albert.rierol.net",
    "bobbyhiltz.com",
+   "cygnoir.net",
+   "lazybea.rs",
    "tuskito.neocities.org"
   ],
   "cors_star": 115,
   "content_type": {
    "application/json": 288,
    "none": 3,
-   "text/json": 1,
-   "application/manifest+json": 1
+   "application/manifest+json": 1,
+   "text/json": 1
   },
   "discovery_via": {
    "fallback": 26,
@@ -1170,36 +1171,36 @@
   "dev": 19,
   "uk": 15,
   "de": 11,
-  "me": 11,
   "io": 11,
+  "me": 11,
   "fr": 7,
   "ca": 6,
   "eu": 5,
   "space": 4,
-  "xyz": 3,
-  "page": 3,
   "blog": 3,
   "info": 3,
   "nl": 3,
-  "cc": 2,
-  "site": 2,
-  "rs": 2
+  "page": 3,
+  "xyz": 3,
+  "art": 2,
+  "camera": 2,
+  "cc": 2
  },
  "platforms": {
   "own domain": 276,
   "github.io": 9,
   "neocities.org": 5,
-  "tilde.": 1,
+  "codeberg.page": 1,
   "pages.dev": 1,
-  "codeberg.page": 1
+  "tilde.": 1
  },
  "sample": {
   "sample-webring": {
    "listed_hosts": 461,
-   "reachable": 435,
-   "with_human_json": 22,
-   "rate": 0.0506,
-   "robots_blocked": 21,
+   "reachable": 426,
+   "with_human_json": 21,
+   "rate": 0.0493,
+   "robots_blocked": 20,
    "hits": [
     "aldur.blog",
     "arbs09.dev",
@@ -1219,7 +1220,6 @@
     "lxak.net",
     "marcgoertz.de",
     "newsonaut.com",
-    "raphnet.net",
     "rossabaker.com",
     "trovster.com",
     "villapirorum.netlify.app"
@@ -1385,9 +1385,9 @@
   }
  },
  "sample_combined": {
-  "reachable_hosts": 5593,
+  "reachable_hosts": 5587,
   "with_human_json": 107,
-  "rate": 0.0191
+  "rate": 0.0192
  },
  "sample_only_sites": [
   "andregarzia.com",
@@ -1484,9 +1484,9 @@
   "by_outcome": {
    "blocks crawlers (robots.txt)": 5,
    "still links a file that is broken": 1,
-   "file gone": 4,
    "file still served (not discoverable from the homepage)": 4,
    "site offline": 1,
+   "file gone": 4,
    "has a file under a sub-path (not churn)": 1
   }
  },

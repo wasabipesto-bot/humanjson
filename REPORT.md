@@ -1,7 +1,7 @@
 # The human.json vouch graph — survey of 5 October 2026
 
-All numbers come from `data/stats.json`, which `just analyze` regenerates. The interactive
-graph is in `report/index.html`, and the frozen crawl is in `data/snapshots/2026-10-05/`.
+This is the first survey, frozen as of the 5 October 2026 crawl (`data/snapshots/2026-10-05/`).
+The [live site](https://wasabipesto-bot.github.io/humanjson/) recomputes these numbers every week.
 
 ## How the data was collected
 
@@ -254,5 +254,3 @@ vouches from .uk file-holders go to other .uk file-holders, about 4× their 5% s
 - **History coverage:** Wayback captures are uneven. 112 of 298 file URLs were never archived,
   and a vouch added and removed between captures is invisible. Git history is complete but
   covers only 80 files.
-- **Consent:** publishing this aggregate, as opposed to keeping it locally, raises the consent
-  question in spec issue #63. Nothing has been published.

@@ -1,0 +1,41 @@
+# On code or design changes: rebuild the site from committed state + the newest snapshot
+# (no crawling) and publish it.
+name: Rebuild site
+
+on:
+  push:
+    branches: [main]
+    paths: ["analysis/**", "crawler/**", "justfile", "pyproject.toml", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+      - uses: extractions/setup-just@v4
+      - run: just rebuild
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: report
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

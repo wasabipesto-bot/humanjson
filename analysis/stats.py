@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "crawler"))
 from crawl import norm  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-TODAY = date(2026, 10, 5)
+TODAY = date.today()  # replaced in main() by the date of the crawl being analysed
 
 
 SECOND_LEVEL = {"co.uk", "org.uk", "me.uk", "ac.uk", "com.au", "net.au", "org.au", "co.nz", "co.jp", "com.br", "co.za"}
@@ -48,6 +48,8 @@ def parse_date(s):
 def main():
     g = json.loads((ROOT / "data/graph.json").read_text())
     db = sqlite3.connect(ROOT / "data/crawl.sqlite")
+    global TODAY
+    TODAY = datetime.fromtimestamp(db.execute("select max(probed_at) from probes").fetchone()[0], timezone.utc).date()
     nodes = {n["id"]: n for n in g["nodes"]}
     sites = {k for k, n in nodes.items() if n["has_file"]}
     G = nx.DiGraph()
@@ -55,7 +57,7 @@ def main():
     for e in g["edges"]:
         G.add_edge(e["source"], e["target"], vouched_at=e["vouched_at"])
     F = G.subgraph(sites).copy()  # file-to-file trust graph
-    S = {}
+    S = {"crawl_date": TODAY.isoformat()}
 
     # ---- 1. How many, and largest -------------------------------------------------
     outdeg = sorted(((G.out_degree(k), k) for k in sites), reverse=True)
@@ -114,7 +116,7 @@ def main():
         "share_reaching_half_within_5": round(sum(v >= len(sites) / 2 for v in reach5.values()) / len(sites), 3),
     }
     # Groups cut off from the main component
-    S["islands"] = [sorted(c) for c in wccs[1:] if len(c) >= 3]
+    S["islands"] = sorted((sorted(c) for c in wccs[1:] if len(c) >= 3), key=lambda c: (-len(c), c))
     same = [(u, v) for u, v in G.edges if regdom(u) == regdom(v)]
     S["same_owner"] = {
         "edges_same_registrable_domain": len(same),
@@ -297,13 +299,13 @@ def main():
                     "tls" if "SSL" in s else "timeout" if "Timeout" in s else
                     s.split(":")[0] if s.startswith("err") else s] += 1
     S["bare_target_status"] = dict(bare_status.most_common())
-    declared_broken = [k for k, s in status.items() if s and s.startswith("declared-but")]
+    declared_broken = sorted(k for k, s in status.items() if s and s.startswith("declared-but"))
     S["declared_but_broken"] = declared_broken
 
     # ---- 7. Spec compliance / hygiene ----------------------------------------------
     S["compliance"] = {
         "versions": dict(Counter(nodes[k]["version"] for k in sites).most_common()),
-        "lenient_parse": [k for k in sites if nodes[k]["parse"] == "lenient"],
+        "lenient_parse": sorted(k for k in sites if nodes[k]["parse"] == "lenient"),
         "cors_star": sum(1 for k in sites if nodes[k]["cors"] == "*"),
         "content_type": dict(Counter((nodes[k]["content_type"] or "none").split(";")[0].strip()
                                      for k in sites).most_common()),
@@ -327,7 +329,7 @@ def main():
             if p in h:
                 return p
         return "own domain"
-    S["tlds"] = dict(Counter(tld(k) for k in sites).most_common(20))
+    S["tlds"] = dict(sorted(Counter(tld(k) for k in sites).items(), key=lambda kv: (-kv[1], kv[0]))[:20])
     S["platforms"] = dict(Counter(platform(k) for k in sites).most_common())
 
     # ---- 9. Blind sample adoption rate ---------------------------------------------
@@ -356,15 +358,15 @@ def main():
                                     and G.in_degree(k) == 0)
 
     # ---- 9b. Churn: vouched-for sites with no live file that the Wayback Machine saw with one
-    churn_path = ROOT / "data/churn_probe.json"
+    churn_path = ROOT / "data/state/churn.json"
     if churn_path.exists():
-        cp = json.loads(churn_path.read_text())
+        cp = {h: v["rows"] for h, v in json.loads(churn_path.read_text()).items()}
         file_re = re.compile(r"/humans?\.json$")
         checked = {h for h, v in cp.items() if v is not None}
         had = {h: [r for r in v if file_re.search(r[0].split("?")[0])] for h, v in cp.items() if v}
         forges = {"codeberg.org", "github.com", "gitlab.com", "raw.githubusercontent.com", "git.sr.ht"}
         had = {h: v for h, v in had.items() if v and h not in forges}
-        rc_path = ROOT / "data/churn_recheck.json"
+        rc_path = ROOT / "data/state/churn_recheck.json"
         recheck = json.loads(rc_path.read_text()) if rc_path.exists() else {}
 
         def now(h):

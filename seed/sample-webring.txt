@@ -50,7 +50,7 @@ https://blog.b-ark.ca
 https://blog.darylsun.page
 https://blog.libove.org
 https://blog.meadowhawk.xyz
-https://blog.orbitalalchemists.org/sc
+https://blog.orbitalalchemists.org
 https://blog.rishabhps.com
 https://bneil.me
 https://bobbyhiltz.com
@@ -126,7 +126,7 @@ https://echoesinthemachine.blog
 https://edleeman.co.uk
 https://edmundxwhite.com
 https://ege.celikci.me
-https://ellesho.me/page
+https://ellesho.me
 https://emanuelegori.uno
 https://emilesilvis.com
 https://entropy.church
@@ -150,16 +150,15 @@ https://fundor333.com
 https://fusil.uk
 https://garystu.art
 https://gaze.systems
-https://genxnotes.com/en
+https://genxnotes.com
 https://ggirelli.info
 https://ghostparty.today
 https://gicorada.com
 https://gigold.me
 https://gingersysadmin.com
-https://git.schmarty.net/schmarty/gem-diamond
-https://git.schmarty.net/schmarty/indiewebring.ws
+https://git.schmarty.net
 https://giuliodematte.is
-https://glitch.com/edit
+https://glitch.com
 https://glyphy.com
 https://gregorlove.com
 https://gurupanguji.com
@@ -210,7 +209,7 @@ https://joelchrono.xyz
 https://joeross.me
 https://joewheeler.co.uk
 https://johanbove.info
-https://johnjohnston.info/blog
+https://johnjohnston.info
 https://jojeee.xyz
 https://jokerm.com
 https://jolvera.dev
@@ -223,12 +222,12 @@ https://journal.robbi.my
 https://jtworld.net
 https://justinribeiro.com
 https://kandr3s.co
-https://karthikeyankc.com/about-me
+https://karthikeyankc.com
 https://kat5.dev
 https://keijilohier.com
 https://kevinboone.me
 https://kfdzcoffee.cn
-https://khleedril.org/blog
+https://khleedril.org
 https://kiko.io
 https://kimberlyhirsh.com
 https://kovah.de
@@ -296,7 +295,7 @@ https://newsonaut.com
 https://noahie.xyz
 https://nostodnayr.net
 https://noyes.io
-https://octospacc.altervista.org/author/minioctt
+https://octospacc.altervista.org
 https://ohhelloana.blog
 https://outer-outer.space
 https://owencompher.me
@@ -311,7 +310,7 @@ https://pilch.me
 https://pilch.zip
 https://pin13.net
 https://pinkgallica.com
-https://pirahxcx.neocities.org/small-web-dedicated
+https://pirahxcx.neocities.org
 https://pixelroiber.de
 https://practicing.design
 https://pray-xdd.ru
@@ -362,7 +361,7 @@ https://skaterfish.net
 https://sliceofplant.com
 https://someguysblog.net
 https://soopy.moe
-https://spont.codeberg.page/yahr-matey
+https://spont.codeberg.page
 https://srijan.ch
 https://srp.life
 https://starbreaker.org
@@ -379,7 +378,7 @@ https://tarandir.dev
 https://thamara.co.uk
 https://the-2am-corner.surge.sh
 https://thealonealex.bearblog.dev
-https://thecampvs.com/author/dennis
+https://thecampvs.com
 https://thedimpau.se
 https://thefield.blog
 https://theme.marisa.club
@@ -442,7 +441,7 @@ https://www.nateify.xyz
 https://www.pilledtexts.com
 https://www.preterit.me
 https://www.pushbuttonkitty.com
-https://www.raphnet.net/index_en.php
+https://www.raphnet.net
 https://www.rauljimenez.info
 https://www.rhyswynne.co.uk
 https://www.ricardochavezt.com
