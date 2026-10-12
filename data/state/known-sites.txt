@@ -112,6 +112,7 @@ ashleymcquaid.com
 astrabun.com
 astriiid.fr
 aubreysambor.com
+aupaysdescavetroll.fr
 ausiastsel.substack.com
 austinkleon.com
 authorhelp.uk
@@ -158,6 +159,7 @@ bewcloud.com
 beyondinteractive.co.uk
 bfloeser.de
 bfloeser.de/posts
+bibliothequefahrenheit.blogspot.com
 bilej.monster
 billhunt.dev
 billmorris.io/shoals
@@ -202,6 +204,7 @@ blog.firedrake.org
 blog.front-matter.de
 blog.geensnor.nl
 blog.genma.fr
+blog.geomusings.com
 blog.glyph.im
 blog.hardill.me.uk
 blog.helenchong.omg.lol/en
@@ -309,6 +312,7 @@ catileptic.tech
 cedmax.net
 cedon.dev
 chagratt.site
+chameth.com
 chamik.eu
 changelog.complete.org
 chaos.social/@foosel
@@ -444,6 +448,7 @@ denissalem.ovh
 densford.net
 derickrethans.nl
 dertagundich.de
+deslivresrances.blogspot.com
 destroyallsoftware.com
 developerjack.com
 developmentseed.org
@@ -580,6 +585,7 @@ felienne.nl
 felix.plesoianu.ro
 feraltomatoes.com
 feuerx.net
+feygirl.home.blog
 ffoodd.fr
 fiber-patterns.trueelena.org
 fictionalwolfe.ca
@@ -814,6 +820,7 @@ jectoons.net
 jeddacp.com
 jeffreyoverstreet.com
 jefklakscodex.com
+jelisjeblogue.blogspot.com
 jen.phillipsuk.org
 jenniferplusplus.com
 jennschiffer.com
@@ -951,6 +958,7 @@ lemonsieurdelaphoto.com
 leohblooms.com
 leonw.ong
 leouieda.com
+les-lectures-du-maki.blogspot.com
 lescastcodeurs.com
 lesleylai.info
 letorey.co.uk
@@ -964,6 +972,7 @@ limeleaf.coop
 linkyblog.neocities.org
 livelaugh.blog
 livius.org
+livres.gloubik.info
 lkhrs.com
 lmnt.me
 localghost.dev
@@ -1145,6 +1154,7 @@ neilzone.co.uk
 neogeofanclub.com
 neopythonic.blogspot.com
 neural-reckoning.org/dan_goodman.html
+nevertwhere.blogspot.com
 news.onbrn.com
 newsletter.oalannoble.com
 newsonaut.com
@@ -1216,6 +1226,7 @@ orbitalmartian.polymaths.page/
 orphaned.monster
 osteophage.neocities.org
 ottorask.com
+outrelivres.fr
 owen.blacker.me.uk
 ox.cx
 p4bl0.net
@@ -1727,6 +1738,7 @@ yossarian.net
 youtube.com/@VeronicaExplains
 youtube.com/@imautisticnowwhat
 yummyurinal.bearblog.dev
+yuyine.be
 zacharykai.net
 zacharys.dev
 zachleat.com

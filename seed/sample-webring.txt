@@ -21,7 +21,6 @@ https://annanorris.ca
 https://apfelhammer.de
 https://apiratelifefor.me
 https://arbs09.dev
-https://arcangelo.net
 https://ari.lt
 https://arkirus.com
 https://arne.xyz
@@ -179,10 +178,12 @@ https://hyblon.eu
 https://iambismark.net
 https://igorweb.space
 https://ikkqqstudio.codeberg.page
+https://impatrick.blog
 https://incorporealbard.online
 https://inhji.de
 https://insitze.com
 https://intothebook.net
+https://irongeek.net
 https://islandinthenet.com
 https://ivanthinking.net
 https://jackjamieson.net
@@ -216,6 +217,7 @@ https://jolvera.dev
 https://jonas.brusman.se
 https://jorgesanz.net
 https://jorisvandijk.com
+https://joshuamorris.info
 https://joshuapsteele.com
 https://jothamlim.com
 https://journal.robbi.my
@@ -294,6 +296,7 @@ https://nertzy.com
 https://newsonaut.com
 https://noahie.xyz
 https://nostodnayr.net
+https://notiz.blog
 https://noyes.io
 https://octospacc.altervista.org
 https://ohhelloana.blog
@@ -380,7 +383,6 @@ https://the-2am-corner.surge.sh
 https://thealonealex.bearblog.dev
 https://thecampvs.com
 https://thedimpau.se
-https://thefield.blog
 https://theme.marisa.club
 https://themindofruss.com
 https://thomashodson.com

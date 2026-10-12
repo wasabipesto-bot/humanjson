@@ -3,6 +3,10 @@
   "status": 200,
   "parses": true
  },
+ "https://akselmo.dev/human.json": {
+  "status": null,
+  "robots": true
+ },
  "https://codeberg.org/g-rppl/movetrack/src/commit/01f7455a13c0c7682ac33305b80564fe08ce74b1/pkgdown/assets/human.json": {
   "status": null,
   "robots": true
@@ -44,8 +48,8 @@
   "parses": true
  },
  "https://post-tenebras-lire.net/human.json": {
-  "status": null,
-  "robots": true
+  "status": 200,
+  "parses": true
  },
  "https://raniz.blog/human.json": {
   "status": 404,
@@ -60,8 +64,8 @@
   "robots": true
  },
  "https://vhbelvadi.com/human.json": {
-  "status": null,
-  "error": "ReadTimeout"
+  "status": 200,
+  "parses": true
  },
  "https://www.acdw.net/.well-known/human.json": {
   "status": null,
@@ -74,6 +78,10 @@
  "https://www.geedea.pro/human.json": {
   "status": null,
   "robots": true
+ },
+ "https://www.hempuli.com/human/human.json": {
+  "status": 404,
+  "parses": false
  },
  "https://xlthlx.com/human.json": {
   "status": 200,
