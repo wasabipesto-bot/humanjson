@@ -19,6 +19,10 @@
   "status": 200,
   "parses": true
  },
+ "https://html-chunder.neocities.org/human.json": {
+  "status": 404,
+  "parses": false
+ },
  "https://jaenis.ch/human.json": {
   "status": null,
   "robots": true
@@ -72,7 +76,7 @@
   "robots": true
  },
  "https://www.canneddragons.net/assets/human.json": {
-  "status": 404,
+  "status": 406,
   "parses": false
  },
  "https://www.geedea.pro/human.json": {
@@ -80,8 +84,8 @@
   "robots": true
  },
  "https://www.hempuli.com/human/human.json": {
-  "status": 404,
-  "parses": false
+  "status": 200,
+  "parses": true
  },
  "https://xlthlx.com/human.json": {
   "status": 200,

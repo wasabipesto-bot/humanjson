@@ -44,6 +44,7 @@ https://benjaminturner.me
 https://benji.dog
 https://ber.earth
 https://billglover.me
+https://bisha.neocities.org
 https://blog.andrewshell.org
 https://blog.b-ark.ca
 https://blog.darylsun.page
@@ -139,6 +140,7 @@ https://fefa.net.br
 https://felipebrasilblog.github.io
 https://fifegeo.co.uk
 https://fireburn.ru
+https://flam.mataroa.blog
 https://found-media-archive.neocities.org
 https://frasermclean.com
 https://frills.dev
@@ -224,6 +226,7 @@ https://journal.robbi.my
 https://jtworld.net
 https://justinribeiro.com
 https://kandr3s.co
+https://karnwong.me
 https://karthikeyankc.com
 https://kat5.dev
 https://keijilohier.com
@@ -240,6 +243,7 @@ https://kwaamfan.haliya.net
 https://l3on.site
 https://lachlanharris.au
 https://lars-christian.com
+https://latentmirror.com
 https://lchamberlin.com
 https://leehenry.top
 https://legoraft.com
@@ -247,6 +251,7 @@ https://leilukin.com
 https://leivajd.com
 https://leoashcraft.com
 https://lifeofpablo.com
+https://lio.surge.sh
 https://logicface.co.uk
 https://lostfocus.de
 https://lucien.nogues.ca
@@ -260,7 +265,6 @@ https://mahmoudashraf.dev
 https://mandarismoore.com
 https://marcgoertz.de
 https://marcomadera.com
-https://margemviva.netlify.app
 https://marisa.club
 https://martymcgui.re
 https://matrixster.co.uk
@@ -306,7 +310,6 @@ https://pagesandbytes.com
 https://paologabriel.com
 https://paracosm.pages.dev
 https://paramdeo.com
-https://personal.arukusu.netcraze.link
 https://petermolnar.net
 https://phoebeivy.dev
 https://pilch.me
@@ -315,6 +318,7 @@ https://pin13.net
 https://pinkgallica.com
 https://pirahxcx.neocities.org
 https://pixelroiber.de
+https://popbot.work
 https://practicing.design
 https://pray-xdd.ru
 https://prigoana.com
@@ -405,6 +409,7 @@ https://vonexplaino.com
 https://waterpigs.co.uk
 https://wcygan.net
 https://web.ducokuijer.nl
+https://wedmore.surge.sh
 https://wehavetoask.com
 https://weidok.al
 https://weisser-zwerg.dev
@@ -454,6 +459,7 @@ https://www.tejasgk.com
 https://www.thorsten-konigorski.de
 https://www.trovster.com
 https://yashgarg.dev
+https://yenrhik.mataroa.blog
 https://yordi.me
 https://yuna0x0.com
 https://zacharykai.net
