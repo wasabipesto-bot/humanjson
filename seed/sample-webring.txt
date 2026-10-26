@@ -148,7 +148,6 @@ https://frittiert.es
 https://fullmetalbrackets.com
 https://fundamenta.micro.blog
 https://fundor333.com
-https://fusil.uk
 https://garystu.art
 https://gaze.systems
 https://genxnotes.com
@@ -192,6 +191,7 @@ https://jackjamieson.net
 https://jacobhall.net
 https://jacoblarose.com
 https://jade.ellis.link
+https://jagk.dev
 https://jagrg.org
 https://jahir.dev
 https://jamesg.blog
@@ -310,6 +310,7 @@ https://pagesandbytes.com
 https://paologabriel.com
 https://paracosm.pages.dev
 https://paramdeo.com
+https://personal.arukusu.netcraze.link
 https://petermolnar.net
 https://phoebeivy.dev
 https://pilch.me
@@ -339,6 +340,7 @@ https://reeswrites.com
 https://reillyspitzfaden.com
 https://rexbarrett.com
 https://rfonte.kiti.dev
+https://richardgolian.com
 https://riley-tech.de
 https://riv.ar
 https://river.cat
@@ -382,11 +384,12 @@ https://svemagie.net
 https://tantek.com
 https://tar.dev
 https://tarandir.dev
+https://thadeussmith.com
 https://thamara.co.uk
-https://the-2am-corner.surge.sh
 https://thealonealex.bearblog.dev
 https://thecampvs.com
 https://thedimpau.se
+https://thefield.blog
 https://theme.marisa.club
 https://themindofruss.com
 https://thomashodson.com
@@ -409,12 +412,12 @@ https://vonexplaino.com
 https://waterpigs.co.uk
 https://wcygan.net
 https://web.ducokuijer.nl
-https://wedmore.surge.sh
 https://wehavetoask.com
 https://weidok.al
 https://weisser-zwerg.dev
 https://wesc.neocities.org
 https://wfdoujin.com
+https://willie.page
 https://winther.sysctl.dk
 https://wojtek.bratek.org
 https://writerwhocodes.com
@@ -459,7 +462,6 @@ https://www.tejasgk.com
 https://www.thorsten-konigorski.de
 https://www.trovster.com
 https://yashgarg.dev
-https://yenrhik.mataroa.blog
 https://yordi.me
 https://yuna0x0.com
 https://zacharykai.net

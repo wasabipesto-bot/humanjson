@@ -26,6 +26,7 @@
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://autiomaa.org/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://axxuy.com/.well-known/human.json", "kind": "status", "n_captures": 3}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://baillehachepascal.dev/human.json", "kind": "status", "n_captures": 1}
+{"checked_at": 1793014896.4041827, "error": null, "hj_url": "https://bbbhltz.codeberg.page/assets/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1792409094.6377301, "error": null, "hj_url": "https://bbbhltz.codeberg.page/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://benmyers.dev/human.json", "kind": "status", "n_captures": 4}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://beta.hkamran.com/human.json", "kind": "status", "n_captures": 0}
@@ -42,6 +43,7 @@
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://blog.jsbarretto.com/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://blog.trueelena.org/static/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://bluestarcreations.net/human-www.json", "kind": "status", "n_captures": 0}
+{"checked_at": 1793014896.0927098, "error": null, "hj_url": "https://bobbyhiltz.com/assets/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://bobbyhiltz.com/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://bootleg.technology/.well-known/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://brassnet.biz/human.json", "kind": "status", "n_captures": 1}
@@ -178,7 +180,7 @@
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://mobile.bluestarcreations.net/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://mterry.name/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://myles.garden/human.json", "kind": "status", "n_captures": 1}
-{"checked_at": 1792409144.2292025, "error": "HTTPStatusError", "hj_url": "https://neatnik.net/.well-known/human.json", "kind": "status", "n_captures": null}
+{"checked_at": 1793014946.507341, "error": "HTTPStatusError", "hj_url": "https://neatnik.net/.well-known/human.json", "kind": "status", "n_captures": null}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://nedbatchelder.com/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://neilzone.co.uk/human/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://newsonaut.com/human.json", "kind": "status", "n_captures": 1}
@@ -258,7 +260,7 @@
 {"checked_at": 1791256001.915424, "error": null, "hj_url": "https://vhbelvadi.com/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://villepreux.net/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791256005.5737274, "error": null, "hj_url": "https://vivax.dev/human.json", "kind": "status", "n_captures": 0}
-{"checked_at": 1792409144.4196086, "error": "HTTPStatusError", "hj_url": "https://vlad.website/human.json", "kind": "status", "n_captures": null}
+{"checked_at": 1793014946.501854, "error": "HTTPStatusError", "hj_url": "https://vlad.website/human.json", "kind": "status", "n_captures": null}
 {"checked_at": 1791255888.6124685, "error": null, "hj_url": "https://void-star.net/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://volcanloupgames.neocities.org/human.json", "kind": "status", "n_captures": 0}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://voxelmanip.se/human.json", "kind": "status", "n_captures": 2}
@@ -289,7 +291,7 @@
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.kytta.dev/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.lemonsieurdelaphoto.com/human.json", "kind": "status", "n_captures": 1}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.leouieda.com/human.json", "kind": "status", "n_captures": 1}
-{"checked_at": 1792409144.228993, "error": "HTTPStatusError", "hj_url": "https://www.neatnik.net/.well-known/human.json", "kind": "status", "n_captures": null}
+{"checked_at": 1793014946.503192, "error": "HTTPStatusError", "hj_url": "https://www.neatnik.net/.well-known/human.json", "kind": "status", "n_captures": null}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.nicksimson.com/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.onepict.com/human.json", "kind": "status", "n_captures": 2}
 {"checked_at": 1791241200.0, "error": null, "hj_url": "https://www.ottorask.com/human.json", "kind": "status", "n_captures": 0}
