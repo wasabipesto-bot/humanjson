@@ -52,8 +52,8 @@
   "parses": true
  },
  "https://post-tenebras-lire.net/human.json": {
-  "status": 200,
-  "parses": true
+  "status": 410,
+  "parses": false
  },
  "https://raniz.blog/human.json": {
   "status": 404,
@@ -76,7 +76,7 @@
   "robots": true
  },
  "https://www.canneddragons.net/assets/human.json": {
-  "status": 406,
+  "status": 404,
   "parses": false
  },
  "https://www.geedea.pro/human.json": {

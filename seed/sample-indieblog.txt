@@ -32,8 +32,10 @@ http://blog.freira.dev/
 http://blog.jgc.org/
 http://blog.kindel.com/
 http://blog.kochie.io/
+http://blog.macrolet.net/
 http://blog.miguelgrinberg.com/feed
 http://blog.nick.burns.io/
+http://blog.nuclearsecrecy.com/
 http://blog.pablolarah.cl/
 http://blog.pamelafox.org/
 http://blog.penelopetrunk.com/
@@ -132,6 +134,7 @@ http://linesandcolors.com/
 http://links.net/
 http://live.julik.nl/
 http://lucumr.pocoo.org/
+http://lushprojects.com/blog
 http://m-chrzan.xyz/rss.xml
 http://malloc.dog/
 http://martin.kleppmann.com/
@@ -184,7 +187,6 @@ http://practicing.design/
 http://prog21.dadgum.com/
 http://pydev.blogspot.com/
 http://questionableengineering.com/
-http://rachelbythebay.com/w/
 http://rachelnabors.com/
 http://radar.spacebar.org/
 http://radex.io/
@@ -242,7 +244,6 @@ http://unoriginalcraft.blogspot.com/
 http://urbanflyfisher.com/
 http://verisimilitudes.net/
 http://veritas.hurty.net/
-http://vool.ie/
 http://walkingarizona.blogspot.com/
 http://weblog.jamisbuck.org/
 http://whathelpsthehomeless.blogspot.com/
@@ -296,7 +297,6 @@ http://www.rhyswynne.co.uk/
 http://www.righto.com/
 http://www.rlvision.com/
 http://www.rubypigeon.com/
-http://www.rutschle.net/
 http://www.sagarkamat.com/
 http://www.screamingatmyscreen.com/feed/
 http://www.shawnewallace.com/
@@ -307,7 +307,6 @@ http://www.streamhead.com/
 http://www.thiswildcuriosity.com/
 http://www.tiago.tf/thoughts
 http://www.tomarenberg.net/blog/
-http://www.trickjarrett.com/
 http://www.tysonmaly.com/
 http://www.uraimo.com/
 http://www.vaines.org/
@@ -331,6 +330,7 @@ https://4gravitons.com/
 https://5pi.de/
 https://8051enthusiast.github.io/
 https://82mhz.net/
+https://8sided.blog/
 https://8yd.no/
 https://98.codes/
 https://a.wholelottanothing.org/
@@ -350,6 +350,7 @@ https://aartaka.me/
 https://abdulapopoola.com/
 https://abhadury.com/
 https://abhi.now/
+https://abhinavsarkar.net/
 https://abhishe.com/
 https://abishekmuthian.com/
 https://abmurrow.com/
@@ -371,6 +372,7 @@ https://adam-p.ca/
 https://adam.micro.blog/
 https://adambennett.dev/
 https://adamcraven.com/writing/
+https://adamgreenough.me/
 https://adamhepner.pl/
 https://adamsitnik.com/
 https://adamwathan.me/
@@ -595,6 +597,7 @@ https://arbourtrary.com/
 https://ardunn.us/
 https://aredridel.dinhe.net/
 https://areoform.wordpress.com/
+https://argumentativeoldgit.wordpress.com/
 https://ari.lt/rss.xml
 https://ariadne.space/
 https://arielsalminen.com/
@@ -628,6 +631,7 @@ https://asemic-horizon.com/
 https://asemichorizon.wordpress.com/
 https://ashleyjanssen.com/
 https://astickadogandaboxwithsomethinginit.com/
+https://astrid.tech/
 https://astridetal.com/
 https://astriiid.fr/
 https://astro-blog-cyan-alpha.vercel.app/
@@ -875,7 +879,6 @@ https://blog.haschek.at/
 https://blog.hayati.net/
 https://blog.helenchong.omg.lol/en/
 https://blog.henrygressmann.de/
-https://blog.herlein.com/
 https://blog.horaceg.xyz/
 https://blog.humphd.org/
 https://blog.iamjannik.me/
@@ -918,6 +921,7 @@ https://blog.koehntopp.info/
 https://blog.kovah.de/en/
 https://blog.ktamas.com/
 https://blog.kulman.sk/
+https://blog.kylekukshtel.com/
 https://blog.lasheen.dev/
 https://blog.lauramichet.com/
 https://blog.lawrencejones.dev/
@@ -933,6 +937,7 @@ https://blog.lmorchard.com/
 https://blog.lohr.dev/
 https://blog.loikein.one/
 https://blog.lostartpress.com/
+https://blog.louisderrac.com/en
 https://blog.luap.info/
 https://blog.luiscarlospando.com/
 https://blog.lukaszwojcik.net/
@@ -1020,6 +1025,7 @@ https://blog.senko.net/
 https://blog.setale.me/
 https://blog.shadura.me/
 https://blog.shaishav.kr/
+https://blog.shannonkay.com/
 https://blog.sherriw.com/
 https://blog.shr4pnel.com/
 https://blog.singleton.io/
@@ -1055,7 +1061,6 @@ https://blog.usmanity.com/
 https://blog.utveckla.re/
 https://blog.valentin.sh/
 https://blog.varunramesh.net/
-https://blog.vashishtha.in/
 https://blog.vasi.li/
 https://blog.vfiles.no/posts/
 https://blog.viktomas.com/
@@ -1104,6 +1109,7 @@ https://bogomolov.work/
 https://bohemiansultriness.nekoweb.org/
 https://bohops.com/
 https://bojanvidanovic.com/
+https://bongotwisty.uk/
 https://bookmaniac.org/
 https://bor0.wordpress.com/
 https://boris.kourtoukov.com/
@@ -1307,7 +1313,6 @@ https://ciroesposito.com/articoli
 https://cirrus.twiddles.com/
 https://cjewel.com/
 https://clagnut.com/
-https://clandestini.org/
 https://claudio.uk/
 https://claytonerrington.com/
 https://claytonwramsey.com/blog
@@ -1426,6 +1431,7 @@ https://danhannigan.dev/
 https://daniel-siepmann.de/index.html
 https://daniel.do/
 https://daniel.industries/
+https://daniel.kea.st/
 https://danielbower.com/
 https://danielcorin.com/
 https://danielcwilson.com/
@@ -1471,6 +1477,7 @@ https://daveceddia.com/
 https://davefernig.com/
 https://davehenry.blog/
 https://davekellam.com/
+https://davelawrence.photo/
 https://davepeck.org/
 https://daverupert.com/
 https://daveschumaker.net/
@@ -1526,6 +1533,7 @@ https://deletescape.ch/
 https://deliciousreverie.co.uk/
 https://den.dev/
 https://denden.garden/
+https://denis.milanovic.au/
 https://denisdefreyne.com/
 https://denisebushphoto.wordpress.com/
 https://denner.co/
@@ -1579,7 +1587,6 @@ https://disassociated.com/
 https://discardpile.pika.page/
 https://discombobulated.co.nz/
 https://discontinuednotes.com/
-https://disordered.me/
 https://disoriented.net/
 https://dispatchestofriends.mataroa.blog/
 https://disquiet.com/
@@ -1628,7 +1635,6 @@ https://drinkybird.net/
 https://drislock.org/blog/
 https://drmacsthinkingspace.wordpress.com/
 https://drossbucket.com/
-https://drt24.user.srcf.net/blog
 https://dru-withoutamap.blogspot.com/
 https://drwho.virtadpt.net/
 https://du.nkel.dev/
@@ -1873,6 +1879,7 @@ https://gabriellew.ee/
 https://gabz.blog/
 https://gaganpreet.in/
 https://gagor.pro/
+https://gallant.dev/
 https://gamesbymanuel.com/
 https://ganzeer.today/
 https://garden.bradwoods.io/
@@ -1880,6 +1887,7 @@ https://garden.delyo.be/
 https://garrido.io/
 https://garrit.xyz/
 https://garry.net/posts/
+https://garyalexander.co.uk/
 https://gaurav.koley.in/
 https://gavart.ist/
 https://gavinhoward.com/
@@ -1887,6 +1895,7 @@ https://gavinr.com/
 https://gavinray97.github.io/blog
 https://gearsco.de/
 https://gebir.ge/blog/
+https://geder-media.pika.page/
 https://geekbravado.com/
 https://geekmonkey.org/
 https://geewaan.netlify.com/
@@ -1943,10 +1952,10 @@ https://greenman.org/
 https://greg.harmsboone.org/
 https://gregalder.com/yardposts/
 https://gregat.es/
+https://gregmorris.co.uk/
 https://gregorlove.com/
 https://gregoryhammond.ca/
 https://grh.am/
-https://grifel.dev/
 https://griff.steni.us/
 https://grumpygamer.com/
 https://gsthnz.com/
@@ -1978,7 +1987,6 @@ https://haltakov.net/
 https://hamatti.org/
 https://hamel.dev/
 https://hamishcampbell.com/
-https://hammyhavoc.com/
 https://hamneggs716.com/
 https://hamneggs716.wordpress.com/
 https://hanki.dev/
@@ -2214,6 +2222,7 @@ https://jarango.com/
 https://jarche.com/
 https://jaredgorski.org/
 https://jaredwhite.com/
+https://jarekavi.com/
 https://jarema.me/rss/vi.xml
 https://jarosays.blog/
 https://jarunmb.com/
@@ -2359,6 +2368,7 @@ https://joshuagoodw.in/
 https://joshuamorris.info/
 https://joshuarogers.net/
 https://joshuastuebner.com/
+https://joshwithers.au/
 https://jouni.kantola.se/
 https://journal.dinobansigan.com/
 https://journal.james-zhan.com/
@@ -2370,6 +2380,7 @@ https://journal.seefar.dev/
 https://jpkoning.blogspot.com/
 https://jpreston.xyz/
 https://jrhawley.ca/
+https://jshmnrd.ca/
 https://jshox.com/jay
 https://jsrn.net/
 https://juanuys.com/
@@ -2610,7 +2621,6 @@ https://llogiq.github.io/
 https://lloydatkinson.net/
 https://lmika.org/
 https://lmnt.me/
-https://lnx.graphics/
 https://lobi.to/
 https://localghost.dev/
 https://log.0x21.biz/
@@ -2798,6 +2808,7 @@ https://matthewsheret.wordpress.com/
 https://matthewshields.co.uk/
 https://matthewstrom.com/
 https://matthewtift.com/
+https://matthewtrent.me/blog
 https://matthiasnoback.nl/
 https://matthiasott.com/feed
 https://matthiasott.com/rss
@@ -2847,6 +2858,7 @@ https://mediocregopher.com/
 https://medium.com/@ftrain?source=rss-168dab556633------2
 https://medriscoll.com/
 https://medwa.io/
+https://meetryanflowers.com/
 https://meganesulli.com/
 https://mehrankhalili.com/
 https://mehulkar.com/
@@ -2864,7 +2876,6 @@ https://memozine.me/
 https://mensfeld.pl/
 https://meowni.ca/
 https://merecivilian.com/
-https://mertbulan.com/
 https://metagrrrl.com/
 https://metamorphingmachine.neocities.org/
 https://metaredux.com/
@@ -3006,6 +3017,7 @@ https://muxup.com/
 https://mvasilkov.animuchan.net/
 https://mvieira.fr/
 https://mwarrenarts.com/
+https://mwl.io/
 https://mxb.dev/
 https://mxgns.uk/
 https://mxstbr.com/
@@ -3025,6 +3037,7 @@ https://n8ta.com/
 https://nabeelvalley.co.za/
 https://nabraj.com/
 https://nadav.ca/
+https://nader.io/
 https://nader.pm/articles/
 https://nadh.in/blog/
 https://nagekar.com/
@@ -3077,7 +3090,6 @@ https://newsfromnorfolk.uk/
 https://newsletter.disappearingmoment.com/
 https://newsletter.eng-leadership.com/
 https://nextfive.xyz/
-https://nfraprado.net/
 https://ngonella.com/
 https://nhgardensolutions.wordpress.com/
 https://nice-marmot.net/rss.xml
@@ -3105,7 +3117,6 @@ https://nikdoof.com/posts/
 https://nikhil.bearblog.dev/
 https://nikhilism.com/
 https://nikhilmwarrier.codeberg.page/blog/
-https://nikhilsoni.me/
 https://nikhilvishnu.com/nikhilvishnu.github.io/
 https://nikkin.dev/
 https://nikoheikkila.fi/
@@ -3231,6 +3242,7 @@ https://pachulski.me/
 https://paco.sh/
 https://paintedpixelsblog.wordpress.com/
 https://paleofuture.com/blog/
+https://palone.blog/
 https://pankajtanwar.in/blog
 https://paperless.blog/
 https://parallelthoughts.xyz/
@@ -3318,7 +3330,6 @@ https://philwilson.org/
 https://phloe.co/
 https://phoenixtrap.com/
 https://photos.raygrasso.com/
-https://piccalil.li/
 https://pierre.io/
 https://pig-monkey.com/
 https://pikselkraft.fr/
@@ -3329,7 +3340,6 @@ https://pinkgallica.com/
 https://piperhaywood.com/
 https://piraces.dev/
 https://pirahxcx.neocities.org/
-https://piruett.se/
 https://pivic.blog/
 https://pixelesque.net/blog/
 https://pixelpoppers.com/
@@ -3465,6 +3475,7 @@ https://reillyspitzfaden.com/blog
 https://reldn.co.uk/
 https://remysharp.com/
 https://renaissance-design.net/
+https://renanmf.com/
 https://renatello.com/
 https://rend.ezvo.us/
 https://renkotsuban.com/
@@ -3485,8 +3496,8 @@ https://richardswsmith.wordpress.com/
 https://richlyevocative.net/
 https://richteenager.mataroa.blog/
 https://ricos.site/
-https://riess.dev/
 https://riffraff.info/
+https://rinzewind.org/blog-en/
 https://rishigoomar.com/
 https://rishikeshs.com/
 https://risingthumb.xyz/Writing/Blog/index.rss
@@ -3581,7 +3592,6 @@ https://s3lph.me/
 https://saccade.com/blog
 https://sachachua.com/blog/feed/
 https://saeedesmaili.com/
-https://sahajsarup.com/
 https://sal.dev/
 https://saladblog.neocities.org/
 https://salem.io/
@@ -3596,6 +3606,7 @@ https://samanthajohn.com/
 https://sambish.com/
 https://samclarke.uk/
 https://sameerbajaj.com/
+https://samfeldstein.xyz/
 https://samhermes.com/
 https://sampatt.com/
 https://sampsa.fun/
@@ -3618,10 +3629,12 @@ https://sarasoueidan.com/blog/
 https://sarunw.com/
 https://saschadiercks.de/
 https://sashinexists.com/
+https://sathyabh.at/
 https://satyamkapoor.com/
 https://satyrs.eu/garden
 https://savjee.be/
 https://savraj.co/
+https://sayr.us/
 https://sboots.ca/
 https://scabshack.lol/
 https://scastiel.dev/
@@ -3669,7 +3682,6 @@ https://seldo.com/
 https://semicomplete.com/
 https://seneth.me/
 https://sentfrom.me/
-https://sergeykibish.com/blog/
 https://sergiosantos.info/
 https://sergiswriting.com/
 https://serhack.me/
@@ -3677,7 +3689,6 @@ https://sethlouis.dev/
 https://sethw.xyz/
 https://sevenoutoften.co.uk/
 https://sgillies.net/
-https://shadow.sombragris.org/
 https://shadowfacts.net/
 https://shadowsandsatin.wordpress.com/
 https://shahaliyev.org/
@@ -3802,7 +3813,6 @@ https://spacedimp.com/
 https://spacetime.dev/
 https://spasic.me/
 https://specbranch.com/
-https://specularrealms.com/
 https://speedbird.wordpress.com/
 https://spezifisch.codeberg.page/
 https://spiess.dev/
@@ -3850,7 +3860,6 @@ https://stevenklambert.com/
 https://stevenscrawls.com/
 https://stevenwoodson.com/
 https://stfn.pl/
-https://stop.zona-m.net/
 https://strangepotato.dev/
 https://straythought.xyz/
 https://stribny.name/blog/
@@ -4118,7 +4127,6 @@ https://ufal.envs.net/blog.html
 https://uka.life/
 https://ultimatemachine.se/
 https://ultracrepidarian.phfactor.net/
-https://ultrasaurus.com/feed/
 https://umhau.github.io/
 https://una.im/
 https://unattributed.cc/
@@ -4136,7 +4144,6 @@ https://unorde.red/
 https://unrelenting.technology/
 https://untested.sonnet.io/
 https://unwissen.blog/
-https://updates.inqk.net/
 https://urbannature.blog/
 https://urda.com/
 https://usamainsights.com/
@@ -4155,7 +4162,6 @@ https://vanis.sh/
 https://vannevel.net/
 https://vanwa.ch/
 https://varun.ca/
-https://vasanthv.net/
 https://vasters.com/clemens/
 https://vector-of-bool.github.io/
 https://veerle.duoh.com/
@@ -4265,7 +4271,6 @@ https://williamoconnell.me/
 https://williamvdg.me/
 https://williamzujkowski.github.io/
 https://willrc.co.uk/
-https://wilw.dev/
 https://wilwheaton.net/
 https://wimpysworld.com/posts/
 https://wimvanderbauwhede.github.io/
@@ -4283,6 +4288,7 @@ https://wiwi.blog/blog
 https://wojtek.im/journal
 https://wojteksychut.com/
 https://woltman.com/
+https://woodsprite.dev/
 https://woollywormhead.com/
 https://words.bothhands.ca/
 https://words.presgas.name/
@@ -4361,7 +4367,6 @@ https://www.annahavron.com/
 https://www.antopiras.dev/
 https://www.arp242.net/
 https://www.articulatecode.dev/
-https://www.artminnow.com/
 https://www.arun.is/
 https://www.arunwadhwa.com/
 https://www.ashish.zip/
@@ -4380,6 +4385,7 @@ https://www.barbariangrunge.com/
 https://www.barbarianmeetscoding.com/
 https://www.bartvandersanden.com/
 https://www.bboy.app/
+https://www.bebna.de/
 https://www.belter.io/
 https://www.ben-evans.com/benedictevans/
 https://www.benbyford.com/works/
@@ -4560,6 +4566,7 @@ https://www.fractalkitty.com/
 https://www.frankching.com/wordpress
 https://www.fredrikmeyer.net/
 https://www.friendlyskies.net/
+https://www.frumble.de/blog
 https://www.ft.io/
 https://www.fullmoonfiberart.com/
 https://www.funkysi1701.com/
@@ -4761,6 +4768,7 @@ https://www.mjt.me.uk/
 https://www.mlpowered.com/
 https://www.mnot.net/blog/
 https://www.monolog.dev/
+https://www.mooreds.com/wordpress
 https://www.morelightmorelight.com/
 https://www.morling.dev/
 https://www.mrdbourke.com/
@@ -4858,7 +4866,6 @@ https://www.philipotoole.com/
 https://www.philipzucker.com/
 https://www.philliproth.de/
 https://www.philosophicalgeek.com/
-https://www.phpied.com/
 https://www.pieterbrinkman.com/
 https://www.pinecoder.dev/
 https://www.piperswe.me/
@@ -4872,6 +4879,7 @@ https://www.positech.co.uk/cliffsblog
 https://www.preethamrn.com/
 https://www.productiverage.com/
 https://www.prograham.net/
+https://www.protozoic.com/
 https://www.pschua.com/
 https://www.ptrdev.com/
 https://www.pvk.ca/
@@ -4955,7 +4963,6 @@ https://www.shawenyao.com/
 https://www.shogan.co.uk/
 https://www.shokunin.studio/blog/
 https://www.sholis.com/
-https://www.shuchow.com/
 https://www.sicpers.info/
 https://www.siddharthagolu.com/
 https://www.siennaeggler.com/
@@ -4989,7 +4996,6 @@ https://www.spongefile.com/
 https://www.spudart.org/
 https://www.srijn.net/
 https://www.stackallocated.com/
-https://www.star-shaped.org/
 https://www.stavros.io/
 https://www.stchris.net/
 https://www.stdin.co.uk/blog2/
@@ -5028,7 +5034,6 @@ https://www.tampham.co/
 https://www.taniarascia.com/
 https://www.tapper-ware.net/blog
 https://www.tartley.com/
-https://www.taskboy.com/
 https://www.tatianamac.com/
 https://www.taxresearch.org.uk/Blog
 https://www.tbray.org/ongoing/
@@ -5107,6 +5112,7 @@ https://www.vctrbd.com/
 https://www.vegard.net/
 https://www.velcro-city.co.uk/
 https://www.viblo.se/
+https://www.vidarholen.net/contents/blog
 https://www.vinuthomas.com/
 https://www.virtualsanity.com/
 https://www.visakanv.com/blog/
@@ -5117,6 +5123,7 @@ https://www.vrk.dev/
 https://www.vzqk50.com/
 https://www.walterra.dev/blog
 https://www.wandering-scientist.com/
+https://www.warpstonepile.com/
 https://www.wavelengths.online/
 https://www.web-goddess.org/
 https://www.webrocker.de/
@@ -5252,6 +5259,7 @@ https://zed.gay/
 https://zed0.co.uk/blog/
 https://zedas.fr/
 https://zee-nix.blogspot.com/
+https://zeebots.space/
 https://zef.studio/
 https://zefram.xyz/
 https://zeldman.com/
@@ -5267,8 +5275,6 @@ https://zezivotarecruiterky.com/
 https://zgware.com/
 https://zhenyangli.me/
 https://zignar.net/
-https://zinzy.website/
-https://zinzy.website/posts/
 https://zioibi.com/
 https://zoeaubert.me/
 https://zoejazz.com/

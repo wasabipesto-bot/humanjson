@@ -9,7 +9,6 @@ https://afranca.com.br
 https://aldur.blog
 https://alexandr-sidorenko.me
 https://alexcaza.com
-https://alexeystar.com
 https://alexsirac.com
 https://alexzeecomedy.com
 https://alongtheray.com
@@ -69,7 +68,6 @@ https://calumryan.com
 https://camwebb.info
 https://cascading.space
 https://catgirlin.space
-https://cathieleblanc.com
 https://celadon.moe
 https://centiskor.ch
 https://charlyhotel.de
@@ -148,6 +146,7 @@ https://frittiert.es
 https://fullmetalbrackets.com
 https://fundamenta.micro.blog
 https://fundor333.com
+https://fusil.uk
 https://garystu.art
 https://gaze.systems
 https://genxnotes.com
@@ -263,6 +262,7 @@ https://maartenketelaars.eu
 https://mabbs.github.io
 https://mahmoudashraf.dev
 https://mandarismoore.com
+https://manishtamang.com
 https://marcgoertz.de
 https://marcomadera.com
 https://marisa.club
@@ -288,10 +288,12 @@ https://misterchrisjones.ca
 https://mkultra.monster
 https://moondeer.blog
 https://moondeer.micro.blog
+https://mrfrisby.com
 https://mrkapowski.com
 https://mrkod.eu.org
 https://mrmave.work
 https://n8chz.neocities.org
+https://nadjabester.com
 https://naln1.ca
 https://naturalplaceblog.com
 https://negatethis.com
@@ -301,7 +303,6 @@ https://newsonaut.com
 https://noahie.xyz
 https://nostodnayr.net
 https://notiz.blog
-https://noyes.io
 https://octospacc.altervista.org
 https://ohhelloana.blog
 https://outer-outer.space
@@ -310,7 +311,6 @@ https://pagesandbytes.com
 https://paologabriel.com
 https://paracosm.pages.dev
 https://paramdeo.com
-https://personal.arukusu.netcraze.link
 https://petermolnar.net
 https://phoebeivy.dev
 https://pilch.me
@@ -322,7 +322,6 @@ https://pixelroiber.de
 https://popbot.work
 https://practicing.design
 https://pray-xdd.ru
-https://prigoana.com
 https://prin.lu
 https://prry.uk
 https://prtksxna.com
@@ -392,6 +391,7 @@ https://thedimpau.se
 https://thefield.blog
 https://theme.marisa.club
 https://themindofruss.com
+https://thesolarprincess.org
 https://thomashodson.com
 https://thorsten-konigorski.de
 https://tilman.me
@@ -403,7 +403,7 @@ https://tuesdaynight.blog
 https://unicast.neocities.org
 https://uxbrad.com
 https://v1sta.xyz
-https://vertilo.space
+https://vampireapologist.com
 https://vic.demuzere.be
 https://victor.kropp.name
 https://villapirorum.netlify.app
@@ -457,6 +457,7 @@ https://www.rhyswynne.co.uk
 https://www.ricardochavezt.com
 https://www.senseantisense.com
 https://www.shannonkay.com
+https://www.sigfrids.world
 https://www.sophy.be
 https://www.tejasgk.com
 https://www.thorsten-konigorski.de
@@ -466,7 +467,6 @@ https://yordi.me
 https://yuna0x0.com
 https://zacharykai.net
 https://zacharyzollman.com
-https://zarar.dev
 https://zeebots.space
 https://zerokspot.com
 https://zietlow.io

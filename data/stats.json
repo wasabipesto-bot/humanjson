@@ -1,14 +1,14 @@
 {
- "crawl_date": "2026-10-26",
+ "crawl_date": "2026-11-02",
  "counts": {
-  "sites_with_file": 298,
-  "bare_targets": 1368,
-  "edges": 2542,
-  "edges_between_files": 654,
-  "files_with_zero_vouches": 24,
-  "carried_forward": 12,
+  "sites_with_file": 299,
+  "bare_targets": 1358,
+  "edges": 2523,
+  "edges_between_files": 653,
+  "files_with_zero_vouches": 25,
+  "carried_forward": 16,
   "median_out_degree": 4,
-  "mean_out_degree": 8.5
+  "mean_out_degree": 8.4
  },
  "top_out": [
   {
@@ -115,7 +115,7 @@
   },
   {
    "site": "ploum.net",
-   "vouched_by": 17,
+   "vouched_by": 16,
    "has_file": true
   },
   {
@@ -241,15 +241,15 @@
    "vouched_by": 8
   },
   {
-   "site": "pluralistic.net",
-   "vouched_by": 7
-  },
-  {
    "site": "kevquirk.com",
    "vouched_by": 7
   },
   {
    "site": "tracydurnell.com",
+   "vouched_by": 6
+  },
+  {
+   "site": "pluralistic.net",
    "vouched_by": 6
   },
   {
@@ -284,26 +284,26 @@
  "unvouched_sites": 87,
  "trust": {
   "n_pairs_at_longest_distance": 2,
-  "largest_scc": 117,
+  "largest_scc": 116,
   "scc_sizes_top5": [
-   117,
+   116,
    8,
    4,
    4,
    4
   ],
   "n_singleton_scc": 102,
-  "largest_wcc": 177,
-  "n_wcc": 74,
+  "largest_wcc": 176,
+  "n_wcc": 75,
   "wcc_sizes_top5": [
-   177,
+   176,
    8,
    4,
    4,
    4
   ],
   "core_diameter": 11,
-  "core_avg_shortest_path": 4.33,
+  "core_avg_shortest_path": 4.32,
   "longest_shortest_chain": 11,
   "longest_chain": [
    "blog.edwardloveall.com",
@@ -320,26 +320,26 @@
    "janogonzalez.com"
   ],
   "mutual_pairs": 189,
-  "reciprocity": 0.578,
+  "reciprocity": 0.579,
   "largest_mutual_clique": 4,
   "largest_mutual_cliques": [
-   [
-    "gaullier.org",
-    "khinsen.net",
-    "leouieda.com",
-    "tzovar.as"
-   ],
    [
     "kamloopstaichi.org",
     "newsonaut.com",
     "theanimalreporter.com",
     "thriftmac.com"
+   ],
+   [
+    "gaullier.org",
+    "khinsen.net",
+    "leouieda.com",
+    "tzovar.as"
    ]
   ],
-  "median_reach_within_5_hops": 54,
+  "median_reach_within_5_hops": 51,
   "max_reach_within_5_hops": [
    "firesphere.dev",
-   129
+   128
   ],
   "share_reaching_half_within_5": 0.0
  },
@@ -445,6 +445,16 @@
  "same_day_rings": [
   {
    "sites": [
+    "kamloopstaichi.org",
+    "newsonaut.com",
+    "theanimalreporter.com",
+    "thriftmac.com"
+   ],
+   "date": "2026-03-30",
+   "outside_vouchers": []
+  },
+  {
+   "sites": [
     "onepict.com",
     "sam.pikesley.org",
     "tante.cc"
@@ -472,16 +482,6 @@
     "skye.fyi",
     "tzovar.as"
    ]
-  },
-  {
-   "sites": [
-    "kamloopstaichi.org",
-    "newsonaut.com",
-    "theanimalreporter.com",
-    "thriftmac.com"
-   ],
-   "date": "2026-03-30",
-   "outside_vouchers": []
   }
  ],
  "reciprocation_lag_days": {
@@ -500,7 +500,7 @@
   "ca": {
    "out": 15,
    "same": 12,
-   "share_of_targets_with_cc": 0.023
+   "share_of_targets_with_cc": 0.027
   },
   "eu": {
    "out": 14,
@@ -522,15 +522,15 @@
    "same": 2,
    "share_of_targets_with_cc": 0.007
   },
+  "fr": {
+   "out": 7,
+   "same": 2,
+   "share_of_targets_with_cc": 0.02
+  },
   "as": {
    "out": 7,
    "same": 0,
    "share_of_targets_with_cc": 0.003
-  },
-  "fr": {
-   "out": 6,
-   "same": 2,
-   "share_of_targets_with_cc": 0.02
   }
  },
  "pagerank_top": [
@@ -548,15 +548,11 @@
   },
   {
    "site": "nicksimson.com",
-   "pr": 0.0198
+   "pr": 0.0199
   },
   {
    "site": "neatnik.net",
-   "pr": 0.0178
-  },
-  {
-   "site": "ploum.net",
-   "pr": 0.0158
+   "pr": 0.0179
   },
   {
    "site": "sethmlarson.dev",
@@ -564,7 +560,7 @@
   },
   {
    "site": "rknight.me",
-   "pr": 0.0143
+   "pr": 0.0144
   },
   {
    "site": "tante.cc",
@@ -573,6 +569,10 @@
   {
    "site": "hynek.me",
    "pr": 0.0132
+  },
+  {
+   "site": "ploum.net",
+   "pr": 0.0128
   },
   {
    "site": "robida.net",
@@ -588,7 +588,7 @@
   },
   {
    "site": "foosel.net",
-   "pr": 0.0123
+   "pr": 0.0124
   },
   {
    "site": "tzovar.as",
@@ -598,43 +598,43 @@
  "betweenness_top": [
   {
    "site": "neilzone.co.uk",
-   "bc": 0.0635
+   "bc": 0.0628
   },
   {
    "site": "rldane.space",
-   "bc": 0.0535
+   "bc": 0.0515
   },
   {
    "site": "tzovar.as",
-   "bc": 0.0386
+   "bc": 0.0375
   },
   {
    "site": "shkspr.mobi/blog",
-   "bc": 0.0369
-  },
-  {
-   "site": "ploum.net",
-   "bc": 0.036
+   "bc": 0.0364
   },
   {
    "site": "tante.cc",
-   "bc": 0.0348
+   "bc": 0.034
+  },
+  {
+   "site": "ploum.net",
+   "bc": 0.0325
   },
   {
    "site": "robida.net",
-   "bc": 0.0321
-  },
-  {
-   "site": "sethmlarson.dev",
-   "bc": 0.0319
+   "bc": 0.0316
   },
   {
    "site": "shellsharks.com",
-   "bc": 0.0317
+   "bc": 0.0314
+  },
+  {
+   "site": "sethmlarson.dev",
+   "bc": 0.0314
   },
   {
    "site": "joelchrono.xyz",
-   "bc": 0.0278
+   "bc": 0.0274
   }
  ],
  "adoption_by_month": {
@@ -642,13 +642,14 @@
   "2025-11": 1,
   "2026-01": 2,
   "2026-03": 158,
-  "2026-04": 39,
+  "2026-04": 40,
   "2026-05": 25,
   "2026-06": 5,
   "2026-07": 15,
   "2026-08": 13,
   "2026-09": 24,
-  "2026-10": 3
+  "2026-10": 2,
+  "2026-11": 1
  },
  "adoption_undated": 12,
  "vouches_by_month": {
@@ -658,45 +659,46 @@
   "2026-01": 10,
   "2026-02": 6,
   "2026-03": 1093,
-  "2026-04": 364,
+  "2026-04": 365,
   "2026-05": 246,
   "2026-06": 92,
   "2026-07": 147,
-  "2026-08": 280,
-  "2026-09": 213,
-  "2026-10": 44
+  "2026-08": 277,
+  "2026-09": 192,
+  "2026-10": 21,
+  "2026-11": 27
  },
  "vouches_undated": 33,
  "pre_spec_dates": 4,
  "freshness": {
   "newest_vouch_age": {
-   "\u226430d": 12,
-   "31\u201390d": 55,
-   "91\u2013180d": 61,
-   ">180d": 145
+   "\u226430d": 9,
+   "31\u201390d": 52,
+   "91\u2013180d": 60,
+   ">180d": 152
   },
-  "newest_vouch_undated": 25,
+  "newest_vouch_undated": 26,
   "last_modified_age": {
-   "\u226430d": 87,
-   "31\u201390d": 45,
-   "91\u2013180d": 39,
-   ">180d": 62
+   "\u226430d": 78,
+   "31\u201390d": 48,
+   "91\u2013180d": 43,
+   ">180d": 64
   },
-  "last_modified_missing": 65,
+  "last_modified_missing": 66,
   "single_date_files": 129,
-  "active_since_june": 101,
-  "files_with_vouches_on_multiple_dates": 108
+  "active_since_june": 100,
+  "files_with_vouches_on_multiple_dates": 107
  },
  "history": {
-  "files_with_archive": 197,
+  "files_with_archive": 198,
   "files_with_git_history": 80,
   "git_files_changed_after_first_commit": 37,
   "git_commits_median": 2,
   "git_last_commit_age": {
    "\u226430d": 3,
    "31\u201390d": 16,
-   "91\u2013180d": 16,
-   ">180d": 45
+   "91\u2013180d": 13,
+   ">180d": 48
   },
   "vouches_removed": 27,
   "removed_by_kind": {
@@ -771,7 +773,7 @@
     "removed": "chrisburnell.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -781,7 +783,7 @@
     "removed": "chrismcleod.dev",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -791,7 +793,7 @@
     "removed": "pxlnv.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -801,7 +803,7 @@
     "removed": "raymondcamden.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -811,7 +813,7 @@
     "removed": "robinrendle.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -863,7 +865,7 @@
     "removed": "solariz.de/",
     "between": [
      "2026-04-13",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "url changed"
@@ -913,7 +915,7 @@
     "removed": "text.eapl.mx/main-es",
     "between": [
      "2026-03-17",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "url changed"
@@ -923,7 +925,7 @@
     "removed": "binarydigit.dev",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "url changed"
@@ -933,7 +935,7 @@
     "removed": "chrisburnell.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -943,7 +945,7 @@
     "removed": "chrismcleod.dev",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -953,7 +955,7 @@
     "removed": "crashthearcade.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "target offline"
@@ -963,7 +965,7 @@
     "removed": "pxlnv.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -973,7 +975,7 @@
     "removed": "raymondcamden.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -983,7 +985,7 @@
     "removed": "robinrendle.com",
     "between": [
      "2026-03-28",
-     "2026-10-26"
+     "2026-11-02"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -1106,37 +1108,38 @@
    "https://html-chunder.neocities.org/human.json",
    "https://jaenis.ch/human.json",
    "https://lazybea.rs/human.json",
+   "https://post-tenebras-lire.net/human.json",
    "https://yawnbox.eu/human.json"
   ]
  },
  "bare_target_status": {
-  "no-human-json": 1193,
-  "timeout": 67,
+  "no-human-json": 1177,
+  "timeout": 66,
   "unprobed": 43,
-  "robots": 41,
-  "err": 23,
-  "declared-but-http404": 1
+  "robots": 40,
+  "err": 30,
+  "declared-but-http404": 2
  },
  "declared_but_broken": [
+  "canneddragons.net",
   "dpogue.ca",
   "harrycresswell.com",
-  "press.k49.fr.nf",
   "shayneparkinson.com",
   "srvanderplas.github.io",
   "takeonrules.com"
  ],
  "compliance": {
   "versions": {
-   "0.1.1": 282,
+   "0.1.1": 283,
    "1": 4,
    "0.1": 3,
-   "0.1.2": 2,
    "1.0.0": 2,
+   "0.1.2": 2,
    "0.1.4": 1,
-   "0.0.1": 1,
+   "1.1.0": 1,
    "0.1.6": 1,
-   "0.1.0": 1,
-   "1.1.0": 1
+   "0.0.1": 1,
+   "0.1.0": 1
   },
   "lenient_parse": [
    "albert.rierol.net",
@@ -1144,43 +1147,43 @@
    "cygnoir.net",
    "tuskito.neocities.org"
   ],
-  "cors_star": 115,
+  "cors_star": 116,
   "content_type": {
-   "application/json": 293,
+   "application/json": 294,
    "none": 3,
-   "text/json": 1,
-   "application/manifest+json": 1
+   "application/manifest+json": 1,
+   "text/json": 1
   },
   "discovery_via": {
-   "fallback": 26,
-   "link": 275
+   "fallback": 27,
+   "link": 271
   },
   "self_vouch": 19,
   "extra_top_level_keys": {
    "$schema": 6,
-   "_comment": 1,
    "comment": 1,
+   "updated_at": 1,
    "$id": 1,
    "title": 1,
    "description": 1,
    "type": 1,
    "required": 1,
    "properties": 1,
-   "updated_at": 1
+   "_comment": 1
   },
   "vouch_extra_keys": {},
   "undated_vouches": 33
  },
  "tlds": {
-  "com": 92,
-  "net": 33,
+  "com": 93,
+  "net": 32,
   "org": 26,
   "dev": 19,
   "uk": 15,
   "de": 11,
   "io": 11,
   "me": 11,
-  "ca": 7,
+  "ca": 8,
   "fr": 6,
   "eu": 4,
   "space": 4,
@@ -1194,12 +1197,12 @@
   "ing": 2
  },
  "platforms": {
-  "own domain": 282,
+  "own domain": 283,
   "github.io": 9,
   "neocities.org": 4,
   "codeberg.page": 1,
-  "tilde.": 1,
-  "pages.dev": 1
+  "pages.dev": 1,
+  "tilde.": 1
  },
  "sample": {
   "sample-webring": {
@@ -1207,7 +1210,7 @@
    "reachable": 440,
    "with_human_json": 26,
    "rate": 0.0591,
-   "robots_blocked": 17,
+   "robots_blocked": 18,
    "hits": [
     "aldur.blog",
     "arbs09.dev",
@@ -1239,10 +1242,10 @@
   },
   "sample-blogroll": {
    "listed_hosts": 1307,
-   "reachable": 1233,
+   "reachable": 1237,
    "with_human_json": 47,
-   "rate": 0.0381,
-   "robots_blocked": 43,
+   "rate": 0.038,
+   "robots_blocked": 45,
    "hits": [
     "aartaka.me",
     "andregarzia.com",
@@ -1294,11 +1297,11 @@
    ]
   },
   "sample-indieblog": {
-   "listed_hosts": 5201,
+   "listed_hosts": 5208,
    "reachable": 4995,
-   "with_human_json": 94,
-   "rate": 0.0188,
-   "robots_blocked": 104,
+   "with_human_json": 95,
+   "rate": 0.019,
+   "robots_blocked": 102,
    "hits": [
     "aaronczichon.de",
     "aartaka.me",
@@ -1350,6 +1353,7 @@
     "joelchrono12.xyz",
     "john.colagioia.net",
     "journal.kvibber.com",
+    "jshmnrd.ca",
     "kedara.eu",
     "kedara.nl",
     "kvibber.com",
@@ -1398,9 +1402,9 @@
   }
  },
  "sample_combined": {
-  "reachable_hosts": 5623,
-  "with_human_json": 109,
-  "rate": 0.0194
+  "reachable_hosts": 5617,
+  "with_human_json": 110,
+  "rate": 0.0196
  },
  "sample_only_sites": [
   "andregarzia.com",
@@ -1414,6 +1418,7 @@
   "jayeless.net",
   "jeanmarielafon.com",
   "jorgesanz.net",
+  "jshmnrd.ca",
   "l3on.site",
   "lunalux.io",
   "michaelbrooks.co.uk",
@@ -1428,7 +1433,7 @@
  ],
  "churn": {
   "hosts_checked": 1364,
-  "robots_hosts_checked": 38,
+  "robots_hosts_checked": 37,
   "had_file": {
    "acdw.net": {
     "now": "blocks crawlers (robots.txt)",
@@ -1439,7 +1444,7 @@
     "first_seen": "20260502"
    },
    "canneddragons.net": {
-    "now": "file gone",
+    "now": "still links a file that is broken",
     "first_seen": "20260503"
    },
    "geedea.pro": {
@@ -1491,7 +1496,7 @@
     "first_seen": "20260419"
    },
    "post-tenebras-lire.net": {
-    "now": "has a file under a sub-path (not churn)",
+    "now": "file gone",
     "first_seen": "20260909"
    },
    "raniz.blog": {
@@ -1517,17 +1522,18 @@
   },
   "by_outcome": {
    "blocks crawlers (robots.txt)": 7,
-   "file gone": 5,
+   "still links a file that is broken": 1,
    "file still served (not discoverable from the homepage)": 2,
-   "has a file under a sub-path (not churn)": 7
+   "has a file under a sub-path (not churn)": 6,
+   "file gone": 5
   }
  },
  "provenance": {
-  "vouch": 131,
-  "seeds-2026-10-05-csv.txt": 97,
+  "vouch": 129,
+  "seeds-2026-10-05-csv.txt": 99,
   "github-seeds.txt": 20,
   "research-seeds.txt": 17,
-  "sample-indieblog.txt": 12,
+  "sample-indieblog.txt": 13,
   "sample-blogroll.txt": 7,
   "sample-webring.txt": 6,
   "alias-only": 4,
