@@ -7,7 +7,6 @@ https://aedhonk.systems
 https://aethermug.com
 https://afranca.com.br
 https://aldur.blog
-https://alexandr-sidorenko.me
 https://alexcaza.com
 https://alexsirac.com
 https://alexzeecomedy.com
@@ -43,6 +42,7 @@ https://benjaminturner.me
 https://benji.dog
 https://ber.earth
 https://billglover.me
+https://binarydigit.net
 https://bisha.neocities.org
 https://blog.andrewshell.org
 https://blog.b-ark.ca
@@ -65,11 +65,13 @@ https://bulltown.joejenett.com
 https://burgeonlab.com
 https://cagrimmett.com
 https://calumryan.com
+https://camisado.co.uk
 https://camwebb.info
 https://cascading.space
 https://catgirlin.space
 https://celadon.moe
 https://centiskor.ch
+https://chaosh.at
 https://charlyhotel.de
 https://cheztervargas.com
 https://chiarapasquini.net
@@ -123,6 +125,7 @@ https://dougbeal.com
 https://echoesinthemachine.blog
 https://edleeman.co.uk
 https://edmundxwhite.com
+https://educatedkanak.de
 https://ege.celikci.me
 https://ellesho.me
 https://emanuelegori.uno
@@ -138,7 +141,6 @@ https://fefa.net.br
 https://felipebrasilblog.github.io
 https://fifegeo.co.uk
 https://fireburn.ru
-https://flam.mataroa.blog
 https://found-media-archive.neocities.org
 https://frasermclean.com
 https://frills.dev
@@ -187,6 +189,7 @@ https://irongeek.net
 https://islandinthenet.com
 https://ivanthinking.net
 https://jackjamieson.net
+https://jacobandersen.dev
 https://jacobhall.net
 https://jacoblarose.com
 https://jade.ellis.link
@@ -211,7 +214,6 @@ https://joelchrono.xyz
 https://joeross.me
 https://joewheeler.co.uk
 https://johanbove.info
-https://johnjohnston.info
 https://jojeee.xyz
 https://jokerm.com
 https://jolvera.dev
@@ -250,7 +252,6 @@ https://leilukin.com
 https://leivajd.com
 https://leoashcraft.com
 https://lifeofpablo.com
-https://lio.surge.sh
 https://logicface.co.uk
 https://lostfocus.de
 https://lucien.nogues.ca
@@ -269,7 +270,6 @@ https://marisa.club
 https://martymcgui.re
 https://matrixster.co.uk
 https://matthewscheffel.com
-https://maya.land
 https://mayx.eu.org
 https://mayx.gitlab.io
 https://mayx.pages.dev
@@ -374,7 +374,6 @@ https://srijan.ch
 https://srp.life
 https://starbreaker.org
 https://status.h3rb1.com
-https://status.herrmontag.de
 https://stdfox.me
 https://stephenpieper.net
 https://stevenwoodson.com
@@ -427,8 +426,10 @@ https://www.bagaag.com
 https://www.bckn.be
 https://www.boffosocko.com
 https://www.bongotwisty.blog
+https://www.cedricbonhomme.org
 https://www.ciccarello.me
 https://www.dfoley.ie
+https://www.dijonkitchen.org
 https://www.edwinwenink.xyz
 https://www.eltr.ac
 https://www.eorus.com

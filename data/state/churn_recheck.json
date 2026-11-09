@@ -52,8 +52,8 @@
   "parses": true
  },
  "https://post-tenebras-lire.net/human.json": {
-  "status": 410,
-  "parses": false
+  "status": 200,
+  "parses": true
  },
  "https://raniz.blog/human.json": {
   "status": 404,

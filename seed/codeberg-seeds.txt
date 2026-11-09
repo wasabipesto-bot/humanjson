@@ -85,6 +85,7 @@ https://kleinbox.dev
 https://konomikitten.codeberg.page/
 https://kvibber.com
 https://lamonaca.dev
+https://legume.uk
 https://libreserver.org
 https://lime360.nekoweb.org/
 https://linktr.ee/officialrajdeepsingh
@@ -170,6 +171,7 @@ https://wolkenheim.eu
 https://www.aonghusstorey.com
 https://www.ashwinsundar.com
 https://www.claudinec.net/
+https://www.danielsenff.de
 https://www.fiee.net
 https://www.frede.dev
 https://www.gaullier.org/en/about

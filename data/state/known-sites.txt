@@ -182,6 +182,7 @@ blakerain.com
 blakewatson.com
 blarg.ca
 blep.org
+bloeckchengrafik.de
 blog.achintyarao.in
 blog.afandian.com
 blog.allpurposem.at
@@ -308,6 +309,7 @@ cashmerecrypt.art
 cassey.dev
 cassie.ink
 castleseftonpress.co.uk
+casualvillain.com
 catecheticconverter.com
 catileptic.tech
 cedmax.net
@@ -329,6 +331,7 @@ chrisjones.io
 chriskiehl.com
 chrislowis.co.uk
 chrismcleod.dev
+chrisminnick.com
 chrisroos.co.uk
 christandpopculture.com
 christopherhimes.com
@@ -640,6 +643,7 @@ garymcgraw.com
 gaspartorriero.it
 gaullier.org
 gaullier.org/en/about
+gautier.difolco.dev
 gavart.ist
 gbilder.com
 geedea.pro
@@ -857,7 +861,9 @@ jorgennilsson.com
 jorgesanz.net
 josephquam.com
 joshmock.com
+joshtronic.com
 joshtumath.uk
+joshuamorris.info
 joshwcomeau.com
 journal.bsd.cafe
 journal.james-zhan.com
@@ -916,6 +922,7 @@ khleedril.org/blog
 khrys.eu.org
 kianryan.co.uk
 kiko.io
+killsixbilliondemons.com
 kimberlyhirsh.com
 kimcapcreations.fr
 kirgroup.net
@@ -1049,6 +1056,7 @@ marisabel.nl
 markok.dev
 markokaartinen.net
 markuseliasson.se
+markvanderloo.eu
 mart-e.be
 martinschneider.me
 martymcgui.re
@@ -1120,6 +1128,7 @@ moddedbear.com
 mollymcleod.com
 mollywhite.net
 monotasking.hcommons.org
+monstersandmanuals.blogspot.com
 montreuillois.com
 montyfew.com
 moonbase.lgbt
@@ -1198,6 +1207,7 @@ notiz.blog
 noumenal.es
 nounbea.st
 now.achintyarao.in
+ntteloos.nl
 nuchronic.uk
 nutritionfacts.org
 occamstypewriter.org/scurry
@@ -1566,6 +1576,7 @@ thatoddshade.is-a.dev
 thatsmood.com
 the-challenge.bearblog.dev
 the-hug.org/paul/wibblings.html
+theangrygm.com
 theanimalreporter.com
 theblipbloop.github.io
 thebootloader.net
@@ -1584,6 +1595,7 @@ theresmiling.eu
 thesaigoneer.bearblog.dev
 thetangent.space
 thewhitepages.net
+thijmer.nl
 thinkdobecreate.com
 thisdaysportion.com/posts
 thomashodson.com
@@ -1638,6 +1650,7 @@ ulrikeneidel.de
 uncharted-worlds.org/blog
 undef.me
 unixdigest.com
+unsoundedupdates.tumblr.com
 unsung.aresluna.org
 uruky.com
 usebox.net/jjm/blog
@@ -1697,6 +1710,7 @@ wheresyoured.at
 whitep4nth3r.com
 whynothugo.nl
 wiki.achintyarao.in
+wikiquedia.com
 wilkinson.graphics
 willmcgugan.com
 wilwheaton.net
