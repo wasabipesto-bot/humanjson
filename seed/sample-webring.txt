@@ -46,6 +46,7 @@ https://binarydigit.net
 https://bisha.neocities.org
 https://blog.andrewshell.org
 https://blog.b-ark.ca
+https://blog.chiyo.uk
 https://blog.darylsun.page
 https://blog.libove.org
 https://blog.meadowhawk.xyz
@@ -76,6 +77,7 @@ https://charlyhotel.de
 https://cheztervargas.com
 https://chiarapasquini.net
 https://chisenires.design
+https://chish.dev
 https://chlo.is
 https://chris.funderburg.me
 https://chrisburnell.com
@@ -145,7 +147,6 @@ https://found-media-archive.neocities.org
 https://frasermclean.com
 https://frills.dev
 https://frittiert.es
-https://fullmetalbrackets.com
 https://fundamenta.micro.blog
 https://fundor333.com
 https://fusil.uk
@@ -214,6 +215,7 @@ https://joelchrono.xyz
 https://joeross.me
 https://joewheeler.co.uk
 https://johanbove.info
+https://johnjohnston.info
 https://jojeee.xyz
 https://jokerm.com
 https://jolvera.dev
@@ -372,6 +374,7 @@ https://soopy.moe
 https://spont.codeberg.page
 https://srijan.ch
 https://srp.life
+https://starbase430.com
 https://starbreaker.org
 https://status.h3rb1.com
 https://stdfox.me
@@ -381,7 +384,6 @@ https://stumax.micro.blog
 https://svemagie.net
 https://tantek.com
 https://tar.dev
-https://tarandir.dev
 https://thadeussmith.com
 https://thamara.co.uk
 https://thealonealex.bearblog.dev
@@ -431,7 +433,6 @@ https://www.ciccarello.me
 https://www.dfoley.ie
 https://www.dijonkitchen.org
 https://www.edwinwenink.xyz
-https://www.eltr.ac
 https://www.eorus.com
 https://www.equinoxefr.org
 https://www.foldingtime.space

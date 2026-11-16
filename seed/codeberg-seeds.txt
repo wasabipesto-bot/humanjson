@@ -11,6 +11,7 @@ https://andrew.nonetoohappy.buzz
 https://andypiper.me
 https://anthonypena.fr
 https://artlung.neocities.org/
+https://ascochran.fyi
 https://axoga.to/
 https://axxuy.com
 https://beesbuzz.biz/
@@ -37,6 +38,7 @@ https://cubething.dev
 https://danq.me/
 https://davidpeach.me
 https://dbuho.me
+https://dbuho.me/?codeberg
 https://deathkitten.net
 https://dominikschwind.com
 https://drew-naylor.com/
@@ -184,5 +186,6 @@ https://www.selfawaresoup.com/
 https://www.socardomingo.com
 https://www.ytvwld.de
 https://ya.codes
+https://ziyodov.uz
 https://zl4bv.com
 https://zohren.xyz

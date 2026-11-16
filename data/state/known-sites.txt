@@ -21,7 +21,9 @@ absolument-tout.net
 accioecologista-agro.org
 acdw.net
 achintyarao.in
+acook.jp
 adactio.com
+adactio.com/j
 adam.omg.lol
 adamdjbrett.com
 adamj.eu
@@ -109,6 +111,7 @@ artlung.com
 ashbysoft.com
 ashk.au
 ashleymcquaid.com
+asteriisms.com
 astrabun.com
 astriiid.fr
 aubreysambor.com
@@ -219,6 +222,7 @@ blog.johl.io
 blog.jsbarretto.com
 blog.juliaferraioli.com
 blog.khinsen.net
+blog.ktz.me
 blog.legoktm.com
 blog.liw.fi
 blog.lovirent.eu
@@ -509,6 +513,7 @@ eclecticpassions.net
 ecrann.dev
 edithtorres.com
 editoraconcarrito.com
+edleeman.co.uk
 edwardloveall.com
 eevie.ro
 eightofpentacles.com
@@ -637,7 +642,9 @@ futilitycloset.com
 fyr.io
 gabebw.com
 gaelan.me
+garden.maryseph.com
 garden.mattstein.com/notes
+garrido.io
 garrit.xyz
 garymcgraw.com
 gaspartorriero.it
@@ -706,6 +713,7 @@ guillaume-bertello.fr
 guillermolatorre.com
 gvanrossum.github.io
 hacdias.com
+hack5.dev
 hackercodex.com
 hackr.de
 hackwimbledon.org
@@ -740,6 +748,7 @@ hkamran.com
 hmnpls.neocities.org
 hollie.eilloh.net
 holzer.online
+home.hedy.dev
 honzuvkod.dev
 horodecki.net
 horseonvhs.com
@@ -761,6 +770,7 @@ i-eat.rocks
 ianrenton.com
 identechal.com
 igwgames.com
+ilye.ss
 ilyess.cc
 ime.unicamp.br/~biloti
 imfineimfine.com
@@ -800,6 +810,7 @@ jacobdensford.com
 jacobian.org
 jaenis.ch
 jaimieserotica.com
+jak2k.eu
 jamchamb.net
 jamesbaum.co.uk
 jamescooke.info
@@ -830,6 +841,7 @@ jelisjeblogue.blogspot.com
 jen.phillipsuk.org
 jenniferplusplus.com
 jennschiffer.com
+jeremycherfas.net
 jeremycherfas.net/blog
 jessamyn.com
 jesseevers.com
@@ -837,6 +849,7 @@ jezuk.co.uk
 jim-nielsen.com
 jimmynilsson.com
 jlgoodwin.com/words-pictures
+jlopes.eu
 jluther.net
 jmjordan.com
 jmtd.net
@@ -979,6 +992,7 @@ librecast.net
 librezo.fr
 liedra.net
 lifeofaudrey.com
+lifeofpablo.com
 limeleaf.coop
 linkyblog.neocities.org
 livelaugh.blog
@@ -995,6 +1009,7 @@ looktothestars.org
 loreleice.net
 lorenzogerli.net
 lostfocus.de
+lostletters.neocities.org
 lovejoolz.com
 lovergine.com
 lovirent.eu
@@ -1155,6 +1170,7 @@ mygreatloopadventure.com
 myles.garden
 mythic-beasts.com/blog
 mzll.it
+nadjabester.com
 napo.dev
 nas.sr
 nataliethenerd.com
@@ -1403,6 +1419,7 @@ rys.io/en/index.htm
 s-n.me
 saaste.net
 sai.densford.net
+saidensford.com
 saisarida.com
 saki.net7.blog
 sakowski.fr

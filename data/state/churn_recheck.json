@@ -15,6 +15,10 @@
   "status": 200,
   "parses": false
  },
+ "https://edleeman.co.uk/human.json": {
+  "status": 200,
+  "parses": true
+ },
  "https://hisvirusness.com/assets/human.json": {
   "status": 200,
   "parses": true

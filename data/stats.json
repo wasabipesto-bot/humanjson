@@ -1,19 +1,23 @@
 {
- "crawl_date": "2026-11-09",
+ "crawl_date": "2026-11-16",
  "counts": {
-  "sites_with_file": 301,
-  "bare_targets": 1386,
-  "edges": 2570,
-  "edges_between_files": 658,
+  "sites_with_file": 303,
+  "bare_targets": 1398,
+  "edges": 2600,
+  "edges_between_files": 665,
   "files_with_zero_vouches": 24,
-  "carried_forward": 4,
+  "carried_forward": 5,
   "median_out_degree": 4,
-  "mean_out_degree": 8.5
+  "mean_out_degree": 8.6
  },
  "top_out": [
   {
    "site": "sethmlarson.dev",
    "vouches": 101
+  },
+  {
+   "site": "burgeonlab.com",
+   "vouches": 94
   },
   {
    "site": "jorgesanz.net",
@@ -22,10 +26,6 @@
   {
    "site": "artlung.com",
    "vouches": 69
-  },
-  {
-   "site": "burgeonlab.com",
-   "vouches": 68
   },
   {
    "site": "brennan.day",
@@ -124,12 +124,17 @@
    "has_file": true
   },
   {
-   "site": "shellsharks.com",
+   "site": "rknight.me",
+   "vouched_by": 14,
+   "has_file": true
+  },
+  {
+   "site": "tzovar.as",
    "vouched_by": 13,
    "has_file": true
   },
   {
-   "site": "rknight.me",
+   "site": "shellsharks.com",
    "vouched_by": 13,
    "has_file": true
   },
@@ -146,11 +151,6 @@
   {
    "site": "brennan.day",
    "vouched_by": 13,
-   "has_file": true
-  },
-  {
-   "site": "tzovar.as",
-   "vouched_by": 12,
    "has_file": true
   },
   {
@@ -245,15 +245,19 @@
    "vouched_by": 8
   },
   {
+   "site": "tracydurnell.com",
+   "vouched_by": 7
+  },
+  {
+   "site": "kwon.nyc",
+   "vouched_by": 7
+  },
+  {
    "site": "kevquirk.com",
    "vouched_by": 7
   },
   {
-   "site": "tracydurnell.com",
-   "vouched_by": 6
-  },
-  {
-   "site": "kwon.nyc",
+   "site": "manuelmoreale.com",
    "vouched_by": 6
   },
   {
@@ -275,30 +279,26 @@
   {
    "site": "akselmo.dev",
    "vouched_by": 6
-  },
-  {
-   "site": "82mhz.net",
-   "vouched_by": 6
   }
  ],
  "unvouched_sites": 88,
  "trust": {
   "n_pairs_at_longest_distance": 2,
-  "largest_scc": 117,
+  "largest_scc": 118,
   "scc_sizes_top5": [
-   117,
+   118,
    8,
-   4,
+   5,
    4,
    4
   ],
   "n_singleton_scc": 103,
-  "largest_wcc": 180,
+  "largest_wcc": 181,
   "n_wcc": 74,
   "wcc_sizes_top5": [
-   180,
+   181,
    8,
-   4,
+   5,
    4,
    4
   ],
@@ -319,8 +319,8 @@
    "denisdefreyne.com",
    "janogonzalez.com"
   ],
-  "mutual_pairs": 190,
-  "reciprocity": 0.578,
+  "mutual_pairs": 191,
+  "reciprocity": 0.574,
   "largest_mutual_clique": 4,
   "largest_mutual_cliques": [
    [
@@ -336,10 +336,10 @@
     "thriftmac.com"
    ]
   ],
-  "median_reach_within_5_hops": 51,
+  "median_reach_within_5_hops": 52,
   "max_reach_within_5_hops": [
    "firesphere.dev",
-   129
+   130
   ],
   "share_reaching_half_within_5": 0.0
  },
@@ -355,6 +355,13 @@
    "starforge.co.uk"
   ],
   [
+   "crazyroostereye.de",
+   "fireye.coffee",
+   "frutigeraeroarchive.org",
+   "i-eat.rocks",
+   "possiblyaxolotl.com"
+  ],
+  [
    "areweaiyet.taffer.ca",
    "arewequantumyet.taffer.ca",
    "skelly.taffer.ca",
@@ -365,12 +372,6 @@
    "deckardholiday.com",
    "erikmcclure.com",
    "tuskito.neocities.org"
-  ],
-  [
-   "crazyroostereye.de",
-   "fireye.coffee",
-   "frutigeraeroarchive.org",
-   "possiblyaxolotl.com"
   ],
   [
    "enough.computer",
@@ -445,16 +446,6 @@
  "same_day_rings": [
   {
    "sites": [
-    "kamloopstaichi.org",
-    "newsonaut.com",
-    "theanimalreporter.com",
-    "thriftmac.com"
-   ],
-   "date": "2026-03-30",
-   "outside_vouchers": []
-  },
-  {
-   "sites": [
     "onepict.com",
     "sam.pikesley.org",
     "tante.cc"
@@ -480,10 +471,20 @@
     "skye.fyi",
     "tzovar.as"
    ]
+  },
+  {
+   "sites": [
+    "kamloopstaichi.org",
+    "newsonaut.com",
+    "theanimalreporter.com",
+    "thriftmac.com"
+   ],
+   "date": "2026-03-30",
+   "outside_vouchers": []
   }
  ],
  "reciprocation_lag_days": {
-  "pairs_dated": 190,
+  "pairs_dated": 191,
   "same_day": 81,
   "within_week": 136,
   "median": 1,
@@ -505,15 +506,15 @@
    "same": 0,
    "share_of_targets_with_cc": 0.013
   },
+  "de": {
+   "out": 13,
+   "same": 2,
+   "share_of_targets_with_cc": 0.04
+  },
   "nl": {
    "out": 12,
    "same": 2,
    "share_of_targets_with_cc": 0.017
-  },
-  "de": {
-   "out": 12,
-   "same": 2,
-   "share_of_targets_with_cc": 0.04
   },
   "fr": {
    "out": 10,
@@ -526,7 +527,7 @@
    "share_of_targets_with_cc": 0.007
   },
   "as": {
-   "out": 7,
+   "out": 8,
    "same": 0,
    "share_of_targets_with_cc": 0.003
   }
@@ -534,11 +535,11 @@
  "pagerank_top": [
   {
    "site": "shkspr.mobi/blog",
-   "pr": 0.0293
+   "pr": 0.029
   },
   {
    "site": "neilzone.co.uk",
-   "pr": 0.0259
+   "pr": 0.0257
   },
   {
    "site": "nicksimson.com",
@@ -546,7 +547,7 @@
   },
   {
    "site": "sam.pikesley.org",
-   "pr": 0.0195
+   "pr": 0.0193
   },
   {
    "site": "neatnik.net",
@@ -554,23 +555,27 @@
   },
   {
    "site": "ploum.net",
-   "pr": 0.0159
+   "pr": 0.0157
   },
   {
    "site": "sethmlarson.dev",
-   "pr": 0.0146
+   "pr": 0.0145
   },
   {
    "site": "rknight.me",
-   "pr": 0.0142
+   "pr": 0.0143
   },
   {
    "site": "hynek.me",
-   "pr": 0.013
+   "pr": 0.0129
+  },
+  {
+   "site": "tzovar.as",
+   "pr": 0.0127
   },
   {
    "site": "robida.net",
-   "pr": 0.0128
+   "pr": 0.0126
   },
   {
    "site": "shellsharks.com",
@@ -578,61 +583,57 @@
   },
   {
    "site": "foosel.net",
-   "pr": 0.0122
+   "pr": 0.0121
   },
   {
    "site": "tante.cc",
-   "pr": 0.0122
+   "pr": 0.0121
   },
   {
    "site": "onepict.com",
-   "pr": 0.012
-  },
-  {
-   "site": "tzovar.as",
-   "pr": 0.0111
+   "pr": 0.0119
   }
  ],
  "betweenness_top": [
   {
    "site": "neilzone.co.uk",
-   "bc": 0.0617
+   "bc": 0.061
   },
   {
    "site": "rldane.space",
-   "bc": 0.0525
+   "bc": 0.0531
   },
   {
    "site": "tzovar.as",
-   "bc": 0.0365
+   "bc": 0.0392
   },
   {
    "site": "shkspr.mobi/blog",
-   "bc": 0.0361
+   "bc": 0.0358
   },
   {
    "site": "ploum.net",
-   "bc": 0.0353
-  },
-  {
-   "site": "robida.net",
-   "bc": 0.0319
+   "bc": 0.0357
   },
   {
    "site": "tante.cc",
-   "bc": 0.0314
+   "bc": 0.0321
+  },
+  {
+   "site": "robida.net",
+   "bc": 0.0316
   },
   {
    "site": "sethmlarson.dev",
-   "bc": 0.0312
+   "bc": 0.0313
   },
   {
    "site": "shellsharks.com",
-   "bc": 0.0308
+   "bc": 0.0297
   },
   {
    "site": "joelchrono.xyz",
-   "bc": 0.0272
+   "bc": 0.0269
   }
  ],
  "adoption_by_month": {
@@ -644,79 +645,79 @@
   "2026-05": 24,
   "2026-06": 6,
   "2026-07": 15,
-  "2026-08": 13,
+  "2026-08": 14,
   "2026-09": 25,
-  "2026-10": 3,
-  "2026-11": 3
+  "2026-10": 4,
+  "2026-11": 4
  },
- "adoption_undated": 12,
+ "adoption_undated": 11,
  "vouches_by_month": {
   "2025-03": 1,
   "2025-11": 5,
   "2025-12": 8,
   "2026-01": 10,
   "2026-02": 6,
-  "2026-03": 1089,
+  "2026-03": 1087,
   "2026-04": 383,
   "2026-05": 242,
   "2026-06": 94,
   "2026-07": 147,
-  "2026-08": 277,
+  "2026-08": 278,
   "2026-09": 212,
-  "2026-10": 20,
-  "2026-11": 43
+  "2026-10": 35,
+  "2026-11": 59
  },
  "vouches_undated": 33,
  "pre_spec_dates": 4,
  "freshness": {
   "newest_vouch_age": {
-   "\u226430d": 12,
-   "31\u201390d": 54,
-   "91\u2013180d": 52,
-   ">180d": 158
+   "\u226430d": 15,
+   "31\u201390d": 49,
+   "91\u2013180d": 53,
+   ">180d": 161
   },
   "newest_vouch_undated": 25,
   "last_modified_age": {
-   "\u226430d": 88,
-   "31\u201390d": 41,
-   "91\u2013180d": 40,
-   ">180d": 66
+   "\u226430d": 87,
+   "31\u201390d": 44,
+   "91\u2013180d": 39,
+   ">180d": 69
   },
-  "last_modified_missing": 66,
-  "single_date_files": 127,
-  "active_since_june": 105,
-  "files_with_vouches_on_multiple_dates": 111
+  "last_modified_missing": 64,
+  "single_date_files": 126,
+  "active_since_june": 108,
+  "files_with_vouches_on_multiple_dates": 112
  },
  "history": {
-  "files_with_archive": 202,
+  "files_with_archive": 207,
   "files_with_git_history": 80,
   "git_files_changed_after_first_commit": 37,
   "git_commits_median": 2,
   "git_last_commit_age": {
-   "\u226430d": 1,
-   "31\u201390d": 18,
-   "91\u2013180d": 13,
+   "\u226430d": 4,
+   "31\u201390d": 16,
+   "91\u2013180d": 12,
    ">180d": 48
   },
-  "vouches_removed": 27,
+  "vouches_removed": 30,
   "removed_by_kind": {
-   "url changed": 6,
+   "url changed": 7,
    "target offline": 3,
-   "withdrawn": 10,
+   "withdrawn": 12,
    "own site": 2,
    "same-day edit": 6
   },
   "by_source": {
    "wayback": {
-    "added": 442,
+    "added": 475,
     "removed": {
-     "url changed": 4,
+     "url changed": 5,
      "target offline": 3,
-     "withdrawn": 9
+     "withdrawn": 11
     }
    },
    "git": {
-    "added": 215,
+    "added": 216,
     "removed": {
      "withdrawn": 1,
      "url changed": 2,
@@ -732,6 +733,26 @@
     "between": [
      "2026-04-30",
      "2026-08-26"
+    ],
+    "source": "wayback",
+    "kind": "withdrawn"
+   },
+   {
+    "site": "burgeonlab.com",
+    "removed": "ilyess.cc",
+    "between": [
+     "2026-04-13",
+     "2026-11-16"
+    ],
+    "source": "wayback",
+    "kind": "withdrawn"
+   },
+   {
+    "site": "burgeonlab.com",
+    "removed": "ragt.ag",
+    "between": [
+     "2026-04-13",
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -771,7 +792,7 @@
     "removed": "chrisburnell.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -781,7 +802,7 @@
     "removed": "chrismcleod.dev",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -791,7 +812,7 @@
     "removed": "pxlnv.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -801,7 +822,7 @@
     "removed": "raymondcamden.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -811,7 +832,7 @@
     "removed": "robinrendle.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -860,10 +881,40 @@
    },
    {
     "site": "burgeonlab.com",
+    "removed": "html-chunder.neocities.org",
+    "between": [
+     "2026-04-13",
+     "2026-11-16"
+    ],
+    "source": "wayback",
+    "kind": "url changed"
+   },
+   {
+    "site": "burgeonlab.com",
+    "removed": "ilyess.cc",
+    "between": [
+     "2026-04-13",
+     "2026-11-16"
+    ],
+    "source": "wayback",
+    "kind": "withdrawn"
+   },
+   {
+    "site": "burgeonlab.com",
+    "removed": "ragt.ag",
+    "between": [
+     "2026-04-13",
+     "2026-11-16"
+    ],
+    "source": "wayback",
+    "kind": "withdrawn"
+   },
+   {
+    "site": "burgeonlab.com",
     "removed": "solariz.de/",
     "between": [
      "2026-04-13",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "url changed"
@@ -913,7 +964,7 @@
     "removed": "text.eapl.mx/main-es",
     "between": [
      "2026-03-17",
-     "2026-11-09"
+     "2026-10-27"
     ],
     "source": "wayback",
     "kind": "url changed"
@@ -923,7 +974,7 @@
     "removed": "binarydigit.dev",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "url changed"
@@ -933,7 +984,7 @@
     "removed": "chrisburnell.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -943,7 +994,7 @@
     "removed": "chrismcleod.dev",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -953,7 +1004,7 @@
     "removed": "crashthearcade.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "target offline"
@@ -963,7 +1014,7 @@
     "removed": "pxlnv.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -973,7 +1024,7 @@
     "removed": "raymondcamden.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -983,7 +1034,7 @@
     "removed": "robinrendle.com",
     "between": [
      "2026-03-28",
-     "2026-11-09"
+     "2026-11-16"
     ],
     "source": "wayback",
     "kind": "withdrawn"
@@ -1099,7 +1150,7 @@
     "kind": "same-day edit"
    }
   ],
-  "vouches_added_in_later_versions": 657,
+  "vouches_added_in_later_versions": 691,
   "archived_files_now_missing": [
    "https://akselmo.dev/human.json",
    "https://bobbyhiltz.com/human.json",
@@ -1111,11 +1162,11 @@
   ]
  },
  "bare_target_status": {
-  "no-human-json": 1214,
-  "timeout": 64,
+  "no-human-json": 1226,
+  "timeout": 62,
   "unprobed": 43,
-  "robots": 40,
-  "err": 23,
+  "robots": 43,
+  "err": 22,
   "declared-but-http404": 2
  },
  "declared_but_broken": [
@@ -1124,20 +1175,21 @@
   "dpogue.ca",
   "harrycresswell.com",
   "shayneparkinson.com",
-  "srvanderplas.github.io"
+  "srvanderplas.github.io",
+  "takeonrules.com"
  ],
  "compliance": {
   "versions": {
-   "0.1.1": 285,
+   "0.1.1": 287,
    "1": 4,
    "0.1": 3,
-   "0.1.2": 2,
    "1.0.0": 2,
+   "0.1.2": 2,
    "0.0.1": 1,
-   "0.1.0": 1,
    "0.1.4": 1,
-   "0.1.6": 1,
-   "1.1.0": 1
+   "0.1.0": 1,
+   "1.1.0": 1,
+   "0.1.6": 1
   },
   "lenient_parse": [
    "albert.rierol.net",
@@ -1145,16 +1197,16 @@
    "cygnoir.net",
    "tuskito.neocities.org"
   ],
-  "cors_star": 118,
+  "cors_star": 116,
   "content_type": {
-   "application/json": 296,
+   "application/json": 298,
    "none": 3,
    "text/json": 1,
    "application/manifest+json": 1
   },
   "discovery_via": {
-   "fallback": 27,
-   "link": 283
+   "fallback": 30,
+   "link": 282
   },
   "self_vouch": 19,
   "extra_top_level_keys": {
@@ -1176,7 +1228,7 @@
   "com": 89,
   "net": 33,
   "org": 26,
-  "dev": 19,
+  "dev": 20,
   "uk": 15,
   "de": 12,
   "io": 11,
@@ -1195,19 +1247,19 @@
   "ing": 2
  },
  "platforms": {
-  "own domain": 285,
+  "own domain": 287,
   "github.io": 9,
   "neocities.org": 4,
-  "pages.dev": 1,
   "codeberg.page": 1,
+  "pages.dev": 1,
   "tilde.": 1
  },
  "sample": {
   "sample-webring": {
-   "listed_hosts": 472,
-   "reachable": 446,
+   "listed_hosts": 473,
+   "reachable": 447,
    "with_human_json": 25,
-   "rate": 0.0561,
+   "rate": 0.0559,
    "robots_blocked": 17,
    "hits": [
     "aldur.blog",
@@ -1239,10 +1291,10 @@
   },
   "sample-blogroll": {
    "listed_hosts": 1307,
-   "reachable": 1229,
+   "reachable": 1228,
    "with_human_json": 47,
-   "rate": 0.0382,
-   "robots_blocked": 43,
+   "rate": 0.0383,
+   "robots_blocked": 44,
    "hits": [
     "aartaka.me",
     "andregarzia.com",
@@ -1294,10 +1346,10 @@
    ]
   },
   "sample-indieblog": {
-   "listed_hosts": 5265,
-   "reachable": 5065,
-   "with_human_json": 93,
-   "rate": 0.0184,
+   "listed_hosts": 5291,
+   "reachable": 5095,
+   "with_human_json": 96,
+   "rate": 0.0188,
    "robots_blocked": 100,
    "hits": [
     "aaronczichon.de",
@@ -1323,6 +1375,7 @@
     "bobbyhiltz.com",
     "brennan.day",
     "burgeonlab.com",
+    "chrisburnell.com",
     "claytonerrington.com",
     "cobb.land",
     "cogdogblog.com",
@@ -1330,6 +1383,7 @@
     "darthmall.net",
     "davehenry.blog",
     "davesmyth.com",
+    "dbuho.me",
     "denisdefreyne.com",
     "eamoncaddigan.net",
     "emmas.site",
@@ -1360,6 +1414,7 @@
     "marcgoertz.de",
     "michaelbrooks.co.uk",
     "myles.garden",
+    "nedbatchelder.com",
     "newsonaut.com",
     "nicksimson.com",
     "nicolalosito.it",
@@ -1397,9 +1452,9 @@
   }
  },
  "sample_combined": {
-  "reachable_hosts": 5688,
-  "with_human_json": 108,
-  "rate": 0.019
+  "reachable_hosts": 5714,
+  "with_human_json": 110,
+  "rate": 0.0193
  },
  "sample_only_sites": [
   "andregarzia.com",
@@ -1426,8 +1481,8 @@
   "yadin.com"
  ],
  "churn": {
-  "hosts_checked": 1370,
-  "robots_hosts_checked": 37,
+  "hosts_checked": 1381,
+  "robots_hosts_checked": 40,
   "had_file": {
    "acdw.net": {
     "now": "blocks crawlers (robots.txt)",
@@ -1440,6 +1495,10 @@
    "canneddragons.net": {
     "now": "still links a file that is broken",
     "first_seen": "20260503"
+   },
+   "edleeman.co.uk": {
+    "now": "file still served (not discoverable from the homepage)",
+    "first_seen": "20260424"
    },
    "geedea.pro": {
     "now": "blocks crawlers (robots.txt)",
@@ -1517,15 +1576,15 @@
   "by_outcome": {
    "blocks crawlers (robots.txt)": 7,
    "still links a file that is broken": 1,
-   "file still served (not discoverable from the homepage)": 2,
+   "file still served (not discoverable from the homepage)": 3,
    "has a file under a sub-path (not churn)": 7,
    "file gone": 4
   }
  },
  "provenance": {
-  "vouch": 134,
+  "vouch": 135,
   "seeds-2026-10-05-csv.txt": 94,
-  "github-seeds.txt": 20,
+  "github-seeds.txt": 21,
   "research-seeds.txt": 18,
   "sample-indieblog.txt": 13,
   "sample-blogroll.txt": 7,
